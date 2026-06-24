@@ -22,6 +22,7 @@
   --sombra-media: 0 20px 46px rgba(16, 43, 60, 0.16);
   --fuente-base: "Inter", Arial, sans-serif;
   --fuente-titulos: "Space Grotesk", "Inter", Arial, sans-serif;
+  --espacio-ancla: 112px;
 }
 
 html {
@@ -59,6 +60,10 @@ img {
 .contenedor {
   width: min(1120px, 90%);
   margin: 0 auto;
+}
+
+main section {
+  scroll-margin-top: var(--espacio-ancla);
 }
 
 .salto-contenido {
@@ -757,6 +762,10 @@ img {
 }
 
 @media (max-width: 700px) {
+  :root {
+    --espacio-ancla: 148px;
+  }
+
   .navegacion {
     align-items: stretch;
     flex-direction: column;
