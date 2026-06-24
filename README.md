@@ -1,18 +1,19 @@
 # Chilete DevPath Web
 
-Primera version estatica de la web de Chilete DevPath.
+Primera versión estática de la web de Chilete DevPath.
 
 ## Objetivo
 
-Construir una pagina de marca para presentar la ruta de aprendizaje, los repositorios principales, los criterios de publicacion y los canales de comunidad de Chilete DevPath.
+Construir una página de marca para presentar la ruta de aprendizaje, los repositorios principales, los criterios de publicación y los canales de comunidad de Chilete DevPath.
 
-La web funciona como base visual y editorial para una futura version mas completa de la marca.
+La web funciona como base visual y editorial para una futura versión más completa de la marca.
 
 ## Tecnologias
 
 - HTML
 - CSS
-- JavaScript basico
+- JavaScript básico
+- Google Fonts
 
 ## Estructura
 
@@ -27,45 +28,55 @@ chiletedevpath-web/
     `-- img/
 ```
 
-## Como abrir el proyecto
+## Cómo abrir el proyecto
 
 Abrir el archivo `index.html` directamente en el navegador.
 
-No requiere servidor local, dependencias ni instalacion adicional en esta etapa.
+No requiere servidor local, dependencias ni instalación adicional en esta etapa.
 
 ## Estado
 
-Proyecto en construccion.
+Proyecto en construcción.
 
-La primera version se trabaja como web estatica antes de evaluar una migracion futura a React o Vite.
+La primera versión se trabaja como web estática antes de evaluar una migración futura a React o Vite.
 
 ## Alcance actual
 
-- Pagina de inicio de una sola vista.
-- Presentacion de marca.
+- Página de inicio de una sola vista.
+- Presentación de marca.
 - Ruta de aprendizaje organizada por etapas.
 - Repositorios principales.
-- Criterios de publicacion.
+- Criterios de publicación.
 - Redes sociales y comunidad.
+- Animaciones progresivas con JavaScript nativo.
+- Navegación con estado activo durante el desplazamiento.
 
-## Decisiones de diseno
+## Decisiones de diseño
 
-- Identidad visual inspirada en Chilete, Cajamarca, sin usar simbolos institucionales como marca propia.
+- Identidad visual inspirada en Chilete, Cajamarca, sin usar símbolos institucionales como marca propia.
 - Paleta basada en tonos tierra, camino, agua, verde y azul oscuro.
 - Ruta presentada como avance progresivo, no como listado plano de temas.
 - Animaciones sutiles para reforzar movimiento sin afectar accesibilidad.
-- Contenido redactado para comunidad, evitando nombres internos del repositorio como titulo principal de secciones.
+- Contenido redactado para comunidad, evitando nombres internos del repositorio como título principal de secciones.
+- Tipografía externa gratuita con fuentes de respaldo para no romper la experiencia sin conexión.
 
-## Proximos pasos
+## Validación realizada
+
+- Revisión estructural de HTML.
+- Revisión de balance de CSS.
+- Ejecución básica del JavaScript fuera del navegador.
+- Revisión responsive por reglas CSS para escritorio, tablet y móvil.
+
+## Pendiente antes de publicar
 
 - Revisar accesibilidad y navegacion con teclado.
-- Revisar visualmente la pagina en escritorio, tablet y movil.
+- Revisar visualmente la página en escritorio, tablet y móvil desde navegador.
 - Evaluar publicacion con GitHub Pages.
-- Definir si el proyecto sera repositorio propio o sitio principal `chiletedevpath.github.io`.
+- Definir si el proyecto será repositorio propio o sitio principal `chiletedevpath.github.io`.
 
 ## Criterio editorial
 
-El contenido debe mantenerse alineado con las politicas de Chilete DevPath: autoria clara, uso responsable de IA, publicacion segura y bienestar en el aprendizaje tecnico.
+El contenido debe mantenerse alineado con las políticas de Chilete DevPath: autoría clara, uso responsable de IA, publicación segura y bienestar en el aprendizaje técnico.
 
 ## Autor
 

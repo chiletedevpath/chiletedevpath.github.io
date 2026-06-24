@@ -19,6 +19,7 @@
   --color-alerta: #c9342d;
   --color-borde: #d8cfbd;
   --sombra-suave: 0 14px 30px rgba(16, 43, 60, 0.1);
+  --sombra-media: 0 20px 46px rgba(16, 43, 60, 0.16);
   --fuente-base: "Inter", Arial, sans-serif;
   --fuente-titulos: "Space Grotesk", "Inter", Arial, sans-serif;
 }
@@ -200,11 +201,11 @@ img {
     linear-gradient(115deg, rgba(16, 43, 60, 0.96), rgba(16, 43, 60, 0.86)),
     linear-gradient(135deg, rgba(98, 182, 203, 0.2), rgba(245, 197, 66, 0.22)),
     var(--color-principal);
-  padding: 104px 0;
+  padding: 112px 0 96px;
 }
 
 .hero::before {
-  content: "</>";
+  content: "{ }";
   position: absolute;
   right: 8%;
   top: 10%;
@@ -274,12 +275,29 @@ img {
   margin-bottom: 32px;
 }
 
+.hero-indicadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.hero-indicadores span {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: #eff6ff;
+  background-color: rgba(255, 255, 255, 0.08);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .hero-imagen {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.08);
-  box-shadow: var(--sombra-suave);
+  box-shadow: var(--sombra-media);
   transform: rotate(1deg);
 }
 
@@ -375,6 +393,18 @@ img {
   margin-bottom: 12px;
 }
 
+.estado {
+  width: fit-content;
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background-color: rgba(98, 182, 203, 0.16);
+  color: var(--color-principal);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .tarjeta p {
   color: var(--color-texto-suave);
 }
@@ -459,14 +489,30 @@ img {
   border-radius: 8px;
   background-color: var(--color-fondo);
   box-shadow: var(--sombra-suave);
+  isolation: isolate;
   transition:
     border-color 0.2s ease,
     transform 0.2s ease;
 }
 
+.ruta-etapa::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(245, 197, 66, 0.16), transparent 44%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
 .ruta-etapa:hover {
   border-color: var(--color-acento);
   transform: translateY(-4px);
+}
+
+.ruta-etapa:hover::after {
+  opacity: 1;
 }
 
 .ruta-numero {
@@ -521,8 +567,27 @@ img {
 
 /* Contacto */
 .contacto {
+  position: relative;
+  overflow: hidden;
   background-color: var(--color-principal);
   color: #ffffff;
+}
+
+.contacto::before {
+  content: "";
+  position: absolute;
+  right: -12%;
+  top: -42%;
+  width: 48%;
+  height: 120%;
+  border-left: 28px solid rgba(245, 197, 66, 0.18);
+  border-radius: 100% 0 0 100%;
+  transform: rotate(18deg);
+}
+
+.contacto .contenedor {
+  position: relative;
+  z-index: 1;
 }
 
 .contacto .etiqueta,
@@ -541,7 +606,41 @@ img {
 }
 
 .redes {
-  max-width: 820px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 920px;
+}
+
+.red-social {
+  min-height: 96px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.red-social span {
+  display: block;
+  margin-bottom: 8px;
+  color: #dbeafe;
+  font-family: var(--fuente-base);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.red-social:hover,
+.red-social-principal {
+  border-color: var(--color-progreso);
+  background-color: rgba(245, 197, 66, 0.16);
+  transform: translateY(-3px);
 }
 
 .pie {
@@ -618,7 +717,8 @@ img {
 
   .tarjetas-3,
   .tarjetas-4,
-  .ruta-etapas {
+  .ruta-etapas,
+  .redes {
     grid-template-columns: 1fr;
   }
 
@@ -653,10 +753,19 @@ img {
     display: none;
     flex-direction: column;
     gap: 12px;
+    padding: 14px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background-color: #ffffff;
   }
 
   .menu.menu-abierto {
     display: flex;
+  }
+
+  .menu a {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -669,12 +778,20 @@ img {
     font-size: 2.1rem;
   }
 
+  .hero-indicadores {
+    flex-direction: column;
+  }
+
   .acciones {
     flex-direction: column;
   }
 
   .boton {
     text-align: center;
+  }
+
+  .red-social {
+    min-height: auto;
   }
 }
 

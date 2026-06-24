@@ -49,7 +49,7 @@ if (typeof document !== "undefined") {
   }
 
   const elementosAnimados = document.querySelectorAll(
-    ".hero-texto, .hero-imagen, .seccion .etiqueta, .seccion h2, .seccion-descripcion, .tarjeta, .ruta-etapa"
+    ".hero-texto, .hero-imagen, .hero-indicadores, .seccion .etiqueta, .seccion h2, .seccion-descripcion, .tarjeta, .ruta-etapa, .red-social"
   );
 
   elementosAnimados.forEach((elemento) => {
