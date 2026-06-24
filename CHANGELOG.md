@@ -2,7 +2,7 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
-## V1.1 | Pulido público
+## V1.1 | Camino afinado
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
@@ -22,7 +22,7 @@ Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
 ### Criterio de cierre
 
-La V1.1 se considera cerrada porque mejora la primera publicación pública sin cambiar la estructura principal de la web. Su objetivo fue pulir producción, accesibilidad, SEO social y mantenimiento antes de planificar nuevas mejoras de contenido.
+La V1.1 se considera cerrada porque afina la primera publicación pública sin cambiar la estructura principal de la web. Su objetivo fue fortalecer producción, accesibilidad, SEO social y mantenimiento antes de planificar nuevas mejoras de contenido.
 
 ## V1.0 | Camino inicial
 

@@ -14,13 +14,13 @@ La web funciona como base visual y editorial de la marca, con una versión públ
 
 ## Versión actual
 
-`V1.1 | Pulido público`
+`V1.1 | Camino afinado`
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
 - Sitio: https://chiletedevpath.github.io/
 
-Esta versión mejora la primera publicación pública con ajustes de producción, SEO social, accesibilidad, rendimiento visual y experiencia responsive.
+Esta versión afina la primera publicación pública con ajustes de producción, SEO social, accesibilidad, rendimiento visual y experiencia responsive.
 
 ## Tecnologías
 
@@ -76,7 +76,7 @@ chiletedevpath-web/
 
 ## Próximas versiones
 
-La V1.1 queda cerrada como pulido público. Las mejoras futuras deben registrarse como nuevas versiones, por ejemplo:
+La V1.1 queda cerrada como una etapa de afinamiento del camino inicial. Las mejoras futuras deben registrarse como nuevas versiones, por ejemplo:
 
 - `V1.2`: mejoras de contenido, accesibilidad visual o experiencia responsive luego de revisión manual en navegador.
 - `V2.0`: cambio mayor de tecnología, estructura multipágina o propuesta visual.
