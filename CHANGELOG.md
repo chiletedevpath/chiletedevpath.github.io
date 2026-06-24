@@ -2,6 +2,23 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V2.3 | Proyectos academicos en revision
+
+- Fecha de cierre: 24/06/2026
+- Estado: cerrada y publicada
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Incorporacion de una seccion para proyectos academicos en revision dentro de la pagina Proyectos.
+- Vinculacion de `utp-clinica-salud-vital` como avance tecnico en proceso, sin presentarlo como portafolio final.
+- Separacion entre evidencia academica, proyectos en proceso y seleccion futura de portafolio.
+- Alineacion con la matriz de publicacion segura para evitar promocionar proyectos sensibles o no cerrados.
+
+### Criterio de cierre
+
+La V2.3 se considera cerrada porque permite conectar GitHub con la web sin romper el criterio legal/editorial: un proyecto en proceso puede mostrarse como avance, pero no como proyecto final destacado.
+
 ## V2.2 | Ruta interactiva y contenido conectado
 
 - Fecha de cierre: 24/06/2026

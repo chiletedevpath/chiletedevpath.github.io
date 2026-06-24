@@ -2,7 +2,7 @@ export const site = {
   name: "Chilete DevPath",
   author: "Adrián Pisco",
   url: "https://chiletedevpath.github.io",
-  version: "V2.2 | Ruta interactiva y contenido conectado",
+  version: "V2.3 | Proyectos academicos en revision",
   description:
     "Chilete DevPath es la marca personal de Adrián Pisco para documentar aprendizaje, proyectos, criterio técnico y comunidad.",
 };

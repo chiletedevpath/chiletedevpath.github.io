@@ -31,3 +31,19 @@ export const projectAreas = [
     action: "Ver avance",
   },
 ];
+
+export const academicProjects = [
+  {
+    status: "Academico en proceso",
+    title: "Clinica Salud Vital",
+    description:
+      "Proyecto academico en Java orientado a gestion de pacientes, citas y horarios. Se muestra como evidencia en desarrollo, no como portafolio final.",
+    details: [
+      "Dominio sensible con datos ficticios",
+      "Pendiente de cierre academico",
+      "Requiere portada propia antes de destacarse",
+    ],
+    href: "https://github.com/chiletedevpath/utp-clinica-salud-vital",
+    action: "Ver avance",
+  },
+];

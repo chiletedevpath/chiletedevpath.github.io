@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import { projectAreas } from "../data/proyectos.js";
+import { academicProjects, projectAreas } from "../data/proyectos.js";
 ---
 
 <BaseLayout title="Proyectos | Chilete DevPath">
@@ -20,6 +20,19 @@ import { projectAreas } from "../data/proyectos.js";
     <div class="contenedor">
       <div class="tarjetas tarjetas-3">
         {projectAreas.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion-clara">
+    <div class="contenedor">
+      <SectionHeader
+        eyebrow="Evidencia en proceso"
+        title="Proyectos academicos en revision"
+        description="Estos proyectos se enlazan como avance tecnico documentado. Aun no representan portafolio final ni casos listos para destacar."
+      />
+      <div class="tarjetas tarjetas-3">
+        {academicProjects.map((project) => <ProjectCard project={project} />)}
       </div>
     </div>
   </section>
