@@ -3,13 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chilete DevPath es la marca personal de Adrian Pisco para organizar aprendizaje, proyectos, criterio tecnico y recursos para comunidad."
+    />
+    <meta name="author" content="Adrian Pisco" />
+    <meta property="og:title" content="Chilete DevPath | Adrian Pisco" />
+    <meta
+      property="og:description"
+      content="Ruta publica de aprendizaje, proyectos y criterio tecnico como futuro desarrollador Full Stack."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/marca-banner-principal.png" />
     <title>Chilete DevPath | Adrian Pisco</title>
+    <link rel="icon" href="assets/img/marca-logo-sin-fondo.png" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
+    <a class="salto-contenido" href="#inicio">Saltar al contenido principal</a>
+
     <header class="encabezado">
-      <nav class="navegacion contenedor">
+      <nav class="navegacion contenedor" aria-label="Navegacion principal">
         <a class="marca" href="#inicio">Chilete DevPath</a>
 
         <ul class="menu">
@@ -208,6 +223,13 @@
             <article class="tarjeta">
               <h3>Politica editorial</h3>
               <p>Define como documento autoria, fuentes, contexto academico y colaboraciones.</p>
+              <a
+                href="https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/politicas/POLITICA_EDITORIAL.md"
+                target="_blank"
+                rel="noopener"
+              >
+                Leer politica
+              </a>
             </article>
 
             <article class="tarjeta">
@@ -216,16 +238,37 @@
                 La IA se usa como apoyo para aprender, revisar y estructurar, no para simular
                 conocimiento.
               </p>
+              <a
+                href="https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/politicas/POLITICA_USO_RESPONSABLE_IA.md"
+                target="_blank"
+                rel="noopener"
+              >
+                Leer politica
+              </a>
             </article>
 
             <article class="tarjeta">
               <h3>Bienestar tecnico</h3>
               <p>Aprender tambien implica descansar, cuidar la salud y sostener un ritmo realista.</p>
+              <a
+                href="https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/politicas/POLITICA_BIENESTAR_APRENDIZAJE.md"
+                target="_blank"
+                rel="noopener"
+              >
+                Leer politica
+              </a>
             </article>
 
             <article class="tarjeta">
               <h3>Publicacion segura</h3>
               <p>Todo contenido debe revisarse antes de pasar a GitHub, web o portafolio.</p>
+              <a
+                href="https://github.com/chiletedevpath/chiletedevpath/blob/main/docs/publicacion/CHECKLIST_PUBLICACION_SEGURA.md"
+                target="_blank"
+                rel="noopener"
+              >
+                Ver checklist
+              </a>
             </article>
           </div>
         </div>
@@ -287,7 +330,10 @@
     </main>
 
     <footer class="pie">
-      <p>Chilete DevPath - aprendizaje real, criterio tecnico y evolucion profesional.</p>
+      <p>
+        <span id="anio"></span> Chilete DevPath - aprendizaje real, criterio tecnico y evolucion
+        profesional.
+      </p>
     </footer>
 
     <script src="js/main.js"></script>

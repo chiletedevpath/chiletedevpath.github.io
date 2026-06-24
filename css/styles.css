@@ -42,9 +42,31 @@ img {
   display: block;
 }
 
+:focus-visible {
+  outline: 3px solid var(--color-progreso);
+  outline-offset: 4px;
+}
+
 .contenedor {
   width: min(1120px, 90%);
   margin: 0 auto;
+}
+
+.salto-contenido {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  z-index: 20;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: var(--color-progreso);
+  color: var(--color-principal);
+  font-weight: 700;
+  transform: translateY(-140%);
+}
+
+.salto-contenido:focus {
+  transform: translateY(0);
 }
 
 /* Navegacion principal */
@@ -219,6 +241,17 @@ img {
 
 .tarjeta p {
   color: var(--color-texto-suave);
+}
+
+.tarjeta a:not(.boton) {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--color-acento);
+  font-weight: 700;
+}
+
+.tarjeta a:not(.boton):hover {
+  color: var(--color-principal);
 }
 
 .tarjeta-con-enlace {
