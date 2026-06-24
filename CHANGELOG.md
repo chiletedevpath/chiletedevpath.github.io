@@ -2,6 +2,26 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V1.3 | Identidad viva
+
+- Fecha de cierre: 24/06/2026
+- Estado: cerrada y publicada
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Refuerzo del mensaje principal del hero.
+- Mejora de la primera impresión visual de la marca.
+- Incorporación de una capa de identidad sobre origen, camino y construcción.
+- Mejora de tarjetas de proyectos con detalles de valor para comunidad.
+- Reordenamiento de canales de contacto según prioridad estratégica.
+- Actualización de la versión visible en el footer.
+- Actualización del README como ficha técnica de la versión vigente.
+
+### Criterio de cierre
+
+La V1.3 se considera cerrada porque la web comunica con mayor claridad que Chilete DevPath no es solo una lista de repositorios, sino una marca personal con origen, ruta técnica, proyectos y comunidad.
+
 ## V1.2 | Ruta visible
 
 - Fecha de cierre: 24/06/2026

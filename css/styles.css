@@ -211,12 +211,12 @@ main section {
 }
 
 .hero::before {
-  content: "{ }";
+  content: "{ chilete.devpath }";
   position: absolute;
   right: 8%;
   top: 10%;
   color: rgba(255, 255, 255, 0.08);
-  font-size: 8rem;
+  font-size: 4.4rem;
   font-weight: 700;
   line-height: 1;
 }
@@ -299,6 +299,7 @@ main section {
 }
 
 .hero-imagen {
+  position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
@@ -316,6 +317,39 @@ main section {
 
 .hero-imagen:hover img {
   transform: scale(1.03);
+}
+
+.hero-marca-panel {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  background-color: rgba(16, 43, 60, 0.84);
+  backdrop-filter: blur(12px);
+}
+
+.hero-marca-panel span,
+.hero-marca-panel strong {
+  display: block;
+}
+
+.hero-marca-panel span {
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-marca-panel strong {
+  color: var(--color-progreso);
+  font-family: var(--fuente-titulos);
+  font-size: 0.95rem;
 }
 
 .hero .etiqueta {
@@ -413,6 +447,33 @@ main section {
 
 .tarjeta p {
   color: var(--color-texto-suave);
+}
+
+.tarjeta-detalles {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 22px;
+  padding: 14px 0 0;
+  border-top: 1px solid rgba(216, 207, 189, 0.9);
+  list-style: none;
+}
+
+.tarjeta-detalles li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--color-texto);
+  font-size: 0.9rem;
+}
+
+.tarjeta-detalles li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-camino);
 }
 
 .tarjeta a:not(.boton) {
@@ -771,6 +832,16 @@ main section {
     grid-template-columns: 1fr;
   }
 
+  .hero-marca-panel {
+    position: static;
+    grid-template-columns: 1fr;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+
   .tarjetas-3,
   .tarjetas-4,
   .ruta-etapas,
@@ -842,6 +913,11 @@ main section {
 
   .hero h1 {
     font-size: 2.1rem;
+  }
+
+  .hero::before {
+    font-size: 2.6rem;
+    right: 4%;
   }
 
   .hero-indicadores {

@@ -14,13 +14,13 @@ La web funciona como base visual y editorial de la marca, con una versión públ
 
 ## Versión actual
 
-`V1.2 | Ruta visible`
+`V1.3 | Identidad viva`
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
 - Sitio: https://chiletedevpath.github.io/
 
-Esta versión hace más clara la ruta de aprendizaje para la comunidad, mostrando intención, temas y resultado esperado por cada etapa.
+Esta versión refuerza la primera impresión de marca, mejora la presencia visual del hero y ordena mejor el valor de los proyectos y canales de comunidad.
 
 ## Tecnologías
 
@@ -45,13 +45,13 @@ chiletedevpath-web/
 `-- CHANGELOG.md
 ```
 
-## Alcance de V1.2
+## Alcance de V1.3
 
-- Mantiene la base pública de V1.1.
-- Mejora la sección de ruta con intención por etapa.
-- Agrega resultados esperados para cada tramo de aprendizaje.
-- Incorpora una llamada directa al repositorio de aprendizaje.
-- Refuerza la ruta como contenido útil para comunidad, no solo como listado de temas.
+- Mantiene la base pública de V1.2.
+- Refuerza el mensaje principal del hero.
+- Agrega una capa visual de identidad sobre origen, camino y construcción.
+- Mejora la sección de proyectos con detalles de valor.
+- Ordena los canales de comunidad por prioridad estratégica.
 - Actualiza la versión visible del footer.
 - Registra la versión en el historial del proyecto.
 
@@ -60,7 +60,7 @@ chiletedevpath-web/
 - Identidad visual inspirada en Chilete, Cajamarca, sin usar símbolos institucionales como marca propia.
 - Paleta basada en tonos tierra, camino, agua, verde y azul oscuro.
 - Ruta presentada como avance progresivo, con propósito y evidencia esperada.
-- Animaciones sutiles para reforzar movimiento sin afectar accesibilidad.
+- Hero reforzado como primera entrada a la marca Chilete DevPath.
 - Contenido redactado para comunidad, evitando nombres internos del repositorio como título principal de secciones.
 - Tipografía externa gratuita con fuentes de respaldo para no romper la experiencia sin conexión.
 
@@ -74,9 +74,9 @@ chiletedevpath-web/
 
 ## Próximas versiones
 
-La V1.2 queda cerrada como una etapa para hacer visible y entendible la ruta. Las mejoras futuras deben registrarse como nuevas versiones, por ejemplo:
+La V1.3 queda cerrada como una etapa de identidad visual y comunicacional. Las mejoras futuras deben registrarse como nuevas versiones, por ejemplo:
 
-- `V1.3`: mejoras visuales del hero, redes o sección de proyectos luego de revisión manual.
+- `V1.4`: mejoras específicas de accesibilidad visual, rendimiento o revisión manual en navegador.
 - `V2.0`: cambio mayor de tecnología, estructura multipágina o propuesta visual.
 
 ## Criterio editorial
