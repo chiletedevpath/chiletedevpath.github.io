@@ -14,13 +14,13 @@ La web funciona como base visual y editorial de la marca, con una versión públ
 
 ## Versión actual
 
-`V1.1 | Camino afinado`
+`V1.2 | Ruta visible`
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
 - Sitio: https://chiletedevpath.github.io/
 
-Esta versión afina la primera publicación pública con ajustes de producción, SEO social, accesibilidad, rendimiento visual y experiencia responsive.
+Esta versión hace más clara la ruta de aprendizaje para la comunidad, mostrando intención, temas y resultado esperado por cada etapa.
 
 ## Tecnologías
 
@@ -45,15 +45,13 @@ chiletedevpath-web/
 `-- CHANGELOG.md
 ```
 
-## Alcance de V1.1
+## Alcance de V1.2
 
-- Mantiene la base pública de V1.0.
-- Mejora los metadatos sociales para compartir la web en plataformas externas.
-- Agrega URL canónica del sitio.
-- Usa imagen social absoluta para mejorar compatibilidad con redes.
-- Declara dimensiones de imágenes para reducir saltos visuales durante la carga.
-- Ajusta la navegación responsive en tablet y móvil.
-- Mejora accesibilidad del enlace activo del menú con `aria-current`.
+- Mantiene la base pública de V1.1.
+- Mejora la sección de ruta con intención por etapa.
+- Agrega resultados esperados para cada tramo de aprendizaje.
+- Incorpora una llamada directa al repositorio de aprendizaje.
+- Refuerza la ruta como contenido útil para comunidad, no solo como listado de temas.
 - Actualiza la versión visible del footer.
 - Registra la versión en el historial del proyecto.
 
@@ -61,7 +59,7 @@ chiletedevpath-web/
 
 - Identidad visual inspirada en Chilete, Cajamarca, sin usar símbolos institucionales como marca propia.
 - Paleta basada en tonos tierra, camino, agua, verde y azul oscuro.
-- Ruta presentada como avance progresivo, no como listado plano de temas.
+- Ruta presentada como avance progresivo, con propósito y evidencia esperada.
 - Animaciones sutiles para reforzar movimiento sin afectar accesibilidad.
 - Contenido redactado para comunidad, evitando nombres internos del repositorio como título principal de secciones.
 - Tipografía externa gratuita con fuentes de respaldo para no romper la experiencia sin conexión.
@@ -76,9 +74,9 @@ chiletedevpath-web/
 
 ## Próximas versiones
 
-La V1.1 queda cerrada como una etapa de afinamiento del camino inicial. Las mejoras futuras deben registrarse como nuevas versiones, por ejemplo:
+La V1.2 queda cerrada como una etapa para hacer visible y entendible la ruta. Las mejoras futuras deben registrarse como nuevas versiones, por ejemplo:
 
-- `V1.2`: mejoras de contenido, accesibilidad visual o experiencia responsive luego de revisión manual en navegador.
+- `V1.3`: mejoras visuales del hero, redes o sección de proyectos luego de revisión manual.
 - `V2.0`: cambio mayor de tecnología, estructura multipágina o propuesta visual.
 
 ## Criterio editorial

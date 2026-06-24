@@ -2,6 +2,26 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V1.2 | Ruta visible
+
+- Fecha de cierre: 24/06/2026
+- Estado: cerrada y publicada
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Mejora de la sección de ruta de aprendizaje.
+- Incorporación de una intención clara por cada etapa.
+- Agregado de resultados esperados por tramo de aprendizaje.
+- Inclusión de una llamada directa al repositorio `aprendizaje`.
+- Refuerzo de la ruta como material útil para comunidad, no solo como listado de temas.
+- Actualización de la versión visible en el footer.
+- Actualización del README como ficha técnica de la versión vigente.
+
+### Criterio de cierre
+
+La V1.2 se considera cerrada porque la ruta de aprendizaje comunica mejor qué se trabaja, para qué sirve cada etapa y qué evidencia puede esperar la comunidad al recorrer Chilete DevPath.
+
 ## V1.1 | Camino afinado
 
 - Fecha de cierre: 24/06/2026
