@@ -1,0 +1,18 @@
+# Sistema operativo
+Thumbs.db
+Desktop.ini
+
+# Editores
+.vscode/
+.idea/
+
+# Dependencias y compilados futuros
+node_modules/
+dist/
+build/
+out/
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
