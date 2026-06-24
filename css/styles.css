@@ -192,6 +192,7 @@ img {
   border-right: 34px solid rgba(245, 197, 66, 0.5);
   border-radius: 0 100% 100% 0;
   transform: rotate(-18deg);
+  animation: camino-flotante 9s ease-in-out infinite;
 }
 
 .hero-texto {
@@ -222,6 +223,7 @@ img {
   grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
   align-items: center;
   gap: 48px;
+  animation: aparecer-suave 0.8s ease both;
 }
 
 .hero h1 {
@@ -245,12 +247,18 @@ img {
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.08);
   box-shadow: var(--sombra-suave);
+  transform: rotate(1deg);
 }
 
 .hero-imagen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hero-imagen:hover img {
+  transform: scale(1.03);
 }
 
 .hero .etiqueta {
@@ -315,6 +323,16 @@ img {
   border-radius: 8px;
   background-color: var(--color-superficie);
   box-shadow: var(--sombra-suave);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  border-color: var(--color-acento);
+  box-shadow: 0 18px 36px rgba(16, 43, 60, 0.14);
+  transform: translateY(-4px);
 }
 
 .tarjeta h3 {
@@ -353,6 +371,28 @@ img {
 }
 
 /* Ruta de aprendizaje */
+#ruta {
+  position: relative;
+  overflow: hidden;
+}
+
+#ruta::before {
+  content: "";
+  position: absolute;
+  right: -10%;
+  top: 8%;
+  width: 42%;
+  height: 70%;
+  border-left: 22px solid rgba(242, 212, 107, 0.24);
+  border-radius: 100% 0 0 100%;
+  transform: rotate(14deg);
+}
+
+#ruta .contenedor {
+  position: relative;
+  z-index: 1;
+}
+
 .ruta-lista {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -370,6 +410,14 @@ img {
   color: var(--color-texto);
   font-weight: 700;
   counter-increment: ruta;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ruta-lista li:hover {
+  border-color: var(--color-acento);
+  transform: translateX(6px);
 }
 
 .ruta-lista li::before {
@@ -387,6 +435,7 @@ img {
   display: grid;
   place-items: center;
   transform: translateY(-50%);
+  box-shadow: 0 0 0 4px rgba(242, 212, 107, 0.22);
 }
 
 /* Contacto */
@@ -424,6 +473,29 @@ img {
 .pie p {
   width: min(1120px, 90%);
   margin: 0 auto;
+}
+
+@keyframes aparecer-suave {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes camino-flotante {
+  0%,
+  100% {
+    transform: rotate(-18deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-14deg) translateY(-10px);
+  }
 }
 
 /* Adaptacion responsive */
@@ -493,5 +565,16 @@ img {
 
   .boton {
     text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
