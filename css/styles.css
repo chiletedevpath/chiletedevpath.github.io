@@ -19,6 +19,8 @@
   --color-alerta: #c9342d;
   --color-borde: #d8cfbd;
   --sombra-suave: 0 14px 30px rgba(16, 43, 60, 0.1);
+  --fuente-base: "Inter", Arial, sans-serif;
+  --fuente-titulos: "Space Grotesk", "Inter", Arial, sans-serif;
 }
 
 html {
@@ -26,7 +28,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--fuente-base);
   color: var(--color-texto);
   background-color: var(--color-fondo);
   line-height: 1.6;
@@ -79,12 +81,23 @@ img {
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: var(--color-principal);
-  color: #ffffff;
+  border-bottom: 1px solid rgba(216, 207, 189, 0.9);
+  background-color: rgba(247, 244, 232, 0.94);
+  color: var(--color-principal);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 26px rgba(16, 43, 60, 0);
+  transition:
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.encabezado-desplazado {
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 26px rgba(16, 43, 60, 0.1);
 }
 
 .navegacion {
-  padding: 16px 0;
+  padding: 18px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -94,24 +107,25 @@ img {
 .marca {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  font-family: var(--fuente-titulos);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.22rem;
 }
 
 .marca img {
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
 }
 
 .menu-boton {
   display: none;
   padding: 10px 14px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--color-principal);
   border-radius: 8px;
   background-color: transparent;
-  color: #ffffff;
+  color: var(--color-principal);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
@@ -119,17 +133,34 @@ img {
 
 .menu {
   display: flex;
-  gap: 24px;
+  gap: 8px;
   list-style: none;
 }
 
 .menu a {
-  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--color-texto);
+  font-size: 0.98rem;
+  font-weight: 600;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .menu a:hover,
+.menu a.enlace-activo {
+  background-color: rgba(245, 197, 66, 0.28);
+  color: var(--color-principal);
+  transform: translateY(-1px);
+}
+
 .marca:hover {
-  color: var(--color-progreso);
+  color: var(--color-acento);
 }
 
 /* Estructura general */
@@ -148,6 +179,7 @@ img {
 }
 
 .seccion h2 {
+  font-family: var(--fuente-titulos);
   color: var(--color-principal);
   font-size: 2rem;
   line-height: 1.2;
@@ -228,6 +260,7 @@ img {
 
 .hero h1 {
   max-width: 780px;
+  font-family: var(--fuente-titulos);
   color: #ffffff;
   font-size: 3.4rem;
   line-height: 1.1;
@@ -336,6 +369,7 @@ img {
 }
 
 .tarjeta h3 {
+  font-family: var(--fuente-titulos);
   color: var(--color-principal);
   font-size: 1.15rem;
   margin-bottom: 12px;
@@ -449,6 +483,7 @@ img {
 }
 
 .ruta-etapa h3 {
+  font-family: var(--fuente-titulos);
   color: var(--color-principal);
   font-size: 1.15rem;
   margin-bottom: 14px;
@@ -542,6 +577,19 @@ img {
   50% {
     transform: rotate(-14deg) translateY(-10px);
   }
+}
+
+.js-activo .revelar {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.js-activo .revelar.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Adaptacion responsive */
