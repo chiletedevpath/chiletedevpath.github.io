@@ -2,6 +2,24 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V2.1 | Identidad profesional expandida
+
+- Fecha de cierre: 24/06/2026
+- Estado: cerrada y publicada
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Incorporación de una sección personal con fotografía de Adrián Pisco.
+- Uso de una imagen de trabajo para reforzar la construcción real de la marca.
+- Mejora de redes sociales con iconografía y descripciones por canal.
+- Rediseño del footer para funcionar como cierre de marca.
+- Actualización de la versión visible y documentación del proyecto.
+
+### Criterio de cierre
+
+La V2.1 se considera cerrada porque fortalece la presencia profesional de Chilete DevPath sin romper la arquitectura multipágina de V2.0. La web comunica mejor la relación entre marca, persona, ruta técnica y comunidad.
+
 ## V2.0 | Ecosistema navegable
 
 - Fecha de cierre: 24/06/2026

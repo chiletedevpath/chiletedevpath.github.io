@@ -1,13 +1,29 @@
 ---
-import { site } from "../data/site.js";
+import { site, socials } from "../data/site.js";
+import SocialIcon from "./SocialIcon.astro";
 ---
 
 <footer class="pie">
   <div class="pie-contenido">
-    <p>
-      <span id="anio"></span>
-      Chilete DevPath - aprendizaje real, criterio técnico y evolución profesional.
-    </p>
+    <div class="pie-marca">
+      <img src="/assets/img/marca-simbolo-nav.png" width="512" height="512" alt="" />
+      <div>
+        <strong>{site.name}</strong>
+        <p>
+          <span id="anio"></span>
+          Aprendizaje real, criterio técnico y evolución profesional.
+        </p>
+      </div>
+    </div>
+
+    <nav class="pie-redes" aria-label="Redes oficiales">
+      {socials.map((social) => (
+        <a href={social.href} target="_blank" rel="noopener" aria-label={social.name}>
+          <SocialIcon name={social.name} />
+        </a>
+      ))}
+    </nav>
+
     <span class="version-marca">{site.version}</span>
   </div>
 </footer>

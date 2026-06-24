@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHeader from "../components/SectionHeader.astro";
+import SocialIcon from "../components/SocialIcon.astro";
 import { socials } from "../data/site.js";
 ---
 
@@ -15,8 +16,10 @@ import { socials } from "../data/site.js";
       <div class="redes" aria-label="Canales oficiales de Chilete DevPath">
         {socials.map((social) => (
           <a class={social.primary ? "red-social red-social-principal" : "red-social"} href={social.href} target="_blank" rel="noopener">
+            <SocialIcon name={social.name} />
             <span>{social.label}</span>
-            {social.name}
+            <strong>{social.name}</strong>
+            <small>{social.description}</small>
           </a>
         ))}
       </div>

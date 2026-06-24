@@ -14,13 +14,13 @@ La web funciona como base pública de la marca y como punto de entrada más clar
 
 ## Versión actual
 
-`V2.0 | Ecosistema navegable`
+`V2.1 | Identidad profesional expandida`
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
 - Sitio: https://chiletedevpath.github.io/
 
-Esta versión convierte la web de una landing estática a una estructura multipágina con Astro, datos reutilizables, componentes y despliegue automatizado mediante GitHub Pages.
+Esta versión refuerza la identidad profesional de Chilete DevPath con presencia personal, redes con iconografía, una sección visual de trabajo y un cierre de marca más sólido.
 
 ## Tecnologías
 
@@ -54,15 +54,14 @@ chiletedevpath-web/
 `-- CHANGELOG.md
 ```
 
-## Alcance de V2.0
+## Alcance de V2.1
 
-- Migración de HTML estático a Astro.
-- Creación de páginas internas para Inicio, Sobre, Ruta, Proyectos, Recursos, Criterios y Comunidad.
-- Separación de contenido en archivos de datos reutilizables.
-- Creación de componentes para cabecera, hero, tarjetas, ruta, secciones y pie de página.
-- Preparación de despliegue mediante GitHub Actions.
-- Conservación de la identidad visual construida en V1.3.1.
-- Actualización de metadatos por página y URL canónica.
+- Incorporación de fotografía personal en la página principal.
+- Uso de fotografía de trabajo en la página Sobre.
+- Mejora visual de redes sociales con iconografía.
+- Fortalecimiento del footer como cierre de marca.
+- Refuerzo de la narrativa personal detrás de Chilete DevPath.
+- Conservación de la arquitectura Astro creada en V2.0.
 
 ## Decisiones de diseño
 

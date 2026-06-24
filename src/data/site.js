@@ -2,7 +2,7 @@ export const site = {
   name: "Chilete DevPath",
   author: "Adrián Pisco",
   url: "https://chiletedevpath.github.io",
-  version: "V2.0 | Ecosistema navegable",
+  version: "V2.1 | Identidad profesional expandida",
   description:
     "Chilete DevPath es la marca personal de Adrián Pisco para documentar aprendizaje, proyectos, criterio técnico y comunidad.",
 };
@@ -21,32 +21,38 @@ export const socials = [
   {
     name: "GitHub",
     label: "Repositorio principal",
+    description: "Código, proyectos y evolución técnica del ecosistema.",
     href: "https://github.com/chiletedevpath",
     primary: true,
   },
   {
     name: "LinkedIn",
     label: "Perfil profesional",
+    description: "Trayectoria, aprendizaje y perfil profesional.",
     href: "https://www.linkedin.com/in/adrian-pisco",
   },
   {
     name: "Discord",
     label: "Espacio de comunidad",
+    description: "Canal para compartir avance, práctica y comunidad.",
     href: "https://discord.gg/4XsXRT4rG",
   },
   {
     name: "Instagram",
     label: "Contenido visual",
+    description: "Publicaciones visuales sobre marca y aprendizaje.",
     href: "https://www.instagram.com/chiletedevpath/",
   },
   {
     name: "TikTok",
     label: "Contenido corto",
+    description: "Piezas breves para aprender y seguir el proceso.",
     href: "https://www.tiktok.com/@chiletedevpath",
   },
   {
     name: "Facebook",
     label: "Comunidad",
+    description: "Presencia social de Chilete DevPath.",
     href: "https://web.facebook.com/chiletedevpath",
   },
 ];
