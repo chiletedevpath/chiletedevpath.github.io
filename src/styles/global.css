@@ -5,21 +5,21 @@
 }
 
 :root {
-  --color-fondo: #f7f4e8;
+  --color-fondo: #f4f7f6;
   --color-superficie: #ffffff;
-  --color-principal: #102b3c;
-  --color-texto: #18242b;
-  --color-texto-suave: #53636b;
-  --color-acento: #2f8f5b;
-  --color-progreso: #f5c542;
-  --color-camino: #f2d46b;
-  --color-agua: #62b6cb;
-  --color-cerro: #2d4059;
-  --color-raiz: #7c5a33;
+  --color-principal: #0b2433;
+  --color-texto: #16242b;
+  --color-texto-suave: #52646a;
+  --color-acento: #287a5a;
+  --color-progreso: #d7a928;
+  --color-camino: #c99a32;
+  --color-agua: #4c9aae;
+  --color-cerro: #1d3446;
+  --color-raiz: #6e5132;
   --color-alerta: #c9342d;
-  --color-borde: #d8cfbd;
-  --sombra-suave: 0 14px 30px rgba(16, 43, 60, 0.1);
-  --sombra-media: 0 20px 46px rgba(16, 43, 60, 0.16);
+  --color-borde: #d5ded9;
+  --sombra-suave: 0 14px 30px rgba(11, 36, 51, 0.1);
+  --sombra-media: 0 20px 46px rgba(11, 36, 51, 0.16);
   --fuente-base: "Inter", Arial, sans-serif;
   --fuente-titulos: "Space Grotesk", "Inter", Arial, sans-serif;
   --espacio-ancla: 112px;
@@ -796,6 +796,28 @@ main section {
   font-size: 0.94rem;
 }
 
+.ruta-pie {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.ruta-pie a,
+.contenido-item a,
+.recurso-card a {
+  color: var(--color-acento);
+  font-weight: 800;
+}
+
+.ruta-pie a:hover,
+.contenido-item a:hover,
+.recurso-card a:hover {
+  color: var(--color-principal);
+}
+
 .ruta-accion {
   margin-top: 28px;
   padding: 22px;
@@ -811,6 +833,43 @@ main section {
 .ruta-accion p {
   max-width: 720px;
   color: var(--color-texto-suave);
+}
+
+.contenido-ruta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.contenido-item {
+  min-height: 100%;
+  padding: 22px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: var(--sombra-suave);
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.contenido-item h3 {
+  color: var(--color-principal);
+  font-family: var(--fuente-titulos);
+  font-size: 1.08rem;
+}
+
+.contenido-item p {
+  color: var(--color-texto-suave);
+}
+
+.recurso-card small {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-acento);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 /* Paginas internas */
@@ -870,6 +929,83 @@ main section {
   box-shadow: var(--sombra-media);
   aspect-ratio: 1224 / 666;
   object-fit: cover;
+}
+
+.politicas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.politica-documento {
+  min-height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: var(--sombra-suave);
+}
+
+.politica-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-bottom: 1px solid rgba(213, 222, 217, 0.95);
+  background:
+    linear-gradient(135deg, rgba(11, 36, 51, 0.96), rgba(29, 52, 70, 0.96)),
+    var(--color-principal);
+  color: #ffffff;
+}
+
+.politica-encabezado img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #03131d;
+}
+
+.politica-encabezado span {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--color-progreso);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.politica-encabezado h3 {
+  font-family: var(--fuente-titulos);
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.politica-detalle {
+  display: grid;
+  gap: 0;
+  padding: 0;
+}
+
+.politica-detalle div {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 14px;
+  padding: 15px 18px;
+  border-bottom: 1px solid rgba(213, 222, 217, 0.8);
+}
+
+.politica-detalle dt {
+  color: var(--color-principal);
+  font-weight: 800;
+}
+
+.politica-detalle dd {
+  color: var(--color-texto-suave);
+}
+
+.politica-documento .boton {
+  margin: 18px;
 }
 
 /* Contacto */
@@ -1152,7 +1288,9 @@ main section {
   .tarjetas-3,
   .tarjetas-4,
   .ruta-etapas,
-  .redes {
+  .redes,
+  .contenido-ruta,
+  .politicas-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1252,6 +1390,11 @@ main section {
 
   .boton {
     text-align: center;
+  }
+
+  .politica-detalle div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 
   .red-social {

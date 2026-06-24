@@ -10,7 +10,7 @@ import { resources } from "../data/recursos.js";
       <SectionHeader
         eyebrow="Recursos"
         title="Material para aprender y practicar"
-        description="Recursos pensados para que la comunidad estudie, practique y revise conceptos de forma ordenada."
+        description="Recursos organizados por utilidad: practicar, resolver, consultar y publicar con criterio."
       />
     </div>
   </section>
@@ -19,10 +19,12 @@ import { resources } from "../data/recursos.js";
     <div class="contenedor">
       <div class="tarjetas tarjetas-4">
         {resources.map((resource) => (
-          <article class="tarjeta">
+          <article class="tarjeta recurso-card">
             <span class="estado">{resource.status}</span>
+            <small>{resource.type}</small>
             <h3>{resource.title}</h3>
             <p>{resource.description}</p>
+            <a href={resource.href} target="_blank" rel="noopener">Ver recurso</a>
           </article>
         ))}
       </div>

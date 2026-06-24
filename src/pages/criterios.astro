@@ -9,20 +9,43 @@ import { policies } from "../data/recursos.js";
     <div class="contenedor">
       <SectionHeader
         eyebrow="Criterios"
-        title="Publicar también requiere responsabilidad"
-        description="Chilete DevPath mantiene criterios sobre autoría, fuentes, privacidad, uso de IA, bienestar y publicación segura."
+        title="Publicar tambien requiere responsabilidad"
+        description="Chilete DevPath mantiene politicas con formato institucional para cuidar autoria, fuentes, privacidad, IA, bienestar y publicacion segura."
       />
     </div>
   </section>
 
   <section class="seccion">
     <div class="contenedor">
-      <div class="tarjetas tarjetas-4">
+      <div class="politicas-grid">
         {policies.map((policy) => (
-          <article class="tarjeta">
-            <h3>{policy.title}</h3>
-            <p>{policy.description}</p>
-            <a href={policy.href} target="_blank" rel="noopener">Leer documento</a>
+          <article class="politica-documento">
+            <header class="politica-encabezado">
+              <img src="/assets/img/marca-simbolo-nav.png" width="512" height="512" alt="" />
+              <div>
+                <span>{policy.code}</span>
+                <h3>{policy.title}</h3>
+              </div>
+            </header>
+            <dl class="politica-detalle">
+              <div>
+                <dt>Objetivo</dt>
+                <dd>{policy.objective}</dd>
+              </div>
+              <div>
+                <dt>Alcance</dt>
+                <dd>{policy.scope}</dd>
+              </div>
+              <div>
+                <dt>Responsable</dt>
+                <dd>{policy.owner}</dd>
+              </div>
+              <div>
+                <dt>Version</dt>
+                <dd>{policy.version} - {policy.status}</dd>
+              </div>
+            </dl>
+            <a class="boton boton-principal" href={policy.href} target="_blank" rel="noopener">Abrir politica</a>
           </article>
         ))}
       </div>

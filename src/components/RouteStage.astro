@@ -10,5 +10,8 @@ const { stage } = Astro.props;
     {stage.topics.map((topic) => <li>{topic}</li>)}
   </ol>
   <p class="ruta-resultado">Resultado: {stage.result}</p>
-  <span class="estado estado-etapa">{stage.status}</span>
+  <div class="ruta-pie">
+    <span class="estado estado-etapa">{stage.status}</span>
+    <a href={stage.href} target="_blank" rel="noopener">{stage.action}</a>
+  </div>
 </article>
