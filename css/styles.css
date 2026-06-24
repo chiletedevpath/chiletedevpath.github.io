@@ -5,15 +5,17 @@
 }
 
 :root {
-  --color-fondo: #f8fafc;
+  --color-fondo: #f7f3ea;
   --color-superficie: #ffffff;
-  --color-principal: #0f172a;
-  --color-texto: #111827;
-  --color-texto-suave: #475569;
-  --color-acento: #2563eb;
-  --color-progreso: #84cc16;
-  --color-borde: #cbd5e1;
-  --sombra-suave: 0 14px 30px rgba(15, 23, 42, 0.08);
+  --color-principal: #102820;
+  --color-texto: #18251f;
+  --color-texto-suave: #52645a;
+  --color-acento: #6f9b7a;
+  --color-progreso: #e6d39a;
+  --color-camino: #f1dd9b;
+  --color-raiz: #7a5c3d;
+  --color-borde: #d8cfbd;
+  --sombra-suave: 0 14px 30px rgba(16, 40, 32, 0.1);
 }
 
 html {
@@ -160,8 +162,8 @@ img {
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(115deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.84)),
-    linear-gradient(135deg, rgba(37, 99, 235, 0.22), rgba(132, 204, 22, 0.12)),
+    linear-gradient(115deg, rgba(16, 40, 32, 0.96), rgba(16, 40, 32, 0.84)),
+    linear-gradient(135deg, rgba(111, 155, 122, 0.28), rgba(241, 221, 155, 0.2)),
     var(--color-principal);
   padding: 104px 0;
 }
@@ -184,9 +186,24 @@ img {
   bottom: -34%;
   width: 46%;
   height: 78%;
-  border-right: 34px solid rgba(240, 220, 151, 0.36);
+  border-right: 34px solid rgba(241, 221, 155, 0.46);
   border-radius: 0 100% 100% 0;
   transform: rotate(-18deg);
+}
+
+.hero-texto {
+  position: relative;
+}
+
+.hero-texto::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -38px;
+  width: min(420px, 80%);
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-raiz), var(--color-camino), var(--color-acento));
 }
 
 .hero-contenido {
@@ -241,9 +258,21 @@ img {
 
 .identidad-marca div {
   padding: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(241, 221, 155, 0.24);
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.08);
+}
+
+.identidad-marca div:first-child {
+  border-color: rgba(122, 92, 61, 0.65);
+}
+
+.identidad-marca div:nth-child(2) {
+  border-color: rgba(241, 221, 155, 0.75);
+}
+
+.identidad-marca div:nth-child(3) {
+  border-color: rgba(111, 155, 122, 0.75);
 }
 
 .identidad-marca strong {
@@ -381,7 +410,7 @@ img {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background-color: var(--color-progreso);
+  background-color: var(--color-camino);
   color: var(--color-principal);
   font-size: 0.85rem;
   font-weight: 700;
