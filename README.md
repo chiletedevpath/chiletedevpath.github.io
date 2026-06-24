@@ -40,6 +40,12 @@ Proyecto en construcción.
 
 La primera versión se trabaja como web estática antes de evaluar una migración futura a React o Vite.
 
+## Versión actual
+
+`V1.0 | Camino inicial`
+
+Esta versión representa la primera publicación de la web oficial de Chilete DevPath como marca personal, ruta de aprendizaje y base de comunidad.
+
 ## Alcance actual
 
 - Página de inicio de una sola vista.

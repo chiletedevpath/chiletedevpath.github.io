@@ -650,9 +650,25 @@ img {
   text-align: center;
 }
 
-.pie p {
+.pie-contenido {
   width: min(1120px, 90%);
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.version-marca {
+  display: inline-flex;
+  padding: 6px 10px;
+  border: 1px solid rgba(245, 197, 66, 0.34);
+  border-radius: 999px;
+  color: var(--color-progreso);
+  background-color: rgba(245, 197, 66, 0.08);
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 @keyframes aparecer-suave {
