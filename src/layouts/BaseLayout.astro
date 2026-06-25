@@ -29,7 +29,14 @@ const canonicalUrl = new URL(Astro.url.pathname, site.url).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={`${site.url}/assets/img/marca-banner-principal.png`} />
-    <meta name="theme-color" content="#102b3c" />
+    <meta name="theme-color" content="#f5f7f5" />
+    <script is:inline>
+      (() => {
+        const temaGuardado = localStorage.getItem("cdp-theme");
+        const temaSistema = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = temaGuardado || temaSistema;
+      })();
+    </script>
     <title>{title}</title>
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="/assets/img/marca-simbolo-nav.png" />

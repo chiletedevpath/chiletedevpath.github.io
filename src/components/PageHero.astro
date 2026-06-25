@@ -1,4 +1,6 @@
 ---
+import SectionVisual from "./SectionVisual.astro";
+
 const {
   eyebrow,
   title,
@@ -17,8 +19,11 @@ const {
       {description && <p class="seccion-descripcion">{description}</p>}
     </div>
     <div class="page-hero-visual" aria-label={visualTitle}>
-      <span>{visualTitle}</span>
-      <strong>{visualText}</strong>
+      <SectionVisual variant={variant} title={visualTitle} />
+      <div class="page-hero-leyenda">
+        <span>{visualTitle}</span>
+        <strong>{visualText}</strong>
+      </div>
     </div>
   </div>
 </section>

@@ -198,10 +198,54 @@ main section {
   cursor: pointer;
 }
 
+.nav-acciones {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  order: 3;
+}
+
+.tema-boton {
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid color-mix(in srgb, var(--color-borde) 82%, var(--color-principal));
+  border-radius: 999px;
+  background-color: color-mix(in srgb, var(--color-superficie) 92%, transparent);
+  color: var(--color-principal);
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tema-boton:hover {
+  border-color: var(--color-acento);
+  background-color: color-mix(in srgb, var(--color-progreso) 18%, var(--color-superficie));
+  transform: translateY(-1px);
+}
+
+.tema-icono {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-principal);
+  color: var(--color-superficie);
+  display: grid;
+  place-items: center;
+  font-size: 0.82rem;
+}
+
 .menu {
   display: flex;
   gap: 8px;
   list-style: none;
+  order: 2;
 }
 
 .menu a {
@@ -1037,6 +1081,8 @@ main section {
 
 .page-hero-visual,
 .media-placeholder {
+  position: relative;
+  overflow: hidden;
   min-height: 260px;
   padding: 24px;
   border: 1px solid color-mix(in srgb, var(--color-borde) 80%, var(--color-acento));
@@ -1051,6 +1097,96 @@ main section {
   flex-direction: column;
   justify-content: flex-end;
   gap: 8px;
+}
+
+.page-hero-visual {
+  padding: 0;
+  isolation: isolate;
+}
+
+.section-visual {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.section-visual svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.visual-fondo {
+  fill: rgba(255, 255, 255, 0.045);
+}
+
+.visual-malla,
+.visual-conexion {
+  fill: none;
+  stroke: rgba(238, 247, 248, 0.18);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.visual-camino {
+  fill: none;
+  stroke: var(--color-progreso);
+  stroke-linecap: round;
+  stroke-width: 11;
+  opacity: 0.88;
+  animation: pulso-camino 4.8s ease-in-out infinite;
+}
+
+.visual-raiz,
+.visual-escudo,
+.visual-check,
+.visual-card path,
+.visual-persona path {
+  fill: none;
+  stroke: color-mix(in srgb, var(--color-agua) 72%, #ffffff);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5;
+}
+
+.visual-nodo circle,
+.visual-origen {
+  fill: var(--color-progreso);
+  stroke: rgba(255, 255, 255, 0.72);
+  stroke-width: 3;
+}
+
+.visual-nodo rect,
+.visual-card rect,
+.visual-chip {
+  fill: rgba(255, 255, 255, 0.09);
+  stroke: rgba(255, 255, 255, 0.28);
+  stroke-width: 2;
+}
+
+.visual-persona circle {
+  fill: rgba(255, 255, 255, 0.1);
+  stroke: var(--color-progreso);
+  stroke-width: 4;
+}
+
+.visual-raiz-grande {
+  stroke: color-mix(in srgb, var(--color-progreso) 72%, var(--color-agua));
+}
+
+.page-hero-leyenda {
+  position: relative;
+  z-index: 1;
+  min-height: 260px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
+  background:
+    linear-gradient(180deg, transparent 40%, rgba(4, 17, 26, 0.54)),
+    linear-gradient(90deg, rgba(4, 17, 26, 0.34), transparent 58%);
 }
 
 .page-hero-visual span,
@@ -1091,6 +1227,18 @@ main section {
 .page-hero-criterios .page-hero-visual {
   background:
     linear-gradient(135deg, rgba(10, 38, 54, 0.98), rgba(185, 56, 50, 0.58)),
+    var(--color-principal);
+}
+
+.page-hero-comunidad .page-hero-visual {
+  background:
+    linear-gradient(135deg, rgba(10, 38, 54, 0.98), rgba(43, 122, 91, 0.66)),
+    var(--color-principal);
+}
+
+.page-hero-sobre .page-hero-visual {
+  background:
+    linear-gradient(135deg, rgba(10, 38, 54, 0.98), rgba(112, 83, 52, 0.68)),
     var(--color-principal);
 }
 
@@ -1415,6 +1563,19 @@ main section {
   }
 }
 
+@keyframes pulso-camino {
+  0%,
+  100% {
+    opacity: 0.72;
+    stroke-width: 10;
+  }
+
+  50% {
+    opacity: 1;
+    stroke-width: 13;
+  }
+}
+
 .js-activo .revelar {
   opacity: 0;
   transform: translateY(26px);
@@ -1539,9 +1700,18 @@ main section {
     flex-direction: column;
   }
 
+  .nav-acciones {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .tema-boton {
+    flex: 1;
+    justify-content: center;
+  }
+
   .menu-boton {
     display: inline-block;
-    align-self: flex-end;
   }
 
   .menu {
@@ -1551,7 +1721,7 @@ main section {
     padding: 14px;
     border: 1px solid var(--color-borde);
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: var(--color-superficie);
   }
 
   .menu.menu-abierto {

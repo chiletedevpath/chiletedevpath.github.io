@@ -4,6 +4,70 @@ if (typeof document !== "undefined") {
   const anio = document.querySelector("#anio");
   const encabezado = document.querySelector(".encabezado");
   const enlacesMenu = document.querySelectorAll(".menu a[href^='#']");
+  const botonTema = document.querySelector("[data-theme-toggle]");
+  const metaThemeColor = document.querySelector("meta[name='theme-color']");
+  const preferenciaOscura = window.matchMedia("(prefers-color-scheme: dark)");
+
+  const obtenerTemaInicial = () => {
+    const temaGuardado = localStorage.getItem("cdp-theme");
+
+    if (temaGuardado === "dark" || temaGuardado === "light") {
+      return temaGuardado;
+    }
+
+    return preferenciaOscura.matches ? "dark" : "light";
+  };
+
+  const actualizarBotonTema = (tema) => {
+    if (!botonTema) {
+      return;
+    }
+
+    const icono = botonTema.querySelector(".tema-icono");
+    const texto = botonTema.querySelector(".tema-texto");
+    const esOscuro = tema === "dark";
+
+    botonTema.setAttribute("aria-label", esOscuro ? "Cambiar a modo dia" : "Cambiar a modo noche");
+
+    if (icono) {
+      icono.textContent = esOscuro ? "☀" : "☾";
+    }
+
+    if (texto) {
+      texto.textContent = esOscuro ? "Dia" : "Noche";
+    }
+  };
+
+  const aplicarTema = (tema, guardar = true) => {
+    document.documentElement.dataset.theme = tema;
+
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", tema === "dark" ? "#07151f" : "#f5f7f5");
+    }
+
+    actualizarBotonTema(tema);
+
+    if (guardar) {
+      localStorage.setItem("cdp-theme", tema);
+    }
+  };
+
+  aplicarTema(obtenerTemaInicial(), false);
+
+  if (botonTema) {
+    botonTema.addEventListener("click", () => {
+      const temaActual = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+      aplicarTema(temaActual === "dark" ? "light" : "dark");
+    });
+  }
+
+  preferenciaOscura.addEventListener("change", (evento) => {
+    const temaGuardado = localStorage.getItem("cdp-theme");
+
+    if (!temaGuardado) {
+      aplicarTema(evento.matches ? "dark" : "light", false);
+    }
+  });
 
   if (anio) {
     anio.textContent = new Date().getFullYear();

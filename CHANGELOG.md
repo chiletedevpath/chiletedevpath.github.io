@@ -2,6 +2,25 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V3.0 | Sistema visual y tema adaptable
+
+- Fecha de cierre: 24/06/2026
+- Estado: cerrada y publicada
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Incorporacion de modo dia/noche con preferencia persistente en el navegador.
+- Creacion de visuales SVG propios para representar ruta, proyectos, recursos, criterios, comunidad y origen.
+- Reemplazo de placeholders visuales genericos por un sistema grafico reutilizable.
+- Ajuste del header para incluir control de tema sin perder navegacion responsive.
+- Actualizacion de version visible, README y metadatos tecnicos a V3.0.
+- Validacion de que la web siga sin usar logos institucionales, datos sensibles o referencias a proyectos restringidos.
+
+### Criterio de cierre
+
+La V3.0 se considera cerrada porque la web deja de depender de imagenes pendientes o generadas por IA para explicar la marca. Chilete DevPath queda con un sistema visual propio, adaptable y preparado para crecer hacia interactividad avanzada.
+
 ## V2.4 | Experiencia educativa y marca
 
 - Fecha de cierre: 24/06/2026

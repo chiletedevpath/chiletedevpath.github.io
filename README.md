@@ -14,13 +14,13 @@ La web funciona como punto de entrada mas claro que un repositorio para personas
 
 ## Version actual
 
-`V2.4 | Experiencia educativa y marca`
+`V3.0 | Sistema visual y tema adaptable`
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
 - Sitio: https://chiletedevpath.github.io/
 
-Esta version reduce repeticion, mejora la jerarquia visual, diferencia heroes internos y prepara espacios para fotografias y portadas futuras sin usar imagenes pendientes.
+Esta version consolida la identidad visual de Chilete DevPath con ilustraciones SVG propias, modo dia/noche y una navegacion mas preparada para evolucionar como plataforma de aprendizaje.
 
 ## Tecnologias
 
@@ -28,6 +28,7 @@ Esta version reduce repeticion, mejora la jerarquia visual, diferencia heroes in
 - HTML
 - CSS
 - JavaScript
+- SVG propio
 - Google Fonts
 - GitHub Pages
 - GitHub Actions
@@ -54,19 +55,20 @@ chiletedevpath-web/
 `-- CHANGELOG.md
 ```
 
-## Alcance de V2.4
+## Alcance de V3.0
 
-- Inicio orientado a aprender, practicar y revisar evidencia.
-- Heroes internos diferenciados para Ruta, Proyectos, Recursos, Criterios, Comunidad y Sobre.
-- Espacios visuales reservados para fotografias y portadas futuras.
-- Tarjetas de proyectos con franja visual para banners propios.
-- Textos globales corregidos y version visible actualizada.
-- Validacion responsive en movil, tablet, escritorio y pantalla amplia.
+- Sistema de tema dia/noche con preferencia guardada en el navegador.
+- Visuales SVG propios para secciones internas, sin depender de imagenes generadas por IA.
+- Heroes internos con identidad de ruta, proyectos, recursos, criterios, comunidad y origen.
+- Navegacion preparada para escritorio y movil con control de tema visible.
+- Version visible, metadata y paquete actualizados a V3.0.
+- Base visual lista para evolucionar hacia interactividad avanzada sin romper la arquitectura actual.
 
 ## Decisiones de diseno
 
 - Identidad visual inspirada en Chilete, Cajamarca, sin usar simbolos institucionales como marca propia.
 - Paleta basada en azul profundo, verde tecnico, camino dorado y acentos sobrios.
+- Paleta preparada para modo claro y modo oscuro.
 - Ruta presentada como avance progresivo, con practica y evidencia esperada.
 - Navegacion pensada para comunidad, no solo para mostrar repositorios.
 - Separacion entre aprendizaje, evidencia academica, portafolio futuro y criterios de publicacion segura.
