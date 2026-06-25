@@ -14,7 +14,7 @@ La web funciona como punto de entrada mas claro que un repositorio para personas
 
 ## Version actual
 
-`V3.1 | Publicacion segura y PWA base`
+`V3.1`
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada

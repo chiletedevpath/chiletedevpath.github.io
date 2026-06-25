@@ -2,7 +2,7 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
-## V3.1 | Publicacion segura y PWA base
+## V3.1
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
