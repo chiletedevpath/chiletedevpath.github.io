@@ -8,22 +8,25 @@ const {
   variant = "ruta",
   visualTitle = "Espacio visual reservado",
   visualText = "Aqui ira una imagen propia de Chilete DevPath.",
+  showVisual = true,
 } = Astro.props;
 ---
 
-<section class={`seccion page-hero page-hero-${variant}`}>
+<section class:list={["seccion", "page-hero", `page-hero-${variant}`, !showVisual && "page-hero-sin-visual"]}>
   <div class="contenedor page-hero-grid">
     <div class="page-hero-texto">
       {eyebrow && <p class="etiqueta">{eyebrow}</p>}
       <h1>{title}</h1>
       {description && <p class="seccion-descripcion">{description}</p>}
     </div>
-    <div class="page-hero-visual" aria-label={visualTitle}>
-      <SectionVisual variant={variant} title={visualTitle} />
-      <div class="page-hero-leyenda">
-        <span>{visualTitle}</span>
-        <strong>{visualText}</strong>
+    {showVisual && (
+      <div class="page-hero-visual" aria-label={visualTitle}>
+        <SectionVisual variant={variant} title={visualTitle} />
+        <div class="page-hero-leyenda">
+          <span>{visualTitle}</span>
+          <strong>{visualText}</strong>
+        </div>
       </div>
-    </div>
+    )}
   </div>
 </section>

@@ -62,7 +62,7 @@ export const routeStages = [
       },
       {
         label: "Git, GitHub y documentacion tecnica",
-        href: "https://github.com/chiletedevpath/aprendizaje",
+        href: "https://github.com/chiletedevpath/chiletedevpath/tree/main/docs",
       },
     ],
     result:
@@ -171,12 +171,52 @@ export const learningSections = [
 ];
 
 export const techStack = [
-  { name: "HTML", label: "HTML", tone: "markup" },
-  { name: "CSS", label: "CSS", tone: "style" },
-  { name: "JavaScript", label: "JS", tone: "script" },
-  { name: "PHP", label: "PHP", tone: "server" },
-  { name: "Java", label: "Java", tone: "java" },
-  { name: "SQL", label: "SQL", tone: "data" },
-  { name: "Spring Boot", label: "Spring", tone: "backend" },
-  { name: "Astro", label: "Astro", tone: "web" },
+  {
+    name: "HTML",
+    tone: "markup",
+    description: "Estructura semantica del contenido y base de accesibilidad.",
+    href: "https://github.com/chiletedevpath/aprendizaje/tree/main/07-desarrollo-web",
+  },
+  {
+    name: "CSS",
+    tone: "style",
+    description: "Layout responsive, jerarquia visual y sistema de temas.",
+    href: "https://github.com/chiletedevpath/aprendizaje/tree/main/07-desarrollo-web",
+  },
+  {
+    name: "JavaScript",
+    tone: "script",
+    description: "Interaccion, asincronia inicial y comportamiento en navegador.",
+    href: "https://github.com/chiletedevpath/aprendizaje/tree/main/07-desarrollo-web",
+  },
+  {
+    name: "PHP",
+    tone: "server",
+    description: "Formularios, ciclos, arreglos y procesamiento web basico.",
+    href: "https://github.com/chiletedevpath/aprendizaje/tree/main/07-desarrollo-web/php",
+  },
+  {
+    name: "Java",
+    tone: "java",
+    description: "POO, estructuras, algoritmos, patrones y backend academico.",
+    href: "https://github.com/chiletedevpath/aprendizaje/tree/main/03-poo",
+  },
+  {
+    name: "SQL",
+    tone: "data",
+    description: "Modelado, consultas y criterio de datos seguros.",
+    href: "https://github.com/chiletedevpath/aprendizaje/tree/main/06-bases-de-datos",
+  },
+  {
+    name: "Spring Boot",
+    tone: "backend",
+    description: "APIs, persistencia, seguridad, pruebas e integraciones.",
+    href: "https://github.com/chiletedevpath/aprendizaje/tree/main/09-backend",
+  },
+  {
+    name: "Astro",
+    tone: "web",
+    description: "Base estatica de la web publica de Chilete DevPath.",
+    href: "https://github.com/chiletedevpath/chiletedevpath.github.io",
+  },
 ];

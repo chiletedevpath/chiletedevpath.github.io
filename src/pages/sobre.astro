@@ -9,38 +9,19 @@ import PageHero from "../components/PageHero.astro";
     title="Una marca personal con origen, camino y construccion"
     description="Chilete DevPath ordena mi aprendizaje, evidencia mi evolucion tecnica y prepara recursos utiles para otros estudiantes."
     variant="sobre"
-    visualTitle="Origen y camino"
-    visualText="Raices personales conectadas con aprendizaje tecnico y comunidad."
+    showVisual={false}
   />
 
   <section class="seccion">
-    <div class="contenedor sobre-identidad">
-      <div class="sobre-columna sobre-columna-izquierda">
-        <p>
-          Soy Adrian Pisco, estudiante de Ingenieria de Sistemas e Informatica.
-          Chilete DevPath representa mi ruta como futuro desarrollador Full Stack
-          y futuro ingeniero de sistemas.
-        </p>
-        <p>
-          La marca toma como punto de partida mis raices en Chilete, Cajamarca, y
-          las conecta con aprendizaje tecnico, practica constante y comunidad.
-        </p>
-      </div>
-
-      <div class="sobre-silueta" aria-label="Espacio preparado para fotografia profesional de Adrian Pisco de cuerpo completo">
+    <div class="contenedor sobre-aura">
+      <p class="aura-texto aura-uno">Soy Adrian Pisco, estudiante de Ingenieria de Sistemas e Informatica.</p>
+      <p class="aura-texto aura-dos">Chilete DevPath representa mi ruta como futuro desarrollador Full Stack.</p>
+      <div class="sobre-persona-pendiente" aria-label="Espacio pendiente para fotografia profesional de cuerpo completo">
         <span>Foto profesional pendiente</span>
       </div>
-
-      <div class="sobre-columna sobre-columna-derecha">
-        <p>
-          Este sitio organiza lo que antes estaba disperso: aprendizaje, proyectos,
-          recursos, politicas y canales de contacto bajo un ecosistema navegable.
-        </p>
-        <p>
-          La meta es que cada avance pueda convertirse en evidencia tecnica,
-          material util para otros estudiantes y criterio profesional verificable.
-        </p>
-      </div>
+      <p class="aura-texto aura-tres">Tambien expresa mi camino como futuro ingeniero de sistemas.</p>
+      <p class="aura-texto aura-cuatro">Mis raices en Chilete se conectan con aprendizaje tecnico, practica y comunidad.</p>
+      <p class="aura-texto aura-cinco">Cada avance busca convertirse en evidencia real, recurso util y criterio profesional.</p>
     </div>
   </section>
 
@@ -55,10 +36,9 @@ import PageHero from "../components/PageHero.astro";
           contenido util para la comunidad.
         </p>
       </div>
-      <div class="media-placeholder media-placeholder-foto">
-        <span>Imagen pendiente</span>
-        <strong>Espacio para una fotografia real trabajando o presentando Chilete DevPath.</strong>
-      </div>
+      <p class="bloque-nota">
+        La fotografia profesional se incorporara cuando exista una imagen real, sobria y coherente con la marca.
+      </p>
     </div>
   </section>
 </BaseLayout>

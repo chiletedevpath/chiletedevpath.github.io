@@ -2,6 +2,24 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V3.2
+
+- Fecha de cierre: 25/06/2026
+- Estado: cerrada y publicada
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Eliminacion de la seccion duplicada de entradas directas en la pagina Ruta.
+- Conversion de los temas de la ruta en accesos directos a modulos reales del ecosistema.
+- Correccion del enlace de Git, GitHub y documentacion tecnica hacia el repositorio de marca y documentos.
+- Mejora de la seccion de tecnologias con iconos SVG locales y descripcion tecnica breve.
+- Ajuste de la pagina Sobre para retirar el visual generico y preparar una composicion tipo aura alrededor de una futura fotografia profesional.
+
+### Criterio de cierre
+
+La V3.2 se considera cerrada porque reduce redundancia, mejora navegacion real hacia GitHub y deja la identidad personal mejor preparada sin usar fotografias pendientes ni imagenes generadas.
+
 ## V3.1
 
 - Fecha de cierre: 24/06/2026

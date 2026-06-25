@@ -3,7 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import RouteStage from "../components/RouteStage.astro";
-import { learningSections, routeStages, techStack } from "../data/ruta.js";
+import TechIcon from "../components/TechIcon.astro";
+import { routeStages, techStack } from "../data/ruta.js";
 ---
 
 <BaseLayout title="Ruta de aprendizaje | Chilete DevPath">
@@ -41,34 +42,17 @@ import { learningSections, routeStages, techStack } from "../data/ruta.js";
         {techStack.map((tech) => (
           <a
             class={`tech-badge tech-${tech.tone}`}
-            href="https://github.com/chiletedevpath/aprendizaje"
+            href={tech.href}
             target="_blank"
             rel="noopener"
             aria-label={`Ver aprendizaje relacionado con ${tech.name}`}
           >
-            <span>{tech.label}</span>
-            <strong>{tech.name}</strong>
+            <span class="tech-icono"><TechIcon name={tech.name} /></span>
+            <div>
+              <strong>{tech.name}</strong>
+              <p>{tech.description}</p>
+            </div>
           </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="seccion seccion-clara">
-    <div class="contenedor">
-      <SectionHeader
-        eyebrow="Contenido conectado"
-        title="Entradas directas a la ruta"
-        description="Cada bloque indica que esta disponible, que sigue creciendo y que requiere revision antes de publicarse como material para comunidad."
-      />
-      <div class="contenido-ruta">
-        {learningSections.map((item) => (
-          <article class="contenido-item">
-            <span class="estado">{item.status}</span>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <a href={item.href} target="_blank" rel="noopener">Abrir seccion</a>
-          </article>
         ))}
       </div>
     </div>
