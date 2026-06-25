@@ -2,9 +2,9 @@ export const site = {
   name: "Chilete DevPath",
   author: "Adrian Pisco",
   url: "https://chiletedevpath.github.io",
-  version: "V3.4",
+  version: "V3.5",
   description:
-    "Chilete DevPath es la marca personal de Adrian Pisco para documentar aprendizaje, proyectos, criterio tecnico y comunidad.",
+    "Chilete DevPath es la marca personal de Adrian Pisco para documentar aprendizaje, proyectos, criterio técnico y comunidad.",
 };
 
 export const navItems = [
@@ -21,7 +21,7 @@ export const socials = [
   {
     name: "GitHub",
     label: "Repositorio principal",
-    description: "Codigo, proyectos y evolucion tecnica del ecosistema.",
+    description: "Código, proyectos y evolución técnica del ecosistema.",
     href: "https://github.com/chiletedevpath",
     primary: true,
   },

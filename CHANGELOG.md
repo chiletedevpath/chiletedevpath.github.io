@@ -2,6 +2,25 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V3.5
+
+- Fecha de cierre: 25/06/2026
+- Estado: en revisión
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Asignación de fotografías por intención de sección: Inicio, Sobre y Proyectos.
+- Integración de imagen hero realista en Inicio con espacio visual para el mensaje principal.
+- Reemplazo del retrato anterior de Sobre por una imagen principal más coherente con rostro, cuerpo y proporciones.
+- Incorporación de imagen de proceso en Sobre para reforzar práctica, documentación y aprendizaje real.
+- Reemplazo del visual de Proyectos por una imagen de evidencia técnica menos artificial.
+- Exclusión de imagen conceptual de origen para evitar presentarla como fotografía documental de Chilete.
+
+### Criterio de cierre
+
+La V3.5 se considera en revisión hasta validar que cada fotografía aporte a su sección sin parecer montaje, sin exponer datos sensibles y sin desplazar el sistema visual de Ruta, Recursos, Criterios y Comunidad.
+
 ## V3.4
 
 - Fecha de cierre: 25/06/2026
