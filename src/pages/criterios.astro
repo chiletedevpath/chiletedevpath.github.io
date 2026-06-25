@@ -1,19 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SectionHeader from "../components/SectionHeader.astro";
+import PageHero from "../components/PageHero.astro";
 import { policies } from "../data/recursos.js";
 ---
 
 <BaseLayout title="Criterios | Chilete DevPath">
-  <section class="seccion page-hero seccion-clara">
-    <div class="contenedor">
-      <SectionHeader
-        eyebrow="Criterios"
-        title="Publicar tambien requiere responsabilidad"
-        description="Chilete DevPath mantiene politicas con formato institucional para cuidar autoria, fuentes, privacidad, IA, bienestar y publicacion segura."
-      />
-    </div>
-  </section>
+  <PageHero
+    eyebrow="Criterios"
+    title="Aprender tambien implica publicar con responsabilidad"
+    description="Las politicas protegen autoria, fuentes, privacidad, bienestar, IA y seguridad antes de convertir contenido en material publico."
+    variant="criterios"
+    visualTitle="Gobierno de marca"
+    visualText="Aqui ira una imagen institucional de politicas DevPath."
+  />
 
   <section class="seccion">
     <div class="contenedor">

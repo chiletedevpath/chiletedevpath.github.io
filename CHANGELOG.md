@@ -2,6 +2,25 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V2.4 | Experiencia educativa y marca
+
+- Fecha de cierre: 24/06/2026
+- Estado: cerrada y publicada
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Rediseño del inicio para reducir repeticion y orientar al usuario hacia aprender, practicar y revisar evidencias.
+- Creacion de heroes internos diferenciados para Ruta, Proyectos, Recursos, Criterios, Comunidad y Sobre.
+- Incorporacion de espacios visuales reservados para fotografias y portadas futuras sin usar imagenes generadas todavia.
+- Mejora de tarjetas de proyectos con franja visual reservada para portadas propias.
+- Limpieza de textos globales con caracteres dañados y actualizacion de version visible.
+- Ajustes responsive para que los nuevos bloques funcionen en movil, tablet, escritorio y pantallas amplias.
+
+### Criterio de cierre
+
+La V2.4 se considera cerrada porque la web deja de sentirse como directorio y empieza a funcionar como experiencia de aprendizaje y marca, manteniendo criterios legales y editoriales.
+
 ## V2.3 | Proyectos academicos en revision
 
 - Fecha de cierre: 24/06/2026

@@ -1,0 +1,24 @@
+---
+const {
+  eyebrow,
+  title,
+  description,
+  variant = "ruta",
+  visualTitle = "Espacio visual reservado",
+  visualText = "Aqui ira una imagen propia de Chilete DevPath.",
+} = Astro.props;
+---
+
+<section class={`seccion page-hero page-hero-${variant}`}>
+  <div class="contenedor page-hero-grid">
+    <div class="page-hero-texto">
+      {eyebrow && <p class="etiqueta">{eyebrow}</p>}
+      <h1>{title}</h1>
+      {description && <p class="seccion-descripcion">{description}</p>}
+    </div>
+    <div class="page-hero-visual" aria-label={visualTitle}>
+      <span>{visualTitle}</span>
+      <strong>{visualText}</strong>
+    </div>
+  </div>
+</section>

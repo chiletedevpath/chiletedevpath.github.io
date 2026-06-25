@@ -1,6 +1,6 @@
 # Chilete DevPath Web
 
-Web oficial de Chilete DevPath, marca personal de Adrián Pisco para documentar aprendizaje, proyectos, criterio técnico y comunidad.
+Web oficial de Chilete DevPath, marca personal de Adrian Pisco para documentar aprendizaje, proyectos, criterio tecnico y comunidad.
 
 Sitio publicado:
 
@@ -8,21 +8,21 @@ https://chiletedevpath.github.io/
 
 ## Objetivo
 
-Presentar Chilete DevPath como un ecosistema navegable: una marca personal con origen, ruta de aprendizaje, proyectos, recursos, criterios de publicación responsable y canales de comunidad.
+Presentar Chilete DevPath como una experiencia navegable de aprendizaje: una marca personal con origen, ruta tecnica, proyectos con contexto, recursos, criterios de publicacion responsable y canales de comunidad.
 
-La web funciona como base pública de la marca y como punto de entrada más claro que un repositorio para personas que quieran conocer el avance, estudiar contenido o seguir el proyecto.
+La web funciona como punto de entrada mas claro que un repositorio para personas que quieran aprender, revisar avance real o seguir el proyecto.
 
-## Versión actual
+## Version actual
 
-`V2.2 | Ruta interactiva y contenido conectado`
+`V2.4 | Experiencia educativa y marca`
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
 - Sitio: https://chiletedevpath.github.io/
 
-Esta versión conecta la ruta de aprendizaje con contenido real del ecosistema, mejora la organización de recursos y presenta las políticas con formato visual institucional.
+Esta version reduce repeticion, mejora la jerarquia visual, diferencia heroes internos y prepara espacios para fotografias y portadas futuras sin usar imagenes pendientes.
 
-## Tecnologías
+## Tecnologias
 
 - Astro
 - HTML
@@ -54,37 +54,35 @@ chiletedevpath-web/
 `-- CHANGELOG.md
 ```
 
-## Alcance de V2.2
+## Alcance de V2.4
 
-- Ruta de aprendizaje conectada con secciones del repositorio `aprendizaje`.
-- Estados visibles para contenido disponible, en crecimiento, en revisión y en construcción.
-- Recursos organizados por utilidad: práctica guiada, práctica autónoma, consulta y criterio editorial.
-- Políticas presentadas como documentos visuales con encabezado de marca, objetivo, alcance, responsable, versión y estado.
-- Ajuste de paleta hacia una base más sobria y profesional.
-- Conservación de la identidad visual y arquitectura Astro ya establecidas.
+- Inicio orientado a aprender, practicar y revisar evidencia.
+- Heroes internos diferenciados para Ruta, Proyectos, Recursos, Criterios, Comunidad y Sobre.
+- Espacios visuales reservados para fotografias y portadas futuras.
+- Tarjetas de proyectos con franja visual para banners propios.
+- Textos globales corregidos y version visible actualizada.
+- Validacion responsive en movil, tablet, escritorio y pantalla amplia.
 
-## Decisiones de diseño
+## Decisiones de diseno
 
-- Identidad visual inspirada en Chilete, Cajamarca, sin usar símbolos institucionales como marca propia.
-- Paleta basada en tonos tierra, camino, agua, verde y azul oscuro.
-- Ruta presentada como avance progresivo, con propósito y evidencia esperada.
-- Navegación pensada para comunidad, no solo para mostrar repositorios.
-- Contenido redactado con nombres más públicos y atractivos que las carpetas internas del ecosistema.
-- Separación entre contenido publicado, contenido en construcción y criterios de publicación segura.
+- Identidad visual inspirada en Chilete, Cajamarca, sin usar simbolos institucionales como marca propia.
+- Paleta basada en azul profundo, verde tecnico, camino dorado y acentos sobrios.
+- Ruta presentada como avance progresivo, con practica y evidencia esperada.
+- Navegacion pensada para comunidad, no solo para mostrar repositorios.
+- Separacion entre aprendizaje, evidencia academica, portafolio futuro y criterios de publicacion segura.
 
-## Validación realizada
+## Validacion realizada
 
-- Instalación de dependencias con npm.
-- Ejecución de `npm audit`.
-- Ejecución de `npm run build`.
-- Generación de 7 páginas estáticas.
-- Revisión de estructura del proyecto.
-- Verificación de archivos ignorados para no publicar dependencias, caché ni compilados locales.
+- Ejecucion de `npm audit`.
+- Ejecucion de `npm run build`.
+- Generacion de 7 paginas estaticas.
+- Revision visual en movil, tablet, escritorio y pantalla amplia.
+- Verificacion de ausencia de desbordes horizontales en breakpoints principales.
 
 ## Criterio editorial
 
-El contenido debe mantenerse alineado con las políticas de Chilete DevPath: autoría clara, uso responsable de IA, publicación segura y bienestar en el aprendizaje técnico.
+El contenido debe mantenerse alineado con las politicas de Chilete DevPath: autoria clara, uso responsable de IA, publicacion segura y bienestar en el aprendizaje tecnico.
 
 ## Autor
 
-Adrián Pisco - Chilete DevPath.
+Adrian Pisco - Chilete DevPath.

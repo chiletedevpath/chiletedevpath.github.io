@@ -1,17 +1,27 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import SocialIcon from "../components/SocialIcon.astro";
 import { socials } from "../data/site.js";
 ---
 
 <BaseLayout title="Comunidad | Chilete DevPath">
+  <PageHero
+    eyebrow="Comunidad"
+    title="Aprender acompañado hace el camino mas sostenible"
+    description="Los canales de Chilete DevPath sirven para compartir avance, resolver dudas, mostrar practica y construir comunidad con criterio."
+    variant="comunidad"
+    visualTitle="Comunidad pendiente"
+    visualText="Aqui ira una imagen propia sobre comunidad y aprendizaje."
+  />
+
   <section class="seccion contacto">
     <div class="contenedor">
       <SectionHeader
-        eyebrow="Comunidad"
-        title="Sigamos conectados"
-        description="Revisa el avance, sigue el contenido y súmate a los canales donde Chilete DevPath seguirá creciendo."
+        eyebrow="Canales oficiales"
+        title="Sigue el avance por el canal que uses mejor"
+        description="GitHub conserva la evidencia tecnica. Las redes ayudan a compartir proceso, avances, ideas y comunidad."
       />
       <div class="redes" aria-label="Canales oficiales de Chilete DevPath">
         {socials.map((social) => (

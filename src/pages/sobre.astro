@@ -1,32 +1,31 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SectionHeader from "../components/SectionHeader.astro";
+import PageHero from "../components/PageHero.astro";
 ---
 
-<BaseLayout title="Sobre Chilete DevPath | Adrián Pisco">
-  <section class="seccion page-hero seccion-clara">
-    <div class="contenedor">
-      <SectionHeader
-        eyebrow="Sobre Chilete DevPath"
-        title="Una marca personal con origen, camino y construcción"
-        description="Chilete DevPath nace como una forma de ordenar mi aprendizaje, evidenciar mi evolución técnica y compartir recursos útiles para otros estudiantes."
-      />
-    </div>
-  </section>
+<BaseLayout title="Sobre Chilete DevPath | Adrian Pisco">
+  <PageHero
+    eyebrow="Sobre Chilete DevPath"
+    title="Una marca personal con origen, camino y construccion"
+    description="Chilete DevPath ordena mi aprendizaje, evidencia mi evolucion tecnica y prepara recursos utiles para otros estudiantes."
+    variant="sobre"
+    visualTitle="Foto pendiente"
+    visualText="Aqui ira una fotografia profesional propia de Adrian Pisco."
+  />
 
   <section class="seccion">
     <div class="contenedor contenido-texto">
       <p>
-        Soy Adrián Pisco, estudiante de Ingeniería de Sistemas e Informática. Chilete DevPath
+        Soy Adrian Pisco, estudiante de Ingenieria de Sistemas e Informatica. Chilete DevPath
         representa mi ruta como futuro desarrollador Full Stack y futuro ingeniero de sistemas.
       </p>
       <p>
-        La marca toma como punto de partida mis raíces en Chilete, Cajamarca, y las conecta con
-        aprendizaje técnico, práctica constante, proyectos documentados y comunidad.
+        La marca toma como punto de partida mis raices en Chilete, Cajamarca, y las conecta con
+        aprendizaje tecnico, practica constante, proyectos documentados y comunidad.
       </p>
       <p>
         Este sitio organiza lo que antes estaba disperso: aprendizaje, proyectos, recursos,
-        políticas y canales de contacto bajo un ecosistema navegable.
+        politicas y canales de contacto bajo un ecosistema navegable.
       </p>
     </div>
   </section>
@@ -37,18 +36,15 @@ import SectionHeader from "../components/SectionHeader.astro";
         <p class="etiqueta">Forma de trabajo</p>
         <h2>Aprender, practicar, ordenar y compartir</h2>
         <p>
-          Chilete DevPath no se construye como una vitrina vacía. Cada avance debe pasar por
-          práctica, documentación, criterio de publicación y revisión antes de convertirse en
-          contenido útil para la comunidad.
+          Chilete DevPath no se construye como una vitrina vacia. Cada avance debe pasar por
+          practica, documentacion, criterio de publicacion y revision antes de convertirse en
+          contenido util para la comunidad.
         </p>
       </div>
-      <img
-        src="/assets/img/adrian-pisco-workstation.png"
-        width="1224"
-        height="666"
-        alt="Adrián Pisco trabajando en contenido técnico de Chilete DevPath"
-        loading="lazy"
-      />
+      <div class="media-placeholder media-placeholder-foto">
+        <span>Imagen pendiente</span>
+        <strong>Espacio para una fotografia real trabajando o presentando Chilete DevPath.</strong>
+      </div>
     </div>
   </section>
 </BaseLayout>

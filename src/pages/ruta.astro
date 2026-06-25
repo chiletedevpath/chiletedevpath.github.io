@@ -1,20 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import RouteStage from "../components/RouteStage.astro";
 import { learningSections, routeStages } from "../data/ruta.js";
 ---
 
 <BaseLayout title="Ruta de aprendizaje | Chilete DevPath">
-  <section class="seccion page-hero seccion-clara">
-    <div class="contenedor">
-      <SectionHeader
-        eyebrow="Ruta de aprendizaje"
-        title="Aprender construyendo, paso a paso"
-        description="Esta pagina organiza el avance tecnico de Chilete DevPath por etapas, contenido disponible y criterios de publicacion."
-      />
-    </div>
-  </section>
+  <PageHero
+    eyebrow="Ruta de aprendizaje"
+    title="Empieza por fundamentos y avanza con practica real"
+    description="La ruta organiza que aprender, que practicar y que revisar antes de pasar al siguiente nivel."
+    variant="ruta"
+    visualTitle="Mapa de avance"
+    visualText="Aqui ira una grafica del camino Chilete DevPath."
+  />
 
   <section class="seccion">
     <div class="contenedor">

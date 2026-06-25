@@ -1,23 +1,28 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import { academicProjects, projectAreas } from "../data/proyectos.js";
 ---
 
 <BaseLayout title="Proyectos | Chilete DevPath">
-  <section class="seccion page-hero seccion-clara">
-    <div class="contenedor">
-      <SectionHeader
-        eyebrow="Proyectos"
-        title="Evidencia técnica con contexto"
-        description="Los proyectos se organizan según su función: aprendizaje, evidencia académica y futuro portafolio profesional."
-      />
-    </div>
-  </section>
+  <PageHero
+    eyebrow="Proyectos"
+    title="Evidencia tecnica sin confundir avance con portafolio"
+    description="Cada proyecto se muestra con estado, contexto y criterio de publicacion para proteger la marca y explicar el aprendizaje real."
+    variant="proyectos"
+    visualTitle="Portadas pendientes"
+    visualText="Aqui iran banners propios para cada proyecto aprobado."
+  />
 
   <section class="seccion">
     <div class="contenedor">
+      <SectionHeader
+        eyebrow="Mapa del ecosistema"
+        title="Primero se aprende, luego se evidencia, despues se selecciona"
+        description="La web diferencia contenido de aprendizaje, evidencia academica y futuros proyectos de portafolio para no mezclar etapas."
+      />
       <div class="tarjetas tarjetas-3">
         {projectAreas.map((project) => <ProjectCard project={project} />)}
       </div>
