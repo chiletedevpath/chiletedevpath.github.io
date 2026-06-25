@@ -27,6 +27,8 @@
   --tema-header-solido: rgba(255, 255, 255, 0.97);
   --tema-hero-uno: rgba(10, 38, 54, 0.96);
   --tema-hero-dos: rgba(24, 57, 75, 0.9);
+  --tema-seccion-oscura: #0a2636;
+  --tema-seccion-oscura-dos: #12384a;
 
   --color-fondo: var(--tema-fondo);
   --color-superficie: var(--tema-superficie);
@@ -41,6 +43,8 @@
   --color-raiz: var(--tema-raiz);
   --color-alerta: var(--tema-alerta);
   --color-borde: var(--tema-borde);
+  --color-seccion-oscura: var(--tema-seccion-oscura);
+  --color-seccion-oscura-dos: var(--tema-seccion-oscura-dos);
   --sombra-suave: var(--tema-sombra-suave);
   --sombra-media: var(--tema-sombra-media);
   --fuente-base: "Inter", Arial, sans-serif;
@@ -71,6 +75,8 @@
   --tema-header-solido: rgba(9, 28, 40, 0.97);
   --tema-hero-uno: rgba(7, 21, 31, 0.98);
   --tema-hero-dos: rgba(12, 45, 61, 0.92);
+  --tema-seccion-oscura: #06131d;
+  --tema-seccion-oscura-dos: #0c2d3d;
 }
 
 html {
@@ -1358,7 +1364,9 @@ main section {
 .contacto {
   position: relative;
   overflow: hidden;
-  background-color: var(--color-principal);
+  background:
+    linear-gradient(135deg, var(--color-seccion-oscura), var(--color-seccion-oscura-dos)),
+    #0a2636;
   color: #ffffff;
 }
 
@@ -1369,7 +1377,7 @@ main section {
   top: -42%;
   width: 48%;
   height: 120%;
-  border-left: 28px solid rgba(245, 197, 66, 0.18);
+  border-left: 28px solid color-mix(in srgb, var(--color-progreso) 24%, transparent);
   border-radius: 100% 0 0 100%;
   transform: rotate(18deg);
 }
@@ -1386,7 +1394,8 @@ main section {
 }
 
 .contacto .seccion-descripcion {
-  opacity: 0.84;
+  color: #dbeafe;
+  opacity: 0.9;
 }
 
 .contacto .boton-secundario {
@@ -1404,9 +1413,11 @@ main section {
 .red-social {
   min-height: 150px;
   padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.05)),
+    rgba(255, 255, 255, 0.06);
   color: #ffffff;
   display: grid;
   align-content: start;
@@ -1443,7 +1454,7 @@ main section {
 }
 
 .red-social small {
-  color: #dbeafe;
+  color: #d7e8ee;
   font-size: 0.9rem;
   line-height: 1.45;
 }
@@ -1451,7 +1462,9 @@ main section {
 .red-social:hover,
 .red-social-principal {
   border-color: var(--color-progreso);
-  background-color: rgba(245, 197, 66, 0.16);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-progreso) 20%, transparent), rgba(255, 255, 255, 0.07)),
+    rgba(255, 255, 255, 0.08);
   transform: translateY(-3px);
 }
 
