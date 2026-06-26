@@ -14,7 +14,6 @@ if (typeof document !== "undefined") {
   const enlacesMenu = document.querySelectorAll(".menu a[href^='#']");
   const panelesContacto = document.querySelectorAll("[data-contact-panel]");
   const correoContacto = document.querySelector("meta[name='cdp-email']")?.content ?? "";
-  const whatsappContacto = document.querySelector("meta[name='cdp-whatsapp']")?.content ?? "";
 
   if (anio) {
     anio.textContent = new Date().getFullYear();
@@ -123,16 +122,7 @@ if (typeof document !== "undefined") {
   };
 
   panelesContacto.forEach((panel) => {
-    const botonWhatsapp = panel.querySelector("[data-send-whatsapp]");
     const botonCorreo = panel.querySelector("[data-send-email]");
-
-    botonWhatsapp?.addEventListener("click", () => {
-      const mensaje = encodeURIComponent(construirMensaje(panel));
-      const url = whatsappContacto
-        ? `https://wa.me/${whatsappContacto}?text=${mensaje}`
-        : `https://wa.me/?text=${mensaje}`;
-      window.open(url, "_blank", "noopener");
-    });
 
     botonCorreo?.addEventListener("click", () => {
       const asunto = encodeURIComponent(panel.dataset.context || "Contacto Chilete DevPath");

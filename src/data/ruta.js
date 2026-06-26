@@ -2,14 +2,14 @@ export const routeStages = [
   {
     number: "01",
     title: "Base tecnica",
-    intent: "Comprender la logica antes del codigo",
+    intent: "Comprender la lógica antes del código",
     topics: [
       {
         label: "Fundamentos de programacion",
         href: "https://github.com/chiletedevpath/aprendizaje/tree/main/00-fundamentos",
       },
       {
-        label: "Pseudocodigo y pensamiento algoritmico",
+        label: "Pseudocódigo y pensamiento algorítmico",
         href: "https://github.com/chiletedevpath/aprendizaje/tree/main/01-pseudocodigo",
       },
       {
@@ -42,7 +42,7 @@ export const routeStages = [
       },
     ],
     result:
-      "Codigo mas ordenado, estructuras reutilizables y solucion de problemas con mejor diseno.",
+      "Código más ordenado, estructuras reutilizables y solución de problemas con mejor diseño.",
     status: "En crecimiento",
     href: "https://github.com/chiletedevpath/aprendizaje/tree/main/03-poo",
     action: "Ver avance",
@@ -50,7 +50,7 @@ export const routeStages = [
   {
     number: "03",
     title: "Web y datos",
-    intent: "Conectar datos, web y documentacion",
+    intent: "Conectar datos, web y documentación",
     topics: [
       {
         label: "Bases de datos",
@@ -61,7 +61,7 @@ export const routeStages = [
         href: "https://github.com/chiletedevpath/aprendizaje/tree/main/07-desarrollo-web",
       },
       {
-        label: "Git, GitHub y documentacion tecnica",
+        label: "Git, GitHub y documentación técnica",
         href: "https://github.com/chiletedevpath/chiletedevpath/tree/main/docs",
       },
     ],
@@ -94,8 +94,8 @@ export const routeStages = [
       },
     ],
     result:
-      "Proyectos con arquitectura inicial, criterios de publicacion y evidencia profesional.",
-    status: "En revision",
+      "Proyectos con arquitectura inicial, criterios de publicación y evidencia profesional.",
+    status: "En revisión",
     href: "https://github.com/chiletedevpath/aprendizaje/tree/main/08-patrones",
     action: "Ver patrones",
   },
@@ -109,15 +109,15 @@ export const learningSections = [
     href: "https://github.com/chiletedevpath/aprendizaje/tree/main/00-fundamentos",
   },
   {
-    title: "Pseudocodigo",
+    title: "Pseudocódigo",
     status: "Disponible",
-    description: "Ejercicios del curso de Principios de Algoritmos organizados para practicar logica.",
+    description: "Ejercicios del curso de Principios de Algoritmos organizados para practicar lógica.",
     href: "https://github.com/chiletedevpath/aprendizaje/tree/main/01-pseudocodigo",
   },
   {
     title: "Programacion basica",
     status: "Disponible",
-    description: "Practicas iniciales para traducir razonamiento a codigo ejecutable.",
+    description: "Prácticas iniciales para traducir razonamiento a código ejecutable.",
     href: "https://github.com/chiletedevpath/aprendizaje/tree/main/02-programacion-basica",
   },
   {
@@ -129,7 +129,7 @@ export const learningSections = [
   {
     title: "Estructuras de datos",
     status: "Disponible",
-    description: "Listas, tablas hash y grafos para organizar informacion con criterio.",
+    description: "Listas, tablas hash y grafos para organizar información con criterio.",
     href: "https://github.com/chiletedevpath/aprendizaje/tree/main/04-estructuras-datos",
   },
   {
@@ -141,7 +141,7 @@ export const learningSections = [
   {
     title: "Bases de datos",
     status: "Disponible",
-    description: "Modelado, SQL y criterios de publicacion segura de datos.",
+    description: "Modelado, SQL y criterios de publicación segura de datos.",
     href: "https://github.com/chiletedevpath/aprendizaje/tree/main/06-bases-de-datos",
   },
   {
@@ -158,14 +158,14 @@ export const learningSections = [
   },
   {
     title: "Backend",
-    status: "En revision segura",
+    status: "En revisión segura",
     description: "APIs, persistencia, seguridad, testing e integraciones con variables de entorno.",
     href: "https://github.com/chiletedevpath/aprendizaje/tree/main/09-backend",
   },
   {
     title: "Frontend moderno",
     status: "Reservado",
-    description: "Se activara cuando existan practicas reales revisadas y aprobadas.",
+    description: "Se activará cuando existan prácticas reales revisadas y aprobadas.",
     href: "https://github.com/chiletedevpath/aprendizaje/tree/main/10-frontend",
   },
 ];
@@ -192,7 +192,7 @@ export const techStack = [
   {
     name: "PHP",
     tone: "server",
-    description: "Formularios, ciclos, arreglos y procesamiento web basico.",
+    description: "Formularios, ciclos, arreglos y procesamiento web básico.",
     href: "https://github.com/chiletedevpath/aprendizaje/tree/main/07-desarrollo-web/php",
   },
   {
@@ -216,7 +216,7 @@ export const techStack = [
   {
     name: "Astro",
     tone: "web",
-    description: "Base estatica de la web publica de Chilete DevPath.",
+    description: "Base estática de la web pública de Chilete DevPath.",
     href: "https://github.com/chiletedevpath/chiletedevpath.github.io",
   },
 ];

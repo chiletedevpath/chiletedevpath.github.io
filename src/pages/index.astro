@@ -12,21 +12,21 @@ const learningActions = [
   {
     step: "01",
     title: "Empieza por fundamentos",
-    text: "Comprende logica, variables, decisiones, ciclos y forma de pensar antes de correr por tecnologia.",
+    text: "Antes de correr por frameworks, quiero que la base se entienda: lógica, decisiones, ciclos y forma de pensar.",
     href: "/ruta/",
     action: "Ver ruta",
   },
   {
     step: "02",
     title: "Practica con ejercicios",
-    text: "Usa ejercicios desarrollados y retos propuestos para convertir teoría en criterio técnico.",
+    text: "Los ejercicios sirven para equivocarse, comparar, corregir y aprender con más criterio.",
     href: "/recursos/",
     action: "Abrir recursos",
   },
   {
     step: "03",
     title: "Mira evidencia real",
-    text: "Revisa proyectos académicos en proceso con estado claro, contexto y publicación responsable.",
+    text: "Los proyectos muestran avance real, con contexto y sin vender como final algo que aún está creciendo.",
     href: "/proyectos/",
     action: "Ver proyectos",
   },
@@ -39,9 +39,9 @@ const learningActions = [
   <section class="seccion seccion-clara inicio-aprendizaje">
     <div class="contenedor">
       <SectionHeader
-        eyebrow="Empieza aqui"
-        title="Una ruta para aprender con orden, practica y evidencia"
-        description="Chilete DevPath no es solo una vitrina personal. Es un camino público para estudiar, practicar, revisar proyectos y publicar con criterio."
+        eyebrow="Empieza aquí"
+        title="Una ruta para aprender con orden, práctica y evidencia"
+        description="Chilete DevPath nace para compartir mi camino de aprendizaje y convertirlo en una guía útil para otros estudiantes."
       />
 
       <div class="acciones-aprendizaje">
@@ -60,9 +60,9 @@ const learningActions = [
   <section class="seccion">
     <div class="contenedor">
       <SectionHeader
-        eyebrow="Por que Chilete DevPath"
+        eyebrow="Por qué Chilete DevPath"
         title="Aprender no es acumular carpetas: es construir criterio"
-        description="La marca ordena el proceso para que cualquier estudiante entienda que practicar, que revisar y como convertir avances en evidencia publica responsable."
+        description="La idea no es llenar GitHub de archivos. La idea es que cada tema, ejercicio y proyecto tenga una razón para estar publicado."
       />
       <div class="tarjetas tarjetas-4 valor-grid">
         {valueProps.map((item) => (
@@ -79,10 +79,10 @@ const learningActions = [
     <div class="contenedor metricas-panel">
       <div>
         <p class="etiqueta">Ecosistema en crecimiento</p>
-        <h2>Indicadores reales del avance publicado</h2>
+        <h2>Así va creciendo Chilete DevPath</h2>
         <p>
-          Estas métricas resumen el contenido disponible y se actualizan cuando la ruta,
-          los proyectos o las políticas cambian de forma verificable.
+          Estos números me ayudan a mostrar el avance sin exagerarlo. Cambian cuando realmente
+          agrego temas, proyectos o criterios que aportan a la ruta.
         </p>
       </div>
       <div class="metricas-grid">
@@ -101,14 +101,14 @@ const learningActions = [
     <div class="contenedor">
       <SectionHeader
         eyebrow="Ruta de aprendizaje"
-        title="De fundamentos a construccion tecnica"
-        description="La ruta muestra que aprender primero, que practicar despues y como conectar el avance con proyectos reales."
+        title="De fundamentos a construcción técnica"
+        description="La ruta indica por dónde empezar, qué practicar después y cómo conectar el avance con proyectos reales."
       />
       <div class="ruta-etapas ruta-etapas-compacta">
         {routeStages.slice(0, 4).map((stage) => <RouteStage stage={stage} />)}
       </div>
       <div class="ruta-accion">
-        <p>Explora la ruta completa, ejercicios desarrollados y practicas pensadas para aprender construyendo.</p>
+        <p>Explora la ruta completa, ejercicios desarrollados y prácticas pensadas para aprender construyendo.</p>
         <a class="boton boton-principal" href="/ruta/">Ver ruta completa</a>
       </div>
     </div>
@@ -118,8 +118,8 @@ const learningActions = [
     <div class="contenedor">
       <SectionHeader
         eyebrow="Ecosistema DevPath"
-        title="Cada espacio tiene una funcion clara"
-        description="Aprendizaje para practicar, academia para evidenciar, portafolio para seleccionar y criterios para publicar sin improvisar."
+        title="Cada espacio tiene una función clara"
+        description="Aprendizaje es para practicar, academia para evidenciar, portafolio para seleccionar y criterios para publicar sin improvisar."
       />
       <div class="tarjetas tarjetas-3">
         {projectAreas.map((project) => <ProjectCard project={project} />)}
@@ -131,16 +131,17 @@ const learningActions = [
     <div class="contenedor contacto-grid">
       <div>
         <p class="etiqueta">Contacto y feedback</p>
-        <h2>Envía una duda, sugerencia o propuesta</h2>
+        <h2>Escríbeme una duda, sugerencia o propuesta</h2>
         <p>
-          El panel prepara tu mensaje en el navegador y abre WhatsApp o tu cliente de correo.
-          No guarda datos en la web ni los publica.
+          Si algo de la ruta te interesa, falta o puede mejorar, puedes enviarme un correo
+          desde aquí. Lo revisaré como parte del crecimiento de la comunidad.
         </p>
-        <a class="boton boton-secundario" href={site.mapsHref} target="_blank" rel="noopener">
-          Ver origen en Chilete
+        <a class="boton boton-secundario boton-mapa" href={site.mapsHref} target="_blank" rel="noopener">
+          Ver Chilete en el mapa
         </a>
       </div>
-      <div class="formulario-contacto panel-contacto" data-contact-panel data-context="Consulta desde la pagina de inicio">
+      <div class="formulario-contacto panel-contacto formulario-correo" data-contact-panel data-context="Consulta desde la página de inicio">
+        <p class="formulario-intro">Tu mensaje se prepara en tu cliente de correo. El WhatsApp queda disponible en el botón flotante.</p>
         <label>
           Nombre
           <input type="text" name="nombre" autocomplete="name" required />
@@ -154,8 +155,7 @@ const learningActions = [
           <textarea name="mensaje" rows="5" required></textarea>
         </label>
         <div class="acciones-formulario">
-          <button class="boton boton-principal" type="button" data-send-whatsapp>Enviar por WhatsApp</button>
-          <button class="boton boton-secundario" type="button" data-send-email>Enviar por correo</button>
+          <button class="boton boton-principal" type="button" data-send-email>Preparar correo</button>
         </div>
       </div>
     </div>

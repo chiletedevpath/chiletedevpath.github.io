@@ -332,12 +332,24 @@
 
 .formulario-contacto {
   display: grid;
-  gap: 14px;
-  padding: 24px;
-  border: 1px solid var(--color-borde);
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid color-mix(in srgb, var(--color-acento) 28%, var(--color-borde));
   border-radius: 8px;
-  background-color: var(--color-superficie);
-  box-shadow: var(--sombra-suave);
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--color-acento) 7%, transparent), transparent 42%),
+    var(--color-superficie);
+  box-shadow: var(--sombra-media);
+}
+
+.formulario-intro {
+  margin: 0 0 4px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--color-acento);
+  border-radius: 8px;
+  background-color: color-mix(in srgb, var(--color-acento) 8%, var(--color-superficie));
+  color: var(--color-texto-suave);
+  font-size: 0.95rem;
 }
 
 .formulario-contacto label {
@@ -360,13 +372,13 @@
 }
 
 .acciones-formulario {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 12px;
+  margin-top: 4px;
 }
 
 .acciones-formulario .boton {
-  flex: 1 1 180px;
+  width: 100%;
   border: 0;
   cursor: pointer;
 }
@@ -395,6 +407,15 @@
   color: var(--color-principal);
   font-family: var(--fuente-titulos);
   font-size: 1.55rem;
+}
+
+.mapa-identidad p {
+  margin-bottom: 22px;
+}
+
+.boton-mapa,
+.mapa-identidad .boton {
+  margin-top: 14px;
 }
 
 .whatsapp-flotante {

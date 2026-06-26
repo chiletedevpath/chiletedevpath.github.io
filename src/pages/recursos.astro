@@ -3,14 +3,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import { resources } from "../data/recursos.js";
-import { site } from "../data/site.js";
 ---
 
 <BaseLayout title="Recursos | Chilete DevPath">
   <PageHero
     eyebrow="Recursos"
     title="Practica, revisa y avanza con material organizado"
-    description="Esta seccion funciona como biblioteca de aprendizaje: ejercicios, retos, glosarios y criterios para consultar sin perderte entre carpetas."
+    description="Esta sección reúne material para practicar y consultar sin perderse entre carpetas: ejercicios, retos, glosarios y criterios."
     variant="recursos"
     visualTitle="Biblioteca DevPath"
     visualText="Material para resolver, estudiar y publicar con criterio."
@@ -19,9 +18,9 @@ import { site } from "../data/site.js";
   <section class="seccion">
     <div class="contenedor">
       <SectionHeader
-        eyebrow="Como usar esta seccion"
-        title="Elige el recurso segun tu momento de aprendizaje"
-        description="Si aun estas practicando, empieza por retos. Si ya intentaste resolver, revisa ejercicios desarrollados. Si tienes dudas de lenguaje tecnico, consulta el glosario."
+        eyebrow="Cómo usar esta sección"
+        title="Elige el recurso según tu momento de aprendizaje"
+        description="Si estás practicando, empieza por retos. Si ya lo intentaste, revisa ejercicios desarrollados. Si un concepto no queda claro, consulta el glosario."
       />
       <div class="tarjetas tarjetas-4">
         {resources.map((resource) => (
@@ -43,13 +42,14 @@ import { site } from "../data/site.js";
     <div class="contenedor contacto-grid">
       <div>
         <p class="etiqueta">Sugerencias de recursos</p>
-        <h2>Ayuda a priorizar que material falta</h2>
+        <h2>Ayúdame a priorizar qué material falta</h2>
         <p>
-          Si un tema necesita ejercicios, glosario o laboratorio, envia la sugerencia. Primero se revisa
-          que aporte a la ruta y que pueda publicarse sin riesgo legal o academico.
+          Si hay un tema que debería tener ejercicios, glosario o laboratorio, envíame la idea.
+          La revisaré antes de publicarla para que realmente aporte a la ruta.
         </p>
       </div>
-      <div class="formulario-contacto panel-contacto" data-contact-panel data-context="Sugerencia de recurso">
+      <div class="formulario-contacto panel-contacto formulario-recursos" data-contact-panel data-context="Sugerencia de recurso">
+        <p class="formulario-intro">La sugerencia se enviará por correo para revisarla con calma antes de convertirla en contenido público.</p>
         <label>
           Tema sugerido
           <input type="text" name="tema" required />
@@ -60,7 +60,7 @@ import { site } from "../data/site.js";
             <option value="Ejercicio">Ejercicio</option>
             <option value="Reto">Reto</option>
             <option value="Glosario">Glosario</option>
-            <option value="Guia">Guia</option>
+            <option value="Guía">Guía</option>
           </select>
         </label>
         <label>
@@ -68,8 +68,7 @@ import { site } from "../data/site.js";
           <textarea name="motivo" rows="5" required></textarea>
         </label>
         <div class="acciones-formulario">
-          <button class="boton boton-principal" type="button" data-send-whatsapp>Enviar por WhatsApp</button>
-          <button class="boton boton-secundario" type="button" data-send-email>Enviar por correo</button>
+          <button class="boton boton-principal" type="button" data-send-email>Enviar idea por correo</button>
         </div>
       </div>
     </div>

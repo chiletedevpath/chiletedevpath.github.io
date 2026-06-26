@@ -4,10 +4,10 @@ export const projectAreas = [
     title: "Camino de aprendizaje",
     visual: "Ruta",
     imageSrc: "/assets/img/projects/aprendizaje-cover.png",
-    imageAlt: "Espacio de aprendizaje tecnico organizado para Chilete DevPath.",
+    imageAlt: "Espacio de aprendizaje técnico organizado para Chilete DevPath.",
     description:
-      "Ruta progresiva de ejercicios, laboratorios y practicas tecnicas organizadas por nivel de avance.",
-    details: ["Ejercicios desarrollados", "Retos para practicar", "Documentacion por etapa"],
+      "Ruta progresiva de ejercicios, laboratorios y prácticas técnicas organizadas por nivel de avance.",
+    details: ["Ejercicios desarrollados", "Retos para practicar", "Documentación por etapa"],
     href: "https://github.com/chiletedevpath/aprendizaje",
     action: "Explorar camino",
   },
@@ -18,14 +18,14 @@ export const projectAreas = [
     imageSrc: "/assets/img/projects/academia-cover.png",
     imageAlt: "Documentacion academica y evidencia tecnica organizada.",
     description:
-      "Indice de proyectos academicos y entregas con contexto, tecnologias y criterios de publicacion segura.",
+      "Índice de proyectos académicos y entregas con contexto, tecnologías y criterios de publicación segura.",
     details: ["Proyectos entregados", "Contexto academico", "Criterio legal y editorial"],
     href: "https://github.com/chiletedevpath/academia",
     action: "Ver evidencias",
   },
   {
     status: "Seleccion futura",
-    title: "Portafolio en construccion",
+    title: "Portafolio en construcción",
     visual: "Portafolio",
     imageSrc: "/assets/img/projects/portafolio-cover.png",
     imageAlt: "Seleccion profesional futura de proyectos de software.",
@@ -48,9 +48,9 @@ export const academicProjects = [
     visual: "Java",
     progress: 100,
     imageSrc: "/assets/img/projects/clinica-salud-vital-cover.png",
-    imageAlt: "Imagen editorial de un sistema academico de gestion clinica.",
+    imageAlt: "Imagen editorial de un sistema académico de gestión clínica.",
     description:
-      "Sistema academico en Java para gestionar pacientes, citas, doctores y horarios dentro de un flujo de atencion clinica.",
+      "Sistema académico en Java para gestionar pacientes, citas, doctores y horarios dentro de un flujo de atención clínica.",
     details: [
       "Gestion de pacientes y citas",
       "Estructuras de datos aplicadas",

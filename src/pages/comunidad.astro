@@ -3,14 +3,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import SocialIcon from "../components/SocialIcon.astro";
-import { site, socials } from "../data/site.js";
+import { socials } from "../data/site.js";
 ---
 
 <BaseLayout title="Comunidad | Chilete DevPath">
   <PageHero
     eyebrow="Comunidad"
-    title="Aprender acompanado hace el camino mas sostenible"
-    description="Los canales de Chilete DevPath sirven para compartir avance, resolver dudas, mostrar practica y construir comunidad con criterio."
+    title="Aprender acompañado hace el camino más sostenible"
+    description="Quiero que Chilete DevPath también sea un espacio para compartir avances, dudas y aprendizajes sin perder el criterio."
     variant="comunidad"
     visualTitle="Red de aprendizaje"
     visualText="Canales para compartir avance, dudas y aprendizaje responsable."
@@ -21,7 +21,7 @@ import { site, socials } from "../data/site.js";
       <SectionHeader
         eyebrow="Canales oficiales"
         title="Sigue el avance por el canal que uses mejor"
-        description="GitHub conserva la evidencia tecnica. Las redes ayudan a compartir proceso, avances, ideas y comunidad."
+        description="GitHub guarda la evidencia técnica. Las redes me ayudan a explicar el proceso, compartir avances y acercar la ruta a más estudiantes."
       />
       <div class="redes" aria-label="Canales oficiales de Chilete DevPath">
         {socials.map((social) => (
@@ -40,13 +40,14 @@ import { site, socials } from "../data/site.js";
     <div class="contenedor contacto-grid">
       <div>
         <p class="etiqueta">Feedback de comunidad</p>
-        <h2>Comparte una mejora para la comunidad</h2>
+        <h2>Cuéntame qué mejorarías</h2>
         <p>
-          Tu sugerencia se envia por el canal que elijas. La web no publica comentarios ni almacena
-          tus datos; eso mantiene la comunidad ordenada mientras no exista un sistema de moderacion propio.
+          Si ves un tema confuso, una sección incompleta o una idea que pueda ayudar a otros,
+          déjame la sugerencia por correo. Prefiero revisar cada aporte antes de publicarlo.
         </p>
       </div>
-      <div class="formulario-contacto panel-contacto" data-contact-panel data-context="Feedback de comunidad">
+      <div class="formulario-contacto panel-contacto formulario-feedback" data-contact-panel data-context="Feedback de comunidad">
+        <p class="formulario-intro">Este espacio es para sugerencias concretas. Mientras no exista backend, las revisaré por correo.</p>
         <label>
           Nombre
           <input type="text" name="nombre" autocomplete="name" required />
@@ -60,8 +61,7 @@ import { site, socials } from "../data/site.js";
           <textarea name="sugerencia" rows="5" required></textarea>
         </label>
         <div class="acciones-formulario">
-          <button class="boton boton-principal" type="button" data-send-whatsapp>Enviar por WhatsApp</button>
-          <button class="boton boton-secundario" type="button" data-send-email>Enviar por correo</button>
+          <button class="boton boton-principal" type="button" data-send-email>Enviar sugerencia por correo</button>
         </div>
       </div>
     </div>
