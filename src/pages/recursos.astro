@@ -3,24 +3,25 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import { resources } from "../data/recursos.js";
+import { site } from "../data/site.js";
 ---
 
 <BaseLayout title="Recursos | Chilete DevPath">
   <PageHero
     eyebrow="Recursos"
     title="Practica, revisa y avanza con material organizado"
-    description="Esta seccion debe funcionar como biblioteca de aprendizaje: ejercicios, retos, glosarios y criterios listos para consultar."
+    description="Esta seccion funciona como biblioteca de aprendizaje: ejercicios, retos, glosarios y criterios para consultar sin perderte entre carpetas."
     variant="recursos"
     visualTitle="Biblioteca DevPath"
-    visualText="Material preparado para estudiar, practicar y consultar."
+    visualText="Material para resolver, estudiar y publicar con criterio."
   />
 
   <section class="seccion">
     <div class="contenedor">
       <SectionHeader
         eyebrow="Como usar esta seccion"
-        title="Elige si quieres resolver, estudiar o consultar"
-        description="Cada recurso tiene un proposito concreto para que la comunidad no dependa solo de navegar carpetas en GitHub."
+        title="Elige el recurso segun tu momento de aprendizaje"
+        description="Si aun estas practicando, empieza por retos. Si ya intentaste resolver, revisa ejercicios desarrollados. Si tienes dudas de lenguaje tecnico, consulta el glosario."
       />
       <div class="tarjetas tarjetas-4">
         {resources.map((resource) => (
@@ -29,10 +30,45 @@ import { resources } from "../data/recursos.js";
             <small>{resource.type}</small>
             <h3>{resource.title}</h3>
             <p>{resource.description}</p>
-            <a href={resource.href} target="_blank" rel="noopener">Ver recurso</a>
+            <a href={resource.href} target={resource.href.startsWith("http") ? "_blank" : undefined} rel={resource.href.startsWith("http") ? "noopener" : undefined}>
+              Ver recurso
+            </a>
           </article>
         ))}
       </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion-clara">
+    <div class="contenedor contacto-grid">
+      <div>
+        <p class="etiqueta">Sugerencias de recursos</p>
+        <h2>Ayuda a priorizar que material falta</h2>
+        <p>
+          Si un tema necesita ejercicios, glosario o laboratorio, envia la sugerencia. Primero se revisa
+          que aporte a la ruta y que pueda publicarse sin riesgo legal o academico.
+        </p>
+      </div>
+      <form class="formulario-contacto" action={`mailto:${site.email}`} method="post" enctype="text/plain">
+        <label>
+          Tema sugerido
+          <input type="text" name="tema" required />
+        </label>
+        <label>
+          Tipo de recurso
+          <select name="tipo" required>
+            <option value="Ejercicio">Ejercicio</option>
+            <option value="Reto">Reto</option>
+            <option value="Glosario">Glosario</option>
+            <option value="Guia">Guia</option>
+          </select>
+        </label>
+        <label>
+          Motivo
+          <textarea name="motivo" rows="5" required></textarea>
+        </label>
+        <button class="boton boton-principal" type="submit">Enviar sugerencia</button>
+      </form>
     </div>
   </section>
 </BaseLayout>

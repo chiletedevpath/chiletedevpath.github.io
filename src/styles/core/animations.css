@@ -23,6 +23,26 @@
   }
 }
 
+@keyframes frase-hero {
+  0%,
+  18% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  24%,
+  44% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  52%,
+  100% {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
 @keyframes camino-flotante {
   0%,
   100% {

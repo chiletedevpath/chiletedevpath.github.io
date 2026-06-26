@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import { academicProjects } from "../../data/proyectos.js";
+---
+
+<BaseLayout title="Projects | Chilete DevPath">
+  <PageHero
+    eyebrow="Projects"
+    title="Technical evidence without confusing progress with portfolio"
+    description="Academic projects are shown with context, status and publishing criteria."
+    variant="proyectos"
+    visualTitle="Academic evidence"
+    visualText="Projects with documented progress."
+  />
+
+  <section class="seccion">
+    <div class="contenedor">
+      <SectionHeader
+        eyebrow="Reviewed evidence"
+        title="Academic projects with context"
+        description="These projects are evidence of learning, not final portfolio pieces yet."
+      />
+      <div class="tarjetas tarjetas-3">
+        {academicProjects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

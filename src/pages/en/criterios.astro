@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import { policies } from "../../data/recursos.js";
+---
+
+<BaseLayout title="Criteria | Chilete DevPath">
+  <PageHero
+    eyebrow="Publishing criteria"
+    title="We publish with judgment, not with rush"
+    description="Policies protect authorship, sources, privacy, well-being, responsible AI usage and safe publishing."
+    variant="criterios"
+    visualTitle="Editorial control"
+    visualText="Review before public publishing."
+  />
+
+  <section class="seccion">
+    <div class="contenedor politicas-grid">
+      {policies.map((policy) => (
+        <article class:list={["politica-documento", `politica-${policy.tone}`]}>
+          <span class="politica-codigo">{policy.code}</span>
+          <h3>{policy.title}</h3>
+          <p>{policy.highlight}</p>
+          <a class="boton boton-principal" href={policy.href}>Open policy</a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

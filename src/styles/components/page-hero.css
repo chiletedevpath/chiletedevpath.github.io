@@ -109,9 +109,16 @@
 }
 
 .visual-raiz,
+.visual-geografia,
+.visual-rio,
 .visual-escudo,
 .visual-check,
 .visual-card path,
+.visual-terminal path,
+.visual-dashboard path,
+.visual-checklist path,
+.visual-devpath path,
+.visual-busqueda path,
 .visual-persona path {
   fill: none;
   stroke: color-mix(in srgb, var(--color-agua) 72%, #ffffff);
@@ -121,6 +128,7 @@
 }
 
 .visual-nodo circle,
+.visual-hito circle,
 .visual-origen {
   fill: var(--color-progreso);
   stroke: rgba(255, 255, 255, 0.72);
@@ -128,11 +136,50 @@
 }
 
 .visual-nodo rect,
+.visual-terminal rect,
+.visual-dashboard rect,
+.visual-estante rect,
+.visual-checklist rect,
+.visual-devpath rect,
 .visual-card rect,
 .visual-chip {
   fill: rgba(255, 255, 255, 0.09);
   stroke: rgba(255, 255, 255, 0.28);
   stroke-width: 2;
+}
+
+.visual-hito text {
+  fill: var(--color-principal);
+  font-family: var(--fuente-mono);
+  font-size: 13px;
+  font-weight: 900;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.visual-medidor circle,
+.visual-busqueda circle,
+.visual-marca-origen circle {
+  fill: rgba(255, 255, 255, 0.08);
+  stroke: var(--color-progreso);
+  stroke-width: 4;
+}
+
+.visual-geografia {
+  fill: color-mix(in srgb, var(--color-acento) 18%, rgba(255, 255, 255, 0.06));
+  stroke: color-mix(in srgb, var(--color-acento) 72%, #ffffff);
+}
+
+.visual-rio {
+  stroke: color-mix(in srgb, var(--color-agua) 90%, #ffffff);
+  stroke-width: 8;
+  opacity: 0.78;
+}
+
+.visual-estante rect:first-child,
+.visual-dashboard rect:first-child,
+.visual-checklist rect:first-child {
+  fill: rgba(255, 255, 255, 0.07);
 }
 
 .visual-persona circle {

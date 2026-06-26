@@ -3,6 +3,17 @@ import { useEffect, useState } from "react";
 
 const normalizarRuta = (ruta) => (ruta === "/index.html" ? "/" : ruta);
 
+const rutaAlterna = (ruta, codigo) => {
+  const limpia = normalizarRuta(ruta);
+
+  if (codigo === "en") {
+    return limpia.startsWith("/en") ? limpia : `/en${limpia === "/" ? "/" : limpia}`;
+  }
+
+  const sinEn = limpia.replace(/^\/en/, "");
+  return sinEn === "" ? "/" : sinEn;
+};
+
 export default function HeaderNav({
   navItems = [],
   moreItems = [],
@@ -54,11 +65,11 @@ export default function HeaderNav({
   const rutaActiva = normalizarRuta(currentPath);
   const esOscuro = tema === "dark";
   const masActivo = moreItems.some((item) => item.href === rutaActiva);
-  const idiomaActual = languages.find((language) => language.available);
+  const idiomaActivo = rutaActiva.startsWith("/en") ? "en" : "es";
 
   return (
     <nav className="navegacion contenedor" aria-label="Navegacion principal">
-      <a className="marca" href="/" onClick={() => setMenuAbierto(false)}>
+      <a className="marca" href={idiomaActivo === "en" ? "/en/" : "/"} onClick={() => setMenuAbierto(false)}>
         <span className="marca-logo" aria-hidden="true">
           <img src="/assets/img/marca-simbolo-nav.png" width="512" height="512" alt="" />
         </span>
@@ -92,7 +103,7 @@ export default function HeaderNav({
               aria-controls="submenu-mas"
               onClick={() => setMasAbierto((abierto) => !abierto)}
             >
-              Mas
+              {idiomaActivo === "en" ? "More" : "Mas"}
               <ChevronDown size={16} aria-hidden="true" />
             </button>
 
@@ -127,22 +138,29 @@ export default function HeaderNav({
           <span>GitHub</span>
         </a>
 
-        {idiomaActual && (
-          <div className="idioma-control" aria-label="Idioma actual">
-            <span className="idioma-activo">{idiomaActual.label}</span>
-          </div>
-        )}
+        <div className="idioma-control" aria-label={idiomaActivo === "en" ? "Language selector" : "Selector de idioma"}>
+          {languages.map((language) => (
+            <a
+              key={language.code}
+              className={language.code === idiomaActivo ? "idioma-activo" : "idioma-opcion"}
+              href={rutaAlterna(rutaActiva, language.code)}
+              aria-current={language.code === idiomaActivo ? "true" : undefined}
+            >
+              {language.label}
+            </a>
+          ))}
+        </div>
 
         <button
-          className="tema-boton"
+          className="tema-boton tema-boton-icono"
           type="button"
           aria-label={esOscuro ? "Cambiar a modo dia" : "Cambiar a modo noche"}
+          title={esOscuro ? "Modo dia" : "Modo noche"}
           onClick={() => setTema(esOscuro ? "light" : "dark")}
         >
           <span className="tema-icono" aria-hidden="true">
             {esOscuro ? <Sun size={15} /> : <Moon size={15} />}
           </span>
-          <span className="tema-texto">{esOscuro ? "Dia" : "Noche"}</span>
         </button>
 
         <button

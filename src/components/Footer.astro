@@ -1,5 +1,6 @@
 ---
-import { site, socials } from "../data/site.js";
+import { navItems, navMoreItems, site, socials } from "../data/site.js";
+import { policies } from "../data/recursos.js";
 import SocialIcon from "./SocialIcon.astro";
 ---
 
@@ -9,21 +10,22 @@ import SocialIcon from "./SocialIcon.astro";
       <img src="/assets/img/marca-simbolo-nav.png" width="512" height="512" alt="" />
       <div>
         <strong>{site.name}</strong>
-        <p>
-          <span id="anio"></span>
-          Aprendizaje real, criterio técnico y evolución profesional.
-        </p>
+        <p>Desarrollado desde Chilete, Cajamarca, Peru para compartir aprendizaje tecnico con criterio.</p>
       </div>
     </div>
 
-    <div class="pie-cta">
-      <p>Comparte avances, preguntas y práctica con la comunidad.</p>
-      <a class="boton boton-principal" href="https://discord.gg/4XsXRT4rG" target="_blank" rel="noopener">
-        Unirme a Discord
-      </a>
-    </div>
+    <nav class="pie-columna" aria-label="Enlaces rapidos">
+      <strong>Navegacion</strong>
+      {[...navItems, ...navMoreItems].map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <nav class="pie-columna" aria-label="Politicas de Chilete DevPath">
+      <strong>Politicas</strong>
+      {policies.map((policy) => <a href={policy.href}>{policy.title}</a>)}
+    </nav>
 
     <div class="pie-social">
+      <p>Unete a Discord o revisa el avance publico en GitHub.</p>
       <nav class="pie-redes" aria-label="Redes oficiales">
         {socials.map((social) => (
           <a href={social.href} target="_blank" rel="noopener" aria-label={social.name}>
@@ -31,8 +33,11 @@ import SocialIcon from "./SocialIcon.astro";
           </a>
         ))}
       </nav>
-
       <span class="version-marca">{site.version}</span>
     </div>
+  </div>
+  <div class="pie-inferior">
+    <span>Chilete DevPath por Adrian Pisco.</span>
+    <span>© 2024-2026</span>
   </div>
 </footer>

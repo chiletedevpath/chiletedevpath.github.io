@@ -6,26 +6,27 @@ import ProjectCard from "../components/ProjectCard.astro";
 import RouteStage from "../components/RouteStage.astro";
 import { routeStages } from "../data/ruta.js";
 import { projectAreas } from "../data/proyectos.js";
+import { metrics, site, valueProps } from "../data/site.js";
 
 const learningActions = [
   {
     step: "01",
     title: "Empieza por fundamentos",
-    text: "Comprende lógica, variables, decisiones, ciclos y forma de pensar antes de correr por tecnología.",
+    text: "Comprende logica, variables, decisiones, ciclos y forma de pensar antes de correr por tecnologia.",
     href: "/ruta/",
     action: "Ver ruta",
   },
   {
     step: "02",
     title: "Practica con ejercicios",
-    text: "Usa ejercicios desarrollados y retos propuestos para convertir teoría en criterio técnico.",
+    text: "Usa ejercicios desarrollados y retos propuestos para convertir teoria en criterio tecnico.",
     href: "/recursos/",
     action: "Abrir recursos",
   },
   {
     step: "03",
     title: "Mira evidencia real",
-    text: "Revisa proyectos académicos en proceso con estado claro, contexto y publicación responsable.",
+    text: "Revisa proyectos academicos en proceso con estado claro, contexto y publicacion responsable.",
     href: "/proyectos/",
     action: "Ver proyectos",
   },
@@ -38,9 +39,9 @@ const learningActions = [
   <section class="seccion seccion-clara inicio-aprendizaje">
     <div class="contenedor">
       <SectionHeader
-        eyebrow="Empieza aquí"
-        title="Una ruta para aprender con orden, práctica y evidencia"
-        description="Chilete DevPath no es solo una vitrina personal. Es un camino público para estudiar, practicar, revisar proyectos y publicar con criterio."
+        eyebrow="Empieza aqui"
+        title="Una ruta para aprender con orden, practica y evidencia"
+        description="Chilete DevPath no es solo una vitrina personal. Es un camino publico para estudiar, practicar, revisar proyectos y publicar con criterio."
       />
 
       <div class="acciones-aprendizaje">
@@ -59,9 +60,49 @@ const learningActions = [
   <section class="seccion">
     <div class="contenedor">
       <SectionHeader
+        eyebrow="Por que Chilete DevPath"
+        title="Aprender no es acumular carpetas: es construir criterio"
+        description="La marca ordena el proceso para que cualquier estudiante entienda que practicar, que revisar y como convertir avances en evidencia publica responsable."
+      />
+      <div class="tarjetas tarjetas-4 valor-grid">
+        {valueProps.map((item) => (
+          <article class="tarjeta valor-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion-clara">
+    <div class="contenedor metricas-panel">
+      <div>
+        <p class="etiqueta">Estado del ecosistema</p>
+        <h2>Avance visible, sin inflar resultados</h2>
+        <p>
+          Estas metricas son estaticas y se actualizan cuando el contenido real cambia.
+          No simulan usuarios ni actividad que aun no existe.
+        </p>
+      </div>
+      <div class="metricas-grid">
+        {metrics.map((metric) => (
+          <article class="metrica-card">
+            <strong>{metric.value}</strong>
+            <span>{metric.label}</span>
+            <small>{metric.detail}</small>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor">
+      <SectionHeader
         eyebrow="Ruta de aprendizaje"
-        title="De fundamentos a construcción técnica"
-        description="La ruta muestra qué aprender primero, qué practicar después y cómo conectar el avance con proyectos reales."
+        title="De fundamentos a construccion tecnica"
+        description="La ruta muestra que aprender primero, que practicar despues y como conectar el avance con proyectos reales."
       />
       <div class="ruta-etapas ruta-etapas-compacta">
         {routeStages.slice(0, 4).map((stage) => <RouteStage stage={stage} />)}
@@ -83,6 +124,37 @@ const learningActions = [
       <div class="tarjetas tarjetas-3">
         {projectAreas.map((project) => <ProjectCard project={project} />)}
       </div>
+    </div>
+  </section>
+
+  <section class="seccion contacto-formal" id="contacto">
+    <div class="contenedor contacto-grid">
+      <div>
+        <p class="etiqueta">Contacto y feedback</p>
+        <h2>Escribe una duda, sugerencia o propuesta</h2>
+        <p>
+          El contacto directo ayuda a priorizar mejoras reales para la comunidad. El formulario prepara
+          un correo y el boton de WhatsApp abre una conversacion con mensaje inicial.
+        </p>
+        <a class="boton boton-secundario" href={site.mapsHref} target="_blank" rel="noopener">
+          Ver origen en Chilete
+        </a>
+      </div>
+      <form class="formulario-contacto" action={`mailto:${site.email}`} method="post" enctype="text/plain">
+        <label>
+          Nombre
+          <input type="text" name="nombre" autocomplete="name" required />
+        </label>
+        <label>
+          Correo
+          <input type="email" name="correo" autocomplete="email" required />
+        </label>
+        <label>
+          Mensaje
+          <textarea name="mensaje" rows="5" required></textarea>
+        </label>
+        <button class="boton boton-principal" type="submit">Enviar mensaje</button>
+      </form>
     </div>
   </section>
 </BaseLayout>

@@ -113,6 +113,7 @@
 }
 
 .idioma-activo,
+.idioma-opcion,
 .idioma-pendiente {
   min-width: 34px;
   padding: 5px 8px;
@@ -129,6 +130,15 @@
   color: var(--color-texto-suave);
   cursor: not-allowed;
   opacity: 0.72;
+}
+
+.idioma-opcion {
+  color: var(--color-texto-suave);
+}
+
+.idioma-opcion:hover {
+  color: var(--color-principal);
+  background-color: color-mix(in srgb, var(--color-acento) 12%, transparent);
 }
 
 .tema-boton {
@@ -176,6 +186,13 @@
   gap: 8px;
   list-style: none;
   order: 2;
+}
+
+.tema-boton-icono {
+  width: 42px;
+  min-width: 42px;
+  justify-content: center;
+  padding: 8px;
 }
 
 .menu a,

@@ -11,6 +11,6 @@ export const languages = [
     label: "EN",
     name: "English",
     href: "/en/",
-    available: false,
+    available: true,
   },
 ];

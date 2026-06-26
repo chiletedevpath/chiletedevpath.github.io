@@ -66,7 +66,39 @@
   max-width: 720px;
   color: #dbeafe;
   font-size: 1.15rem;
-  margin-bottom: 32px;
+  margin-bottom: 18px;
+}
+
+.hero-dinamico {
+  position: relative;
+  min-height: 34px;
+  margin-bottom: 30px;
+  color: var(--color-progreso);
+  font-family: var(--fuente-mono);
+  font-size: clamp(0.95rem, 1.8vw, 1.12rem);
+  font-weight: 800;
+  overflow: hidden;
+}
+
+.hero-dinamico span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(12px);
+  animation: frase-hero 12s ease-in-out infinite;
+}
+
+.hero-dinamico span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.hero-dinamico span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.hero-dinamico span:nth-child(4) {
+  animation-delay: 9s;
 }
 
 .hero-indicadores {

@@ -6,13 +6,17 @@ const { variant = "ruta", title = "Visual Chilete DevPath" } = Astro.props;
   <svg viewBox="0 0 640 420" role="img" aria-labelledby={`visual-${variant}-title`}>
     <title id={`visual-${variant}-title`}>{title}</title>
     <defs>
-      <linearGradient id={`linea-${variant}`} x1="0" x2="1" y1="0" y2="1">
-        <stop offset="0%" stop-color="var(--color-progreso)" />
-        <stop offset="52%" stop-color="var(--color-acento)" />
-        <stop offset="100%" stop-color="var(--color-agua)" />
+      <linearGradient id={`trazo-${variant}`} x1="0" x2="1" y1="1" y2="0">
+        <stop offset="0%" stop-color="var(--color-raiz)" />
+        <stop offset="42%" stop-color="var(--color-progreso)" />
+        <stop offset="100%" stop-color="var(--color-acento)" />
       </linearGradient>
-      <filter id={`brillo-${variant}`} x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur stdDeviation="4" result="blur" />
+      <linearGradient id={`panel-${variant}`} x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="rgba(255,255,255,.14)" />
+        <stop offset="100%" stop-color="rgba(255,255,255,.04)" />
+      </linearGradient>
+      <filter id={`resplandor-${variant}`} x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
         <feMerge>
           <feMergeNode in="blur" />
           <feMergeNode in="SourceGraphic" />
@@ -20,79 +24,111 @@ const { variant = "ruta", title = "Visual Chilete DevPath" } = Astro.props;
       </filter>
     </defs>
 
-    <rect class="visual-fondo" x="0" y="0" width="640" height="420" rx="22" />
-    <path class="visual-malla" d="M42 334 C140 248 196 306 278 214 S438 130 582 72" />
-    <path class="visual-camino" d="M58 350 C152 286 216 292 292 220 C368 148 448 134 584 78" filter={`url(#brillo-${variant})`} />
+    <rect class="visual-fondo" x="0" y="0" width="640" height="420" rx="26" />
+    <path class="visual-malla" d="M34 338 C122 284 198 298 282 230 C366 160 462 126 594 74" />
 
     {variant === "ruta" && (
       <>
-        {[86, 196, 314, 438, 548].map((x, index) => (
-          <g class="visual-nodo">
-            <circle cx={x} cy={330 - index * 56} r="20" />
-            <rect x={x - 42} y={356 - index * 56} width="84" height="34" rx="10" />
+        <path class="visual-camino" d="M56 336 C150 294 206 280 278 226 C350 172 448 132 584 82" filter={`url(#resplandor-${variant})`} />
+        {[76, 198, 320, 446, 560].map((x, index) => (
+          <g class="visual-hito">
+            <circle cx={x} cy={326 - index * 56} r="18" />
+            <text x={x} y={331 - index * 56}>{String(index + 1).padStart(2, "0")}</text>
           </g>
         ))}
-        <path class="visual-raiz" d="M328 256 v-92 m0 92 c-46-18-74-48-86-90 m86 90 c42-22 72-56 92-100" />
+        <g class="visual-terminal">
+          <rect x="382" y="246" width="154" height="76" rx="14" />
+          <path d="M412 278h62M412 300h88" />
+        </g>
+        <path class="visual-raiz" d="M184 316c0-44 18-72 48-104m-48 104c-22-34-30-70-22-108m22 108c34-20 64-44 92-84" />
       </>
     )}
 
     {variant === "proyectos" && (
       <>
-        {[72, 230, 388].map((x, index) => (
-          <g class="visual-card">
-            <rect x={x} y={88 + index * 38} width="148" height="112" rx="16" />
-            <path d={`M${x + 22} ${118 + index * 38}h74M${x + 22} ${144 + index * 38}h98M${x + 22} ${170 + index * 38}h56`} />
-          </g>
-        ))}
-        <path class="visual-conexion" d="M174 148h62M330 186h62M262 244h112" />
+        <g class="visual-dashboard">
+          <rect x="82" y="82" width="476" height="250" rx="22" />
+          <rect x="114" y="124" width="138" height="76" rx="14" />
+          <rect x="276" y="124" width="102" height="76" rx="14" />
+          <rect x="402" y="124" width="124" height="76" rx="14" />
+          <path d="M120 246h338" />
+          <path d="M120 282h254" />
+        </g>
+        <path class="visual-camino" d="M116 292 C226 236 296 256 386 188 C452 138 506 118 558 102" filter={`url(#resplandor-${variant})`} />
+        <g class="visual-medidor">
+          <circle cx="492" cy="262" r="42" />
+          <path d="M470 263l18 18 34-44" />
+        </g>
       </>
     )}
 
     {variant === "recursos" && (
       <>
-        <g class="visual-card visual-libro">
-          <rect x="90" y="100" width="126" height="176" rx="14" />
-          <path d="M122 136h62M122 166h48M122 196h70" />
+        <g class="visual-estante">
+          <rect x="76" y="104" width="488" height="202" rx="20" />
+          <path d="M108 238h424" />
+          {[124, 214, 304, 394].map((x, index) => (
+            <g class="visual-libro">
+              <rect x={x} y={136 - (index % 2) * 14} width="58" height={86 + (index % 2) * 14} rx="10" />
+              <path d={`M${x + 16} ${160 - (index % 2) * 14}h26M${x + 16} ${184 - (index % 2) * 14}h18`} />
+            </g>
+          ))}
         </g>
-        <g class="visual-card visual-libro">
-          <rect x="256" y="78" width="126" height="198" rx="14" />
-          <path d="M288 118h62M288 148h42M288 178h72" />
-        </g>
-        <g class="visual-card visual-libro">
-          <rect x="422" y="118" width="126" height="158" rx="14" />
-          <path d="M454 154h62M454 184h48M454 214h68" />
+        <path class="visual-camino" d="M116 330 C214 286 294 304 382 250 C448 210 500 202 562 194" />
+        <g class="visual-busqueda">
+          <circle cx="494" cy="146" r="30" />
+          <path d="M516 168l34 34" />
         </g>
       </>
     )}
 
     {variant === "criterios" && (
       <>
-        <g class="visual-card visual-doc">
-          <rect x="118" y="74" width="170" height="232" rx="16" />
-          <path d="M152 126h92M152 164h72M152 202h96M152 240h54" />
+        <g class="visual-checklist">
+          <rect x="112" y="72" width="286" height="274" rx="20" />
+          {[132, 190, 248].map((y) => (
+            <g>
+              <path d={`M150 ${y}l18 18 34-42`} />
+              <path d={`M232 ${y}h104M232 ${y + 24}h74`} />
+            </g>
+          ))}
         </g>
-        <path class="visual-escudo" d="M402 82 512 126v82c0 72-42 116-110 144-68-28-110-72-110-144v-82Z" />
-        <path class="visual-check" d="m354 206 34 34 76-88" />
+        <g class="visual-escudo-grupo">
+          <path class="visual-escudo" d="M462 104 548 138v68c0 58-32 94-86 118-54-24-86-60-86-118v-68Z" />
+          <path class="visual-check" d="m424 214 28 28 60-76" />
+        </g>
+        <path class="visual-camino" d="M98 354 C214 316 306 326 410 270 C490 226 540 206 590 178" />
       </>
     )}
 
     {variant === "comunidad" && (
       <>
-        {[126, 244, 382, 510, 318].map((x, index) => (
-          <g class="visual-persona">
-            <circle cx={x} cy={118 + (index % 3) * 78} r="22" />
-            <path d={`M${x - 34} ${158 + (index % 3) * 78}c18-24 50-24 68 0`} />
-          </g>
-        ))}
-        <path class="visual-conexion" d="M146 126 244 196 382 118 510 274 318 274 244 196" />
+        <g class="visual-red">
+          {[126, 250, 390, 514, 320].map((x, index) => (
+            <g class="visual-persona">
+              <circle cx={x} cy={126 + (index % 3) * 72} r="22" />
+              <path d={`M${x - 34} ${164 + (index % 3) * 72}c18-24 50-24 68 0`} />
+            </g>
+          ))}
+          <path class="visual-conexion" d="M146 126 250 198 390 126 514 270 320 270 250 198" />
+        </g>
+        <path class="visual-camino" d="M70 338 C180 280 280 300 374 242 C456 190 520 164 586 126" />
       </>
     )}
 
     {variant === "sobre" && (
       <>
-        <path class="visual-raiz visual-raiz-grande" d="M320 322V112m0 210c-62-34-100-86-124-160m124 160c64-36 104-92 132-178M320 322c-38 24-74 42-128 48m128-48c42 28 88 42 144 48" />
-        <circle class="visual-origen" cx="320" cy="318" r="34" />
-        <rect class="visual-chip" x="236" y="74" width="168" height="52" rx="14" />
+        <path class="visual-geografia" d="M164 112c48-38 118-44 176-18 40 18 62 48 104 58 42 10 74-6 106 18 32 24 32 74 4 108-38 46-118 50-176 76-70 32-150 42-210-2-54-40-66-112-42-166 10-24 20-48 38-74Z" />
+        <path class="visual-rio" d="M158 296 C218 260 244 222 314 216 C386 210 414 168 482 142" />
+        <path class="visual-camino" d="M146 318 C220 286 252 248 318 238 C396 226 442 176 516 132" filter={`url(#resplandor-${variant})`} />
+        <g class="visual-marca-origen">
+          <circle cx="206" cy="294" r="22" />
+          <path d="M206 272v-48m0 48c-22-12-36-30-44-58m44 58c24-14 38-34 50-62" />
+        </g>
+        <g class="visual-devpath">
+          <rect x="374" y="96" width="136" height="70" rx="14" />
+          <path d="M404 126h72M404 148h48" />
+        </g>
       </>
     )}
   </svg>

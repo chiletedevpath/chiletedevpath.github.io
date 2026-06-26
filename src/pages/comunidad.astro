@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import SocialIcon from "../components/SocialIcon.astro";
-import { socials } from "../data/site.js";
+import { site, socials } from "../data/site.js";
 ---
 
 <BaseLayout title="Comunidad | Chilete DevPath">
@@ -12,7 +12,7 @@ import { socials } from "../data/site.js";
     title="Aprender acompanado hace el camino mas sostenible"
     description="Los canales de Chilete DevPath sirven para compartir avance, resolver dudas, mostrar practica y construir comunidad con criterio."
     variant="comunidad"
-    visualTitle="Comunidad activa"
+    visualTitle="Red de aprendizaje"
     visualText="Canales para compartir avance, dudas y aprendizaje responsable."
   />
 
@@ -33,6 +33,34 @@ import { socials } from "../data/site.js";
           </a>
         ))}
       </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion-clara">
+    <div class="contenedor contacto-grid">
+      <div>
+        <p class="etiqueta">Feedback de comunidad</p>
+        <h2>Envia una mejora sin exponer datos publicamente</h2>
+        <p>
+          Por ahora el feedback se recibe por correo para evitar spam, datos personales visibles y moderacion
+          innecesaria. Los comentarios publicos se evaluaran cuando exista backend y control de seguridad.
+        </p>
+      </div>
+      <form class="formulario-contacto" action={`mailto:${site.email}`} method="post" enctype="text/plain">
+        <label>
+          Nombre
+          <input type="text" name="nombre" autocomplete="name" required />
+        </label>
+        <label>
+          Correo
+          <input type="email" name="correo" autocomplete="email" required />
+        </label>
+        <label>
+          Sugerencia
+          <textarea name="sugerencia" rows="5" required></textarea>
+        </label>
+        <button class="boton boton-principal" type="submit">Enviar feedback</button>
+      </form>
     </div>
   </section>
 </BaseLayout>

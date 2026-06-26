@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PolicyIcon from "../../components/PolicyIcon.astro";
+import { policies } from "../../data/recursos.js";
+
+export function getStaticPaths() {
+  return policies.map((policy) => ({
+    params: { slug: policy.slug },
+    props: { policy },
+  }));
+}
+
+const { policy } = Astro.props;
+---
+
+<BaseLayout title={`${policy.title} | Chilete DevPath`}>
+  <section class:list={["seccion", "politica-detalle-hero", `politica-${policy.tone}`]}>
+    <div class="contenedor politica-detalle-grid">
+      <div>
+        <a class="enlace-retorno" href="/politicas/">Volver a politicas</a>
+        <p class="etiqueta">{policy.code}</p>
+        <h1>{policy.title}</h1>
+        <p class="politica-destacado">{policy.highlight}</p>
+      </div>
+      <div class="politica-sello">
+        <PolicyIcon name={policy.icon} />
+        <span>{policy.version} - {policy.status}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="contenedor politica-detalle-contenido">
+      <article class="bloque-nota">
+        <h2>Objetivo</h2>
+        <p>{policy.objective}</p>
+      </article>
+      <article class="bloque-nota">
+        <h2>Alcance</h2>
+        <p>{policy.scope}</p>
+      </article>
+      <article class="bloque-nota">
+        <h2>Responsable</h2>
+        <p>{policy.owner}</p>
+      </article>
+      <article class="bloque-nota politica-principios">
+        <h2>Principios de aplicacion</h2>
+        <ul>
+          {policy.principles.map((principle) => <li>{principle}</li>)}
+        </ul>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

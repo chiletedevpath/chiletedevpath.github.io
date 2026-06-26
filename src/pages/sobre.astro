@@ -1,54 +1,73 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import { site } from "../data/site.js";
+
+const principles = [
+  {
+    title: "Origen",
+    text: "Chilete representa el punto de partida: identidad, disciplina y una mirada local que no renuncia a crecer.",
+  },
+  {
+    title: "Ruta",
+    text: "DevPath representa el camino: aprender por etapas, practicar, revisar y construir evidencia.",
+  },
+  {
+    title: "Criterio",
+    text: "La marca no busca publicar por publicar. Cada contenido debe ser util, revisable y responsable.",
+  },
+];
 ---
 
 <BaseLayout title="Sobre Chilete DevPath | Adrian Pisco">
   <PageHero
     eyebrow="Sobre Chilete DevPath"
-    title="Una marca para aprender, construir y compartir con criterio"
-    description="Chilete DevPath organiza aprendizaje, proyectos, recursos y criterios de publicacion para convertir el avance tecnico en contenido util para la comunidad."
+    title="Una marca de aprendizaje tecnico con origen, ruta y criterio"
+    description="Chilete DevPath organiza aprendizaje, recursos, proyectos y politicas para convertir avance tecnico en evidencia publica util para la comunidad."
     variant="sobre"
-    showVisual={false}
+    visualTitle="Chilete + DevPath"
+    visualText="Origen local, camino tecnico y publicacion responsable."
   />
 
-  <section class="seccion">
-    <div class="contenedor sobre-aura sobre-aura-con-foto">
-      <p class="aura-texto aura-uno">Chilete DevPath nace como una ruta publica de aprendizaje tecnico.</p>
-      <p class="aura-texto aura-dos">Su proposito es ordenar ejercicios, proyectos y recursos con una secuencia clara.</p>
-      <figure class="sobre-persona-foto">
-        <img
-          src="/assets/img/editorial/sobre-principal-candidato-v1.jpg"
-          width="1024"
-          height="1536"
-          alt="Imagen editorial asociada a la marca Chilete DevPath."
-        />
-      </figure>
-      <p class="aura-texto aura-tres">La marca conecta origen, practica, documentacion y comunidad.</p>
-      <p class="aura-texto aura-cuatro">Cada contenido debe poder revisarse, entenderse y reutilizarse con criterio.</p>
-      <p class="aura-texto aura-cinco">El objetivo es que aprender tambien signifique publicar responsablemente.</p>
+  <section class="seccion seccion-clara">
+    <div class="contenedor sobre-marca-grid">
+      <div>
+        <p class="etiqueta">Que es Chilete DevPath</p>
+        <h2>Un ecosistema para aprender construyendo</h2>
+        <p>
+          Chilete DevPath es la marca personal de Adrian Pisco para documentar una ruta de aprendizaje
+          Full Stack con ejercicios, proyectos academicos, recursos, criterios editoriales y comunidad.
+        </p>
+        <p>
+          No funciona como una lista de enlaces sueltos. Su objetivo es ordenar el proceso para que cada
+          avance pueda entenderse, revisarse y convertirse en material util sin perder contexto.
+        </p>
+      </div>
+      <div class="mapa-identidad">
+        <span>Ubicacion de origen</span>
+        <strong>{site.location}</strong>
+        <p>La identidad territorial se usa como punto de partida de marca, no como apropiacion institucional.</p>
+        <a class="boton boton-secundario" href={site.mapsHref} target="_blank" rel="noopener">Abrir mapa</a>
+      </div>
     </div>
   </section>
 
-  <section class="seccion seccion-clara">
-    <div class="contenedor bloque-trabajo">
-      <div>
-        <p class="etiqueta">Forma de trabajo</p>
-        <h2>Aprender, practicar, ordenar y compartir</h2>
-        <p>
-          Chilete DevPath no se construye como una vitrina vacia. Cada avance debe pasar por
-          practica, documentacion, criterio de publicacion y revision antes de convertirse en
-          contenido util para la comunidad.
-        </p>
+  <section class="seccion">
+    <div class="contenedor">
+      <SectionHeader
+        eyebrow="Diferencia de marca"
+        title="La web debe explicar el camino, no decorar el camino"
+        description="Cada seccion existe para orientar: aprender, practicar, evidenciar, publicar y compartir con responsabilidad."
+      />
+      <div class="tarjetas tarjetas-3">
+        {principles.map((item) => (
+          <article class="tarjeta valor-card">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
       </div>
-      <figure class="bloque-trabajo-imagen">
-        <img
-          src="/assets/img/editorial/sobre-proceso-candidato-v1.jpg"
-          width="1792"
-          height="1024"
-          alt="Proceso de practica y documentacion para Chilete DevPath."
-        />
-      </figure>
     </div>
   </section>
 </BaseLayout>

@@ -2,6 +2,29 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V4.3
+
+- Fecha de cierre: 26/06/2026
+- Estado: en revision
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Incorporacion de boton flotante de WhatsApp con mensaje predeterminado.
+- Incorporacion de formularios estaticos para contacto, recursos y feedback.
+- Creacion de seccion "Por que Chilete DevPath" con propuesta de valor.
+- Incorporacion de metricas estaticas del ecosistema sin simular usuarios.
+- Creacion de rutas internas para politicas de publicacion.
+- Activacion de rutas inglesas reales para las secciones principales.
+- Simplificacion del boton dia/noche a icono accesible.
+- Reorganizacion del footer con enlaces rapidos, politicas, redes y version.
+- Remodelacion de la pagina Sobre para explicar Chilete DevPath como marca.
+- Rediseño de visuales SVG para Ruta, Proyectos, Recursos, Criterios, Comunidad y Sobre.
+
+### Criterio de cierre
+
+La V4.3 mejora contacto, confianza, navegacion, criterio legal/editorial y lectura de marca sin introducir backend, cuentas ni comentarios publicos inseguros.
+
 ## V4.2
 
 - Fecha de cierre: 25/06/2026

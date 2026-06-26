@@ -14,13 +14,13 @@ La web funciona como punto de entrada mas claro que un repositorio para personas
 
 ## Version actual
 
-`V4.2`
+`V4.3`
 
 - Fecha de cierre: 25/06/2026
 - Estado: en revision
 - Sitio: https://chiletedevpath.github.io/
 
-Esta version corrige portadas confusas, mejora la presentacion de proyectos academicos con porcentaje de avance y limpia controles que aun no tienen contenido real, como el idioma ingles.
+Esta version mejora experiencia publica, contacto, politicas internas, idioma ingles navegable, metricas estaticas y narrativa de marca.
 
 ## Tecnologias
 
@@ -63,17 +63,17 @@ chiletedevpath-web/
 `-- CHANGELOG.md
 ```
 
-## Alcance de V4.2
+## Alcance de V4.3
 
-- Portadas raster propias para Aprendizaje, Academia, Portafolio y proyectos academicos seleccionados.
-- Cards academicas con porcentaje de avance visible.
-- Clinica Salud Vital presentada como evidencia academica terminada, no como portafolio final.
-- Ferreteria Soto DB agregada como evidencia entregada dentro del enfoque academico.
-- Ferreteria Sys Patrones agregada como proyecto academico en proceso.
-- Proyectos La Lucha excluidos de la web por criterio legal y posible sensibilidad de informacion.
-- Selector de idioma limitado a ES hasta contar con traduccion real.
-- Paginas Sobre y Criterios ajustadas para evitar mensajes personales o visuales abstractos que no aporten.
-- Paleta ajustada para mejorar contraste y preparar mejor los modos dia y noche.
+- Boton flotante de WhatsApp con mensaje inicial.
+- Formularios estaticos de contacto y feedback compatibles con GitHub Pages.
+- Seccion "Por que Chilete DevPath" y metricas estaticas del ecosistema.
+- Politicas internas con rutas propias dentro de la web.
+- Footer reorganizado con navegacion, redes, politicas y version.
+- Rutas inglesas reales para las secciones principales.
+- Boton de tema reducido a icono con etiqueta accesible.
+- Seccion Sobre reenfocada en la marca, origen Chilete y criterio editorial.
+- Visuales SVG de ruta, proyectos, recursos, comunidad, sobre y criterios rediseñados con mayor sentido.
 
 ## Decisiones de diseno
 
