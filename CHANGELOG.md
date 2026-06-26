@@ -2,6 +2,25 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V4.1
+
+- Fecha de cierre: 25/06/2026
+- Estado: en revisión
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Incorporación de portadas SVG propias para las cards principales de Proyectos.
+- Creación de portada segura para `Clinica Salud Vital` sin datos personales, marcas institucionales ni pantallas sensibles.
+- Actualización de la Clínica como evidencia académica terminada, sin presentarla aún como portafolio final.
+- Ajuste de `ProjectCard` para usar imagen real cuando el proyecto tenga portada definida.
+- Retiro de la foto editorial del hero de Proyectos para mantener coherencia visual mientras se trabaja un sistema fotográfico propio.
+- Limpieza del archivo de la página Proyectos para retirar caracteres dañados visibles en el contenido editado.
+
+### Criterio de cierre
+
+La V4.1 mejora el sistema visual de proyectos sin depender de fotografías improvisadas ni de imágenes con riesgo legal. Las portadas son propias, editables y coherentes con el enfoque de marca.
+
 ## V4.0
 
 - Fecha de cierre: 25/06/2026

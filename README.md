@@ -14,13 +14,13 @@ La web funciona como punto de entrada mas claro que un repositorio para personas
 
 ## Version actual
 
-`V4.0`
+`V4.1`
 
 - Fecha de cierre: 25/06/2026
 - Estado: en revision
 - Sitio: https://chiletedevpath.github.io/
 
-Esta version inicia la migracion estructural de la web: CSS modular, navegacion simplificada, breadcrumb centralizado y base preparada para internacionalizacion.
+Esta version consolida la base V4 con portadas propias para proyectos, cards mas consistentes y una presentacion mas segura de la evidencia academica.
 
 ## Tecnologias
 
@@ -63,14 +63,13 @@ chiletedevpath-web/
 `-- CHANGELOG.md
 ```
 
-## Alcance de V4.0
+## Alcance de V4.1
 
-- Division de `global.css` en archivos por responsabilidad.
-- Navegacion principal reducida para evitar sobrecarga visual.
-- Menu `Mas` para secciones secundarias.
-- Selector `ES / EN` preparado sin enlazar contenido incompleto.
-- Componente `Breadcrumb` para evitar migas de pan duplicadas o inconsistentes.
-- Version visible, metadata y paquete actualizados a V4.0.
+- Portadas SVG propias para Aprendizaje, Academia, Portafolio y Clinica Salud Vital.
+- Cards de proyectos con soporte para imagen real y fallback visual.
+- Clinica Salud Vital presentada como evidencia academica terminada, no como portafolio final.
+- Hero de Proyectos ajustado para usar visual propio mientras se define una fotografia profesional definitiva.
+- Version visible, metadata y paquete actualizados a V4.1.
 
 ## Decisiones de diseno
 

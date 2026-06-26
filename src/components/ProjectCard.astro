@@ -3,7 +3,12 @@ const { project } = Astro.props;
 ---
 
 <article class="tarjeta tarjeta-con-enlace">
-  {project.visual && (
+  {project.imageSrc ? (
+    <figure class="proyecto-visual proyecto-visual-imagen">
+      <img src={project.imageSrc} alt={project.imageAlt ?? ""} loading="lazy" />
+      {project.visual && <figcaption>{project.visual}</figcaption>}
+    </figure>
+  ) : project.visual && (
     <div class="proyecto-visual">
       <span>{project.visual}</span>
     </div>

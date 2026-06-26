@@ -1,29 +1,27 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
-import SectionHeader from "../components/SectionHeader.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import SectionHeader from "../components/SectionHeader.astro";
 import { academicProjects, projectAreas } from "../data/proyectos.js";
 ---
 
 <BaseLayout title="Proyectos | Chilete DevPath">
   <PageHero
     eyebrow="Proyectos"
-    title="Evidencia técnica sin confundir avance con portafolio"
-    description="Cada proyecto se muestra con estado, contexto y criterio de publicación para proteger la marca y explicar el aprendizaje real."
+    title="Evidencia tecnica sin confundir avance con portafolio"
+    description="Cada proyecto se muestra con estado, contexto y criterio de publicacion para proteger la marca y explicar el aprendizaje real."
     variant="proyectos"
-    visualTitle="Evidencia en construcción"
-    visualText="Proyectos, documentación y avance técnico con criterio de publicación."
-    imageSrc="/assets/img/editorial/proyectos-evidencia-candidato-v1.jpg"
-    imageAlt="Adrian Pisco revisando documentación y avance técnico para Chilete DevPath."
+    visualTitle="Evidencia en construccion"
+    visualText="Proyectos, documentacion y avance tecnico con criterio de publicacion."
   />
 
   <section class="seccion">
     <div class="contenedor">
       <SectionHeader
         eyebrow="Mapa del ecosistema"
-        title="Primero se aprende, luego se evidencia, después se selecciona"
-        description="La web diferencia contenido de aprendizaje, evidencia académica y futuros proyectos de portafolio para no mezclar etapas."
+        title="Primero se aprende, luego se evidencia, despues se selecciona"
+        description="La web diferencia contenido de aprendizaje, evidencia academica y futuros proyectos de portafolio para no mezclar etapas."
       />
       <div class="tarjetas tarjetas-3">
         {projectAreas.map((project) => <ProjectCard project={project} />)}
@@ -34,9 +32,9 @@ import { academicProjects, projectAreas } from "../data/proyectos.js";
   <section class="seccion seccion-clara">
     <div class="contenedor">
       <SectionHeader
-        eyebrow="Evidencia en proceso"
-        title="Proyectos académicos en revisión"
-        description="Estos proyectos se enlazan como avance técnico documentado. Aún no representan portafolio final ni casos listos para destacar."
+        eyebrow="Evidencia revisada"
+        title="Proyectos academicos con contexto"
+        description="Estos proyectos se enlazan como evidencia tecnica documentada. No se presentan como portafolio final hasta que pasen revision visual, legal y editorial."
       />
       <div class="tarjetas tarjetas-3">
         {academicProjects.map((project) => <ProjectCard project={project} />)}

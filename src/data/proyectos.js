@@ -3,6 +3,8 @@ export const projectAreas = [
     status: "Ruta activa",
     title: "Camino de aprendizaje",
     visual: "Ruta",
+    imageSrc: "/assets/img/projects/aprendizaje-cover.svg",
+    imageAlt: "Visual de ruta de aprendizaje de Chilete DevPath.",
     description:
       "Ruta progresiva de ejercicios, laboratorios y practicas tecnicas organizadas por nivel de avance.",
     details: ["Ejercicios desarrollados", "Retos para practicar", "Documentacion por etapa"],
@@ -13,6 +15,8 @@ export const projectAreas = [
     status: "Evidencia revisada",
     title: "Evidencia academica",
     visual: "Academia",
+    imageSrc: "/assets/img/projects/academia-cover.svg",
+    imageAlt: "Visual de evidencia academica organizada de Chilete DevPath.",
     description:
       "Indice de proyectos academicos y entregas con contexto, tecnologias y criterios de publicacion segura.",
     details: ["Proyectos entregados", "Contexto academico", "Criterio legal y editorial"],
@@ -23,6 +27,8 @@ export const projectAreas = [
     status: "Seleccion futura",
     title: "Portafolio en construccion",
     visual: "Portafolio",
+    imageSrc: "/assets/img/projects/portafolio-cover.svg",
+    imageAlt: "Visual de portafolio profesional futuro de Chilete DevPath.",
     description:
       "Espacio en preparacion para seleccionar proyectos que demuestren valor profesional real.",
     details: [
@@ -37,15 +43,17 @@ export const projectAreas = [
 
 export const academicProjects = [
   {
-    status: "Academico en proceso",
+    status: "Academico terminado",
     title: "Clinica Salud Vital",
-    visual: "Portada pendiente",
+    visual: "Sistema clinico",
+    imageSrc: "/assets/img/projects/clinica-salud-vital-cover.svg",
+    imageAlt: "Portada academica del proyecto Clinica Salud Vital sin datos personales.",
     description:
-      "Proyecto academico en Java orientado a gestion de pacientes, citas y horarios. Se muestra como evidencia en desarrollo, no como portafolio final.",
+      "Proyecto academico en Java orientado a gestion de pacientes, citas y horarios. Se muestra como evidencia terminada, no como portafolio final.",
     details: [
       "Dominio sensible con datos ficticios",
-      "Pendiente de cierre academico",
-      "Requiere portada propia antes de destacarse",
+      "Datos personales anonimizados",
+      "Portada propia sin informacion sensible",
     ],
     href: "https://github.com/chiletedevpath/utp-clinica-salud-vital",
     action: "Ver avance",
