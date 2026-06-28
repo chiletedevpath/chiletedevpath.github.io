@@ -1,8 +1,16 @@
 ---
 const { project } = Astro.props;
+const isEnglish = project.action?.toLowerCase().startsWith("view");
+const labels = isEnglish
+  ? { problem: "Problem", learned: "What I learned", improve: "What I would improve" }
+  : { problem: "Problema", learned: "Qué aprendí", improve: "Qué mejoraría" };
 ---
 
-<article class="tarjeta tarjeta-con-enlace">
+<article
+  class="tarjeta tarjeta-con-enlace"
+  data-project-card={project.category ? "true" : undefined}
+  data-project-category={project.category}
+>
   {project.imageSrc ? (
     <figure class="proyecto-visual proyecto-visual-imagen">
       <img src={project.imageSrc} alt={project.imageAlt ?? ""} loading="lazy" />
@@ -37,19 +45,19 @@ const { project } = Astro.props;
     <div class="proyecto-ficha">
       {project.problem && (
         <div>
-          <span>Problema</span>
+          <span>{labels.problem}</span>
           <p>{project.problem}</p>
         </div>
       )}
       {project.learned && (
         <div>
-          <span>Qué aprendí</span>
+          <span>{labels.learned}</span>
           <p>{project.learned}</p>
         </div>
       )}
       {project.improve && (
         <div>
-          <span>Qué mejoraría</span>
+          <span>{labels.improve}</span>
           <p>{project.improve}</p>
         </div>
       )}

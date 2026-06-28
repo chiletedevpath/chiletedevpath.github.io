@@ -18,6 +18,8 @@ if (typeof document !== "undefined") {
   const metricasAnimadas = document.querySelectorAll("[data-count]");
   const filtrosRecursos = document.querySelectorAll("[data-resource-filter]");
   const tarjetasRecursos = document.querySelectorAll("[data-resource-category]");
+  const filtrosProyectos = document.querySelectorAll("[data-project-filter]");
+  const tarjetasProyectos = document.querySelectorAll("[data-project-card]");
 
   if (anio) {
     anio.textContent = new Date().getFullYear();
@@ -197,6 +199,23 @@ if (typeof document !== "undefined") {
           categoria === "todos" ||
           tarjeta.dataset.resourceCategory === categoria ||
           tags.includes(categoria);
+        tarjeta.hidden = !visible;
+      });
+    });
+  });
+
+  filtrosProyectos.forEach((filtro) => {
+    filtro.addEventListener("click", () => {
+      const categoria = filtro.dataset.projectFilter;
+
+      filtrosProyectos.forEach((item) => {
+        item.classList.toggle("filtro-activo", item === filtro);
+        item.setAttribute("aria-pressed", String(item === filtro));
+      });
+
+      tarjetasProyectos.forEach((tarjeta) => {
+        const visible =
+          categoria === "todos" || tarjeta.dataset.projectCategory === categoria;
         tarjeta.hidden = !visible;
       });
     });

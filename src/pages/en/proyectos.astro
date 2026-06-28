@@ -4,6 +4,12 @@ import PageHero from "../../components/PageHero.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import SectionHeader from "../../components/SectionHeader.astro";
 import { academicProjectsEn, projectAreasEn } from "../../data/proyectos.js";
+
+const projectFilters = [
+  { label: "All", value: "todos" },
+  { label: "UTP", value: "utp" },
+  { label: "Tecsup", value: "tecsup" },
+];
 ---
 
 <BaseLayout title="Projects | Chilete DevPath">
@@ -36,6 +42,18 @@ import { academicProjectsEn, projectAreasEn } from "../../data/proyectos.js";
         title="Academic projects with context"
         description="These projects show real academic progress with status, technologies, learning notes and direct access to review them with context."
       />
+      <div class="filtros-recursos filtros-proyectos" aria-label="Academic project filters">
+        {projectFilters.map((filter, index) => (
+          <button
+            class={index === 0 ? "filtro-recurso filtro-activo" : "filtro-recurso"}
+            type="button"
+            data-project-filter={filter.value}
+            aria-pressed={index === 0 ? "true" : "false"}
+          >
+            {filter.label}
+          </button>
+        ))}
+      </div>
       <div class="tarjetas tarjetas-3">
         {academicProjectsEn.map((project) => <ProjectCard project={project} />)}
       </div>

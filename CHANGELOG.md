@@ -2,6 +2,25 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V4.9
+
+- Fecha de cierre: 28/06/2026
+- Estado: en revisión
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Alineación del hero de inicio en español e inglés usando el mismo dashboard y la misma estructura visual.
+- Corrección de métricas visibles del dashboard: 12 temas, 6 proyectos y 4 criterios activos.
+- Mejora de textos en proyectos para enfocar "qué mejoraría" en evolución funcional y técnica del sistema.
+- Reemplazo de etiquetas genéricas por identificación institucional: Proyecto UTP y Proyecto Tecsup.
+- Incorporación de filtros por origen en la sección de proyectos.
+- Creación de portadas diferenciadas para los tres proyectos Tecsup.
+
+### Criterio de cierre
+
+La V4.9 corrige inconsistencias detectadas en auditoría visual y mejora la lectura pública de los proyectos sin alterar la lógica de los repos académicos.
+
 ## V4.8
 
 - Fecha de cierre: 28/06/2026

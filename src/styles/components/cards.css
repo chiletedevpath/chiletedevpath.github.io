@@ -695,6 +695,10 @@
   margin: -8px 0 28px;
 }
 
+.filtros-proyectos {
+  margin-top: -4px;
+}
+
 .filtro-recurso {
   border: 1px solid var(--color-borde);
   border-radius: 999px;
@@ -720,6 +724,10 @@
 }
 
 .recurso-card[hidden] {
+  display: none;
+}
+
+[data-project-card][hidden] {
   display: none;
 }
 

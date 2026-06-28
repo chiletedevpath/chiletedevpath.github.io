@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PageHero from "../../components/PageHero.astro";
+import Hero from "../../components/Hero.astro";
 import SectionHeader from "../../components/SectionHeader.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import RouteStage from "../../components/RouteStage.astro";
@@ -48,13 +48,20 @@ const audienceEn = [
 ---
 
 <BaseLayout title="Chilete DevPath | Learning path">
-  <PageHero
+  <Hero
     eyebrow="Chilete, Cajamarca, Peru | Full Stack Development"
-    title="A public learning path built with practice and criteria"
-    description="Chilete DevPath organizes learning, academic evidence, resources and publishing criteria for students who want to grow with order."
-    variant="ruta"
-    visualTitle="Learning path"
-    visualText="From fundamentals to real projects."
+    title="Learn programming with a path, practice and real evidence"
+    description="Chilete DevPath organizes my learning journey so more students can start, practice and publish better without losing technical judgment."
+    dynamicMessages={["Learn from zero", "Practice with evidence", "Build real projects", "Publish with criteria"]}
+    primaryHref="/en/ruta/"
+    primaryLabel="View learning path"
+    secondaryLabel="Explore GitHub"
+    indicators={["12 published topics", "6 contextualized projects", "4 active criteria"]}
+    dashboardStatus="Active path"
+    pathSteps={["Foundations", "Web", "Data", "Backend", "Projects"]}
+    terminalCommand="learn --order --practice --criteria"
+    terminalStatus="publishing verifiable progress..."
+    progressLabel="Technical base"
   />
 
   <section class="seccion seccion-clara inicio-aprendizaje">

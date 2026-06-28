@@ -1,48 +1,66 @@
 ---
+const {
+  eyebrow = "Desde Chilete, Cajamarca al desarrollo Full Stack",
+  title = "Aprende programación con ruta, práctica y evidencia real",
+  description = "Chilete DevPath organiza mi camino de aprendizaje para que más estudiantes puedan empezar, practicar y publicar mejor sin perder criterio técnico.",
+  dynamicMessages = [
+    "Aprende desde cero",
+    "Practica con evidencia",
+    "Construye proyectos reales",
+    "Publica con criterio",
+  ],
+  primaryHref = "/ruta/",
+  primaryLabel = "Ver ruta de aprendizaje",
+  secondaryHref = "https://github.com/chiletedevpath",
+  secondaryLabel = "Explorar GitHub",
+  indicators = ["12 temas publicados", "6 proyectos con contexto", "4 criterios activos"],
+  dashboardStatus = "Ruta activa",
+  dashboardTitle = "Chilete DevPath",
+  pathSteps = ["Fundamentos", "Web", "Datos", "Backend", "Proyectos"],
+  terminalPrompt = "devpath@chilete:~$",
+  terminalCommand = "aprender --orden --practica --criterio",
+  terminalStatus = "publicando avance verificable...",
+  progressLabel = "Base técnica",
+  progressValue = "70%",
+} = Astro.props;
 ---
 
 <section id="inicio" class="hero">
   <div class="contenedor hero-contenido">
     <div class="hero-texto">
-      <p class="etiqueta">Desde Chilete, Cajamarca al desarrollo Full Stack</p>
+      <p class="etiqueta">{eyebrow}</p>
 
-      <h1>Aprende programación con ruta, práctica y evidencia real</h1>
+      <h1>{title}</h1>
 
       <p class="hero-descripcion">
-        Chilete DevPath organiza mi camino de aprendizaje para que más estudiantes puedan empezar,
-        practicar y publicar mejor sin perder criterio técnico.
+        {description}
       </p>
 
       <p class="hero-dinamico" aria-label="Mensajes principales de Chilete DevPath">
-        <span>Aprende desde cero</span>
-        <span>Practica con evidencia</span>
-        <span>Construye proyectos reales</span>
-        <span>Publica con criterio</span>
+        {dynamicMessages.map((message) => <span>{message}</span>)}
       </p>
 
       <div class="acciones">
-        <a class="boton boton-principal" href="/ruta/">Ver ruta de aprendizaje</a>
-        <a class="boton boton-secundario boton-externo" href="https://github.com/chiletedevpath" target="_blank" rel="noopener">
-          Explorar GitHub
+        <a class="boton boton-principal" href={primaryHref}>{primaryLabel}</a>
+        <a class="boton boton-secundario boton-externo" href={secondaryHref} target="_blank" rel="noopener">
+          {secondaryLabel}
         </a>
       </div>
 
       <div class="hero-indicadores" aria-label="Resumen de la marca">
-        <span>11 temas publicados</span>
-        <span>3 proyectos con contexto</span>
-        <span>4 criterios activos</span>
+        {indicators.map((indicator) => <span>{indicator}</span>)}
       </div>
     </div>
 
     <div class="hero-visual" aria-label="Panel visual de avance Chilete DevPath">
       <div class="hero-dashboard">
         <div class="dashboard-top">
-          <span class="dashboard-status">Ruta activa</span>
-          <strong>Chilete DevPath</strong>
+          <span class="dashboard-status">{dashboardStatus}</span>
+          <strong>{dashboardTitle}</strong>
         </div>
 
         <div class="dashboard-path" aria-label="Etapas de aprendizaje">
-          {["Fundamentos", "Web", "Datos", "Backend", "Proyectos"].map((item, index) => (
+          {pathSteps.map((item, index) => (
             <div class="dashboard-step">
               <span>{String(index + 1).padStart(2, "0")}</span>
               <strong>{item}</strong>
@@ -51,15 +69,15 @@
         </div>
 
         <div class="dashboard-terminal" aria-label="Resumen técnico">
-          <span>devpath@chilete:~$</span>
-          <p>aprender --orden --practica --criterio</p>
-          <small>publicando avance verificable...</small>
+          <span>{terminalPrompt}</span>
+          <p>{terminalCommand}</p>
+          <small>{terminalStatus}</small>
         </div>
 
         <div class="dashboard-progress">
           <div>
-            <span>Base técnica</span>
-            <strong>70%</strong>
+            <span>{progressLabel}</span>
+            <strong>{progressValue}</strong>
           </div>
           <div class="dashboard-barra">
             <span></span>
