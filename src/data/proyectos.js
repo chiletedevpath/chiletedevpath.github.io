@@ -18,8 +18,8 @@ export const projectAreas = [
     imageSrc: "/assets/img/projects/academia-cover.png",
     imageAlt: "Documentación académica y evidencia técnica organizada.",
     description:
-      "Índice de proyectos académicos y entregas con contexto, tecnologías y criterios de publicación segura.",
-    details: ["Proyectos entregados", "Contexto académico", "Criterio legal y editorial"],
+      "Índice de proyectos académicos y entregas con contexto, tecnologías y evidencia técnica.",
+    details: ["Proyectos entregados", "Contexto académico", "Evidencia técnica"],
     href: "https://github.com/chiletedevpath/academia",
     action: "Ver evidencias",
   },
@@ -62,7 +62,7 @@ export const academicProjects = [
     learned: "Apliqué estructuras de datos, persistencia simple, menús de consola y organización progresiva del código.",
     improve: "Mejorar interfaz, validaciones y separación de responsabilidades antes de tratarlo como portafolio.",
     href: "https://github.com/chiletedevpath/academia/tree/main/utp/ciclo-05/algoritmos-y-estructuras-de-datos/clinica-salud-vital",
-    action: "Ver en academia",
+    action: "Ver proyecto",
   },
   {
     status: "Terminado",
@@ -83,8 +83,8 @@ export const academicProjects = [
     problem: "Modelar información de inventario, productos, ventas y consultas de una ferretería en contexto académico.",
     learned: "Reforcé diseño relacional, consultas y lectura de datos con criterio de organización.",
     improve: "Preparar una portada propia y documentación pública sin referencias innecesarias al entorno de entrega.",
-    href: "https://github.com/chiletedevpath/academia",
-    action: "Ver referencia",
+    href: "https://github.com/chiletedevpath/academia/tree/main/utp/ciclo-04/base-de-datos-i/ferreteria-soto-db",
+    action: "Ver proyecto",
   },
   {
     status: "Terminado",
@@ -106,7 +106,7 @@ export const academicProjects = [
     learned: "Estoy conectando diseño de clases, reglas de negocio y patrones con una estructura más mantenible.",
     improve: "Refactorizar o ampliar solo en una versión futura, sin alterar la lógica entregada.",
     href: "https://github.com/chiletedevpath/academia/tree/main/utp/ciclo-05/patrones-de-diseno/ferreteria-sys-patrones",
-    action: "Ver en academia",
+    action: "Ver proyecto",
   },
 ];
 
@@ -130,8 +130,8 @@ export const projectAreasEn = [
     imageSrc: "/assets/img/projects/academia-cover.png",
     imageAlt: "Academic documentation and organized technical evidence.",
     description:
-      "Index of academic projects and submissions with context, technologies and safe publishing criteria.",
-    details: ["Submitted projects", "Academic context", "Legal and editorial criteria"],
+      "Index of academic projects and submissions with context, technologies and technical evidence.",
+    details: ["Submitted projects", "Academic context", "Technical evidence"],
     href: "https://github.com/chiletedevpath/academia",
     action: "View evidence",
   },
@@ -166,7 +166,7 @@ export const academicProjectsEn = [
     learned: "I practiced data structures, simple persistence, console menus and progressive code organization.",
     improve: "Improve interface, validations and responsibility separation before treating it as portfolio work.",
     href: "https://github.com/chiletedevpath/academia/tree/main/utp/ciclo-05/algoritmos-y-estructuras-de-datos/clinica-salud-vital",
-    action: "View in academia",
+    action: "View project",
   },
   {
     status: "Completed",
@@ -183,8 +183,8 @@ export const academicProjectsEn = [
     problem: "Model inventory, products, sales and queries for an academic hardware-store context.",
     learned: "I reinforced relational design, queries and data organization criteria.",
     improve: "Prepare a custom cover and public documentation without unnecessary delivery-context references.",
-    href: "https://github.com/chiletedevpath/academia",
-    action: "View reference",
+    href: "https://github.com/chiletedevpath/academia/tree/main/utp/ciclo-04/base-de-datos-i/ferreteria-soto-db",
+    action: "View project",
   },
   {
     status: "Completed",
@@ -202,6 +202,6 @@ export const academicProjectsEn = [
     learned: "I am connecting class design, business rules and patterns with a more maintainable structure.",
     improve: "Refactor or extend only in a future version, without altering the submitted logic.",
     href: "https://github.com/chiletedevpath/academia/tree/main/utp/ciclo-05/patrones-de-diseno/ferreteria-sys-patrones",
-    action: "View in academia",
+    action: "View project",
   },
 ];
