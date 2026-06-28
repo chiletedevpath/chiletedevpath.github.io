@@ -2,6 +2,24 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V4.10
+
+- Fecha de cierre: 28/06/2026
+- Estado: en revisión
+- Sitio: https://chiletedevpath.github.io/
+
+### Alcance
+
+- Rediseño del hero de páginas internas: ruta, proyectos, comunidad, sobre, recursos y criterios.
+- Separación entre SVG visual y textos explicativos para evitar superposición y mejorar lectura.
+- Incorporación de puntos contextuales por sección con paridad visual entre español e inglés.
+- Reemplazo del hero especial de criterios por el mismo sistema de `PageHero`.
+- Ajuste responsive para que los nuevos héroes mantengan espacio suficiente en pantallas pequeñas.
+
+### Criterio de cierre
+
+La V4.10 mejora la lectura visual de las secciones internas sin cambiar el hero principal de inicio ni la lógica de navegación.
+
 ## V4.9
 
 - Fecha de cierre: 28/06/2026

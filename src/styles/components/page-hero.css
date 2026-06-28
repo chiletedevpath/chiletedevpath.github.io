@@ -85,11 +85,15 @@
   width: 100%;
   height: 100%;
   display: block;
-  padding: 18px;
+  padding: 14px;
 }
 
 .visual-fondo {
-  fill: rgba(255, 255, 255, 0.045);
+  fill: rgba(255, 255, 255, 0.055);
+}
+
+.visual-brillo {
+  opacity: 0.9;
 }
 
 .visual-malla,
@@ -103,25 +107,69 @@
 
 .visual-camino {
   fill: none;
-  stroke: var(--color-progreso);
+  stroke: url(#trazo-ruta);
   stroke-linecap: round;
   stroke-width: 11;
   opacity: 0.88;
   animation: pulso-camino 4.8s ease-in-out infinite;
 }
 
-.visual-raiz,
+.section-visual-proyectos .visual-camino {
+  stroke: url(#trazo-proyectos);
+}
+
+.section-visual-recursos .visual-camino {
+  stroke: url(#trazo-recursos);
+}
+
+.section-visual-criterios .visual-camino {
+  stroke: url(#trazo-criterios);
+}
+
+.section-visual-comunidad .visual-camino {
+  stroke: url(#trazo-comunidad);
+}
+
+.section-visual-sobre .visual-camino {
+  stroke: url(#trazo-sobre);
+}
+
+.visual-carretera {
+  fill: none;
+  stroke: url(#trazo-ruta);
+  stroke-linecap: round;
+  stroke-width: 14;
+}
+
+.visual-carretera-sombra {
+  fill: none;
+  stroke: rgba(4, 17, 26, 0.72);
+  stroke-linecap: round;
+  stroke-width: 26;
+}
+
+.visual-ladera,
+.visual-plaza {
+  fill: color-mix(in srgb, var(--color-acento) 18%, rgba(255, 255, 255, 0.06));
+  stroke: color-mix(in srgb, var(--color-acento) 46%, rgba(255, 255, 255, 0.22));
+  stroke-width: 2;
+}
+
 .visual-geografia,
 .visual-rio,
 .visual-escudo,
 .visual-check,
-.visual-card path,
-.visual-terminal path,
+.visual-linea,
 .visual-dashboard path,
 .visual-checklist path,
 .visual-devpath path,
-.visual-busqueda path,
-.visual-persona path {
+.visual-lupa-linea,
+.visual-persona path,
+.visual-checkline path,
+.visual-recurso path,
+.visual-medidor path,
+.visual-origen-marca path,
+.visual-flecha {
   fill: none;
   stroke: color-mix(in srgb, var(--color-agua) 72%, #ffffff);
   stroke-linecap: round;
@@ -129,22 +177,16 @@
   stroke-width: 5;
 }
 
-.visual-nodo circle,
-.visual-hito circle,
-.visual-origen {
+.visual-hito circle {
   fill: var(--color-progreso);
   stroke: rgba(255, 255, 255, 0.72);
   stroke-width: 3;
 }
 
-.visual-nodo rect,
-.visual-terminal rect,
-.visual-dashboard rect,
-.visual-estante rect,
-.visual-checklist rect,
+.visual-panel,
+.visual-kanban rect,
 .visual-devpath rect,
-.visual-card rect,
-.visual-chip {
+.visual-recurso rect {
   fill: rgba(255, 255, 255, 0.09);
   stroke: rgba(255, 255, 255, 0.28);
   stroke-width: 2;
@@ -160,8 +202,8 @@
 }
 
 .visual-medidor circle,
-.visual-busqueda circle,
-.visual-marca-origen circle {
+.visual-lupa,
+.visual-origen-marca circle {
   fill: rgba(255, 255, 255, 0.08);
   stroke: var(--color-progreso);
   stroke-width: 4;
@@ -178,34 +220,37 @@
   opacity: 0.78;
 }
 
-.visual-estante rect:first-child,
-.visual-dashboard rect:first-child,
-.visual-checklist rect:first-child {
-  fill: rgba(255, 255, 255, 0.07);
-}
-
 .visual-persona circle {
   fill: rgba(255, 255, 255, 0.1);
   stroke: var(--color-progreso);
   stroke-width: 4;
 }
 
-.visual-raiz-grande {
-  stroke: color-mix(in srgb, var(--color-progreso) 72%, var(--color-agua));
+.visual-cerros,
+.visual-plaza-base {
+  fill: none;
+  stroke: rgba(238, 247, 248, 0.18);
+  stroke-width: 2;
+}
+
+.visual-recurso:nth-of-type(odd) rect {
+  fill: color-mix(in srgb, var(--color-acento) 14%, rgba(255, 255, 255, 0.08));
 }
 
 .page-hero-leyenda {
-  position: relative;
+  position: absolute;
+  left: 24px;
+  top: 24px;
   z-index: 2;
-  min-height: 260px;
-  padding: 24px;
+  max-width: 280px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap: 8px;
-  background:
-    linear-gradient(180deg, transparent 40%, rgba(4, 17, 26, 0.54)),
-    linear-gradient(90deg, rgba(4, 17, 26, 0.34), transparent 58%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(4, 17, 26, 0.52);
+  backdrop-filter: blur(14px);
 }
 
 .page-hero-visual span,
@@ -221,8 +266,60 @@
   max-width: 320px;
   color: #eef7f8;
   font-family: var(--fuente-titulos);
-  font-size: 1.18rem;
+  font-size: 1.08rem;
   line-height: 1.25;
+}
+
+.page-hero-puntos {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 3;
+  width: min(360px, calc(100% - 40px));
+  display: grid;
+  gap: 10px;
+}
+
+.page-hero-punto {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(4, 17, 26, 0.58);
+  color: #eef7f8;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.page-hero-punto > span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--color-progreso);
+  color: var(--color-principal);
+  font-family: var(--fuente-mono);
+  font-size: 0.82rem;
+  font-weight: 900;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--color-progreso) 38%, transparent);
+}
+
+.page-hero-punto strong {
+  display: block;
+  margin-bottom: 2px;
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.95rem;
+}
+
+.page-hero-punto p {
+  margin: 0;
+  color: rgba(238, 247, 248, 0.78);
+  font-size: 0.82rem;
+  line-height: 1.35;
 }
 
 .page-hero-foto {
@@ -280,6 +377,39 @@
   background:
     linear-gradient(135deg, rgba(10, 38, 54, 0.98), rgba(112, 83, 52, 0.68)),
     var(--color-principal);
+}
+
+@media (max-width: 760px) {
+  .page-hero-visual {
+    min-height: 460px;
+  }
+
+  .section-visual svg {
+    padding: 10px;
+  }
+
+  .page-hero-leyenda {
+    left: 14px;
+    right: 14px;
+    top: 14px;
+    max-width: none;
+    padding: 12px;
+  }
+
+  .page-hero-puntos {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    width: auto;
+  }
+
+  .page-hero-punto {
+    padding: 10px 12px;
+  }
+
+  .page-hero-punto:nth-child(n + 4) {
+    display: none;
+  }
 }
 
 .contenido-texto {

@@ -1,32 +1,24 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
 import PolicyIcon from "../../components/PolicyIcon.astro";
 import { policiesEn } from "../../data/recursos.js";
 ---
 
 <BaseLayout title="Criteria | Chilete DevPath">
-  <section class="seccion criterios-hero">
-    <div class="contenedor criterios-hero-grid">
-      <div>
-        <p class="etiqueta">Publishing criteria</p>
-        <h1>We publish with judgment, not with rush</h1>
-        <strong>Learning also means taking care of what we share.</strong>
-        <p class="seccion-descripcion">
-          Before a resource, project or guide becomes public, it must have context, respect authorship
-          and avoid exposing sensitive data. That is the difference between publishing content and building trust.
-        </p>
-      </div>
-      <aside class="criterios-resumen" aria-label="Publishing criteria summary">
-        <strong>Before publishing I review</strong>
-        <ul>
-          <li>Clear authorship</li>
-          <li>Visible context</li>
-          <li>Protected privacy</li>
-          <li>Responsible AI use</li>
-        </ul>
-      </aside>
-    </div>
-  </section>
+  <PageHero
+    eyebrow="Publishing criteria"
+    title="We publish with judgment, not with rush"
+    description="Before a resource, project or guide becomes public, it must have context, respect authorship and avoid exposing sensitive data. That is the difference between publishing content and building trust."
+    variant="criterios"
+    visualTitle="Review before publishing"
+    visualText="An editorial filter for authorship, privacy and responsible use."
+    visualItems={[
+      { title: "Authorship", text: "Recognize origin, sources and limits of the material." },
+      { title: "Privacy", text: "Avoid personal data or sensitive information." },
+      { title: "Responsibility", text: "Use AI and external resources with judgment." },
+    ]}
+  />
 
   <section class="seccion">
     <div class="contenedor">

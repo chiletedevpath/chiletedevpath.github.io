@@ -8,6 +8,7 @@ const {
   variant = "ruta",
   visualTitle = "Espacio visual reservado",
   visualText = "Visual editorial de Chilete DevPath.",
+  visualItems = [],
   showVisual = true,
   imageSrc,
   imageAlt = "",
@@ -27,6 +28,23 @@ const {
           <img class="page-hero-foto" src={imageSrc} alt={imageAlt} />
         ) : (
           <SectionVisual variant={variant} title={visualTitle} />
+        )}
+        <div class="page-hero-leyenda">
+          <span>{visualTitle}</span>
+          <strong>{visualText}</strong>
+        </div>
+        {visualItems.length > 0 && (
+          <div class="page-hero-puntos" aria-label={visualTitle}>
+            {visualItems.map((item, index) => (
+              <article class="page-hero-punto">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <div>
+                  <strong>{item.title}</strong>
+                  {item.text && <p>{item.text}</p>}
+                </div>
+              </article>
+            ))}
+          </div>
         )}
       </div>
     )}
