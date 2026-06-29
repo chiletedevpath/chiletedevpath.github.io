@@ -317,6 +317,9 @@
 .visual-escudo,
 .visual-check,
 .visual-linea,
+.visual-proyectos-header path,
+.visual-proyectos-ruta-base,
+.visual-proyecto-linea,
 .visual-dashboard path,
 .visual-checklist path,
 .visual-devpath path,
@@ -347,6 +350,130 @@
   fill: rgba(255, 255, 255, 0.09);
   stroke: rgba(255, 255, 255, 0.28);
   stroke-width: 2;
+}
+
+.visual-proyectos-panel {
+  fill:
+    color-mix(in srgb, var(--color-principal) 76%, transparent);
+  stroke: color-mix(in srgb, var(--color-borde) 68%, var(--color-agua));
+  filter: drop-shadow(0 22px 42px rgba(0, 0, 0, 0.24));
+}
+
+.visual-proyectos-header circle {
+  fill: color-mix(in srgb, var(--color-agua) 72%, #ffffff);
+  opacity: 0.84;
+}
+
+.visual-proyectos-header circle:nth-child(2) {
+  fill: var(--color-progreso);
+}
+
+.visual-proyectos-header circle:nth-child(3) {
+  fill: var(--color-acento);
+}
+
+.visual-proyectos-header path,
+.visual-proyectos-ruta-base,
+.visual-proyecto-linea {
+  stroke-width: 4;
+  opacity: 0.42;
+}
+
+.visual-proyectos-ruta-base {
+  stroke: rgba(238, 247, 248, 0.2);
+  stroke-width: 16;
+}
+
+.visual-proyectos-ruta-activa {
+  fill: none;
+  stroke: url(#trazo-proyectos);
+  stroke-linecap: round;
+  stroke-width: 8;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: visual-proyectos-ruta 5.8s ease-in-out infinite;
+}
+
+.visual-proyecto-card rect {
+  fill:
+    color-mix(in srgb, var(--color-superficie) 74%, rgba(255, 255, 255, 0.08));
+  stroke: color-mix(in srgb, var(--color-borde) 70%, rgba(255, 255, 255, 0.18));
+  stroke-width: 2;
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.22));
+}
+
+.visual-proyecto-card {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: visual-proyecto-card 5.8s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.28s);
+}
+
+.visual-proyecto-inst,
+.visual-proyecto-tech,
+.visual-proyectos-check text,
+.visual-proyectos-nodo text {
+  font-family: var(--fuente-mono);
+  font-weight: 900;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.visual-proyecto-inst {
+  fill: var(--color-progreso);
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-anchor: start;
+}
+
+.visual-proyecto-tech {
+  fill: color-mix(in srgb, var(--color-agua) 82%, #ffffff);
+  font-size: 13px;
+  text-anchor: start;
+}
+
+.visual-proyecto-barra-base {
+  fill: rgba(238, 247, 248, 0.16);
+}
+
+.visual-proyecto-barra {
+  fill: url(#trazo-proyectos);
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: visual-proyecto-barra 5.8s ease-in-out infinite;
+}
+
+.visual-proyectos-nodo circle {
+  fill: var(--color-progreso);
+  stroke: rgba(255, 255, 255, 0.88);
+  stroke-width: 3;
+  filter: drop-shadow(0 0 14px color-mix(in srgb, var(--color-progreso) 54%, transparent));
+}
+
+.visual-proyectos-nodo text {
+  fill: var(--color-principal);
+  font-size: 12px;
+}
+
+.visual-proyectos-check circle {
+  fill: color-mix(in srgb, var(--color-acento) 18%, rgba(255, 255, 255, 0.08));
+  stroke: var(--color-progreso);
+  stroke-width: 4;
+  filter: drop-shadow(0 0 18px color-mix(in srgb, var(--color-progreso) 28%, transparent));
+}
+
+.visual-proyectos-check path {
+  fill: none;
+  stroke: color-mix(in srgb, var(--color-agua) 86%, #ffffff);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 8;
+}
+
+.visual-proyectos-check text {
+  fill: var(--color-progreso);
+  font-size: 16px;
 }
 
 .visual-hito text {
@@ -516,8 +643,52 @@
 
 .page-hero-proyectos .page-hero-visual {
   background:
-    linear-gradient(135deg, rgba(10, 38, 54, 0.98), rgba(112, 83, 52, 0.76)),
+    radial-gradient(circle at 76% 22%, rgba(245, 197, 66, 0.18), transparent 30%),
+    radial-gradient(circle at 22% 82%, rgba(79, 156, 175, 0.18), transparent 32%),
+    linear-gradient(135deg, rgba(10, 38, 54, 0.98), rgba(17, 30, 48, 0.92)),
     var(--color-principal);
+}
+
+@keyframes visual-proyectos-ruta {
+  0%,
+  12% {
+    stroke-dashoffset: 1;
+  }
+
+  72%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes visual-proyecto-card {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+
+  12%,
+  74% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0.86;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes visual-proyecto-barra {
+  0%,
+  14% {
+    transform: scaleX(0.18);
+  }
+
+  58%,
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 .page-hero-recursos .page-hero-visual {

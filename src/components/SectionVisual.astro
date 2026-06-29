@@ -113,23 +113,51 @@ const {
 
     {variant === "proyectos" && (
       <g class="visual-proyectos">
-        <rect class="visual-panel" x="86" y="92" width="548" height="290" rx="24" />
-        <path class="visual-linea" d="M130 162h150M130 208h104M130 254h170" />
-        <g class="visual-kanban">
+        <rect class="visual-panel visual-proyectos-panel" x="68" y="58" width="584" height="344" rx="28" />
+        <g class="visual-proyectos-header">
+          <circle cx="112" cy="104" r="10" />
+          <circle cx="144" cy="104" r="10" />
+          <circle cx="176" cy="104" r="10" />
+          <path d="M230 104h232M500 104h78" />
+        </g>
+        <g class="visual-proyectos-flujo">
+          <path class="visual-proyectos-ruta-base" d="M116 326 C208 292 272 300 350 258 C432 214 486 214 590 172" />
+          <path class="visual-proyectos-ruta-activa" d="M116 326 C208 292 272 300 350 258 C432 214 486 214 590 172" filter={`url(#resplandor-${variant})`} pathLength="1" />
           {[0, 1, 2].map((index) => {
-            const x = 318 + index * 92;
+            const points = [
+              [116, 326],
+              [350, 258],
+              [590, 172],
+            ];
+            const [cx, cy] = points[index];
             return (
-              <g>
-                <rect x={x} y="140" width="70" height="132" rx="14" />
-                <path d={`M${x + 18} ${170 + index * 12}h34M${x + 18} ${196 + index * 12}h24`} />
+              <g class="visual-proyectos-nodo">
+                <circle cx={cx} cy={cy} r="18" />
+                <text x={cx} y={cy + 1}>{String(index + 1).padStart(2, "0")}</text>
               </g>
             );
           })}
         </g>
-        <path class="visual-camino" d="M118 326 C214 282 314 304 408 244 C494 190 554 174 646 142" filter={`url(#resplandor-${variant})`} />
-        <g class="visual-medidor">
-          <circle cx="584" cy="302" r="46" />
-          <path d="M562 304l18 18 40-52" />
+        <g class="visual-proyectos-cards">
+          {[
+            { x: 102, y: 152, inst: "UTP", tech: "Java", progress: 196 },
+            { x: 270, y: 126, inst: "UTP", tech: "SQL", progress: 196 },
+            { x: 438, y: 152, inst: "TECSUP", tech: "React", progress: 166 },
+          ].map((card, index) => (
+            <g class="visual-proyecto-card" style={`--i:${index};`}>
+              <rect x={card.x} y={card.y} width="142" height="132" rx="18" />
+              <text class="visual-proyecto-inst" x={card.x + 18} y={card.y + 32}>{card.inst}</text>
+              <path class="visual-proyecto-linea" d={`M${card.x + 18} ${card.y + 58}h84M${card.x + 18} ${card.y + 82}h62`} />
+              <rect class="visual-proyecto-barra-base" x={card.x + 18} y={card.y + 104} width="96" height="8" rx="4" />
+              <rect class="visual-proyecto-barra" x={card.x + 18} y={card.y + 104} width={card.progress / 2} height="8" rx="4" />
+              <text class="visual-proyecto-tech" x={card.x + 18} y={card.y + 126}>{card.tech}</text>
+            </g>
+          ))}
+        </g>
+        <g class="visual-proyectos-check">
+          <circle cx="590" cy="316" r="48" />
+          <path d="M568 318l18 18 40-50" />
+          <text x="590" y="376">100%</text>
         </g>
       </g>
     )}
