@@ -6,6 +6,8 @@ import SocialIcon from "../components/SocialIcon.astro";
 import { socials } from "../data/site.js";
 
 const buscarCanal = (nombre) => socials.find((social) => social.name === nombre);
+const discord = buscarCanal("Discord");
+const github = buscarCanal("GitHub");
 const gruposSociales = [
   {
     title: "Evidencia técnica",
@@ -36,8 +38,14 @@ const gruposSociales = [
     title="Aprender acompañado hace el camino más sostenible"
     description="Quiero que Chilete DevPath también sea un espacio para conversar sobre aprendizaje, compartir avances y mejorar la ruta con aportes reales."
     variant="comunidad"
+    heroImage="/assets/img/heros/comunidad.png"
+    showVisual={false}
     visualTitle="Punto de encuentro"
     visualText="Un espacio abierto para conversar, practicar y mejorar juntos."
+    actions={[
+      { label: "Unirme a Discord", href: discord?.href ?? "#", primary: true, external: true },
+      { label: "Ver GitHub", href: github?.href ?? "#", external: true },
+    ]}
     visualItems={[
       { title: "Canales", text: "GitHub, Discord y redes con roles claros." },
       { title: "Aportes", text: "Ideas y sugerencias que ayuden a la ruta." },

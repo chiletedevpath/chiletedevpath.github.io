@@ -6,6 +6,8 @@ import SocialIcon from "../../components/SocialIcon.astro";
 import { socialsEn } from "../../data/site.js";
 
 const findChannel = (name) => socialsEn.find((social) => social.name === name);
+const discord = findChannel("Discord");
+const github = findChannel("GitHub");
 const socialGroups = [
   {
     title: "Technical evidence",
@@ -36,8 +38,14 @@ const socialGroups = [
     title="Learning with others makes the path sustainable"
     description="Chilete DevPath is also a space to share progress, questions and learning without losing technical criteria."
     variant="comunidad"
+    heroImage="/assets/img/heros/comunidad.png"
+    showVisual={false}
     visualTitle="Meeting point"
     visualText="An open space to talk, practice and improve together."
+    actions={[
+      { label: "Join Discord", href: discord?.href ?? "#", primary: true, external: true },
+      { label: "Open GitHub", href: github?.href ?? "#", external: true },
+    ]}
     visualItems={[
       { title: "Channels", text: "GitHub, Discord and social platforms with clear roles." },
       { title: "Contributions", text: "Ideas and suggestions that improve the path." },

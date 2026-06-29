@@ -11,18 +11,34 @@ const {
   visualLabel,
   visualHeadline,
   visualItems = [],
+  actions = [],
   showVisual = true,
+  heroImage,
   imageSrc,
   imageAlt = "",
 } = Astro.props;
+
+const heroStyle = heroImage ? `--page-hero-bg: url("${heroImage}");` : undefined;
 ---
 
-<section class:list={["seccion", "page-hero", `page-hero-${variant}`, !showVisual && "page-hero-sin-visual"]}>
+<section
+  class:list={["seccion", "page-hero", `page-hero-${variant}`, heroImage && "page-hero-con-fondo", !showVisual && "page-hero-sin-visual"]}
+  style={heroStyle}
+>
   <div class="contenedor page-hero-grid">
     <div class="page-hero-texto">
       {eyebrow && <p class="etiqueta">{eyebrow}</p>}
       <h1>{title}</h1>
       {description && <p class="seccion-descripcion">{description}</p>}
+      {actions.length > 0 && (
+        <div class="page-hero-acciones">
+          {actions.map((action) => (
+            <a class={action.primary ? "boton boton-principal" : "boton boton-secundario"} href={action.href} target={action.external ? "_blank" : undefined} rel={action.external ? "noopener" : undefined}>
+              {action.label}
+            </a>
+          ))}
+        </div>
+      )}
       {(visualText || visualItems.length > 0) && (
         <div class="page-hero-claves" aria-label={visualTitle}>
           {visualText && <p class="page-hero-claves-intro">{visualText}</p>}
