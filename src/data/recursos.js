@@ -122,7 +122,7 @@ export const policiesEn = [
     owner: "Chilete DevPath",
     version: "1.0",
     status: "Active",
-    href: "/politicas/politica-editorial/",
+    href: "/en/politicas/politica-editorial/",
     principles: [
       "Separate original work, classroom learning and content inspired by external sources.",
       "Reference institutions, courses or sources only when they add context and without appropriating their brand.",
@@ -142,7 +142,7 @@ export const policiesEn = [
     owner: "Chilete DevPath",
     version: "1.0",
     status: "Active",
-    href: "/politicas/uso-responsable-ia/",
+    href: "/en/politicas/uso-responsable-ia/",
     principles: [
       "Disclose AI use when it significantly shaped structure, writing or review.",
       "Validate technical content before publishing and do not present generated answers as personal mastery.",
@@ -162,7 +162,7 @@ export const policiesEn = [
     owner: "Chilete DevPath",
     version: "1.0",
     status: "Active",
-    href: "/politicas/bienestar-tecnico/",
+    href: "/en/politicas/bienestar-tecnico/",
     principles: [
       "Avoid normalizing excessive hours as if they were required to learn programming.",
       "Promote active pauses, study order and rest as real parts of technical growth.",
@@ -182,7 +182,7 @@ export const policiesEn = [
     owner: "Chilete DevPath",
     version: "1.0",
     status: "Active",
-    href: "/politicas/publicacion-segura/",
+    href: "/en/politicas/publicacion-segura/",
     principles: [
       "Do not publish IDs, phone numbers, emails, addresses, credentials or data that looks real.",
       "Avoid logos, brands, screenshots or company information without permission or safe context.",
