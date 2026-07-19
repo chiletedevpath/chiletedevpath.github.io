@@ -392,16 +392,6 @@
     text-align: center;
   }
 
-  .whatsapp-flotante {
-    right: 16px;
-    bottom: 16px;
-    min-width: 48px;
-    padding: 13px;
-  }
-
-  .whatsapp-flotante span {
-    display: none;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,7 +2,6 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import ContactFloating from "../components/ContactFloating.astro";
 import { site } from "../data/site.js";
 
 const {
@@ -85,7 +84,6 @@ const englishUrl = new URL(englishPath, site.url).href;
     <main id="contenido">
       <slot />
     </main>
-    <ContactFloating />
     <Footer lang={lang} />
     <script>
       import "../scripts/main.js";

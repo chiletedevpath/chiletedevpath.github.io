@@ -6,7 +6,6 @@ export const site = {
   description:
     "Chilete DevPath es la marca personal de Adrián Pisco para documentar aprendizaje, proyectos, criterio técnico y comunidad.",
   email: "chiletedevpath@gmail.com",
-  whatsapp: "51945834043",
   location: "Chilete, Contumazá, Cajamarca, Perú",
   mapsHref: "https://www.google.com/maps/search/?api=1&query=Chilete%2C%20Cajamarca%2C%20Peru",
 };

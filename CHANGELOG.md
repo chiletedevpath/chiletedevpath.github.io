@@ -86,7 +86,7 @@ La V4.6 corrige problemas de madurez visual, bilingüe incompleto, formularios b
 ### Alcance
 
 - Reescritura de textos publicos para que suenen mas cercanos y menos robotizados.
-- Simplificacion de formularios a envio por correo; WhatsApp queda como canal flotante independiente.
+- Simplificacion de formularios a envio por correo, sin exponer canales personales directos.
 - Reemplazo de heroes SVG en Ruta y Proyectos por imagenes editoriales sin texto superpuesto.
 - Mejora del acceso al mapa de origen con mejor separacion visual y texto mas claro.
 - Rediseño visual de formularios de contacto, feedback y sugerencias de recursos.
@@ -104,8 +104,8 @@ La V4.5 corrige problemas de tono, formularios y composicion visual detectados e
 
 ### Alcance
 
-- Configuracion del numero real de WhatsApp para contacto directo.
-- Reemplazo de formularios `mailto` por paneles de contacto que preparan mensajes por WhatsApp o correo.
+- Ajuste de contacto para priorizar correo y evitar exponer datos personales directos.
+- Reemplazo de formularios `mailto` por paneles de contacto orientados a correo.
 - Ajuste de mensajes publicos para evitar frases defensivas o poco confiables.
 - Retiro de leyendas superpuestas sobre SVG en heroes internos.
 - Mejora de la pagina Sobre para explicar mejor que es Chilete DevPath.
@@ -125,7 +125,7 @@ La V4.4 corrige puntos de confianza y presentacion detectados en revision visual
 
 ### Alcance
 
-- Incorporacion de boton flotante de WhatsApp con mensaje predeterminado.
+- Incorporacion inicial de acceso rapido de contacto, retirado despues por criterio de privacidad.
 - Incorporacion de formularios estaticos para contacto, recursos y feedback.
 - Creacion de seccion "Por que Chilete DevPath" con propuesta de valor.
 - Incorporacion de metricas del ecosistema actualizadas solo cuando cambia contenido real.
@@ -306,7 +306,7 @@ La V3.2 se considera cerrada porque reduce redundancia, mejora navegacion real h
 - Creacion de `manifest.webmanifest` para instalacion basica como PWA.
 - Registro de `sw.js` para cache inicial de paginas y assets principales.
 - Generacion de iconos PWA `192x192`, `512x512` y `apple-touch-icon`.
-- Generacion de `og-image.jpg` en formato `1200x630` para compartir en WhatsApp y redes.
+- Generacion de `og-image.jpg` en formato `1200x630` para compartir en redes sociales.
 - Ampliacion de metadatos Open Graph y Twitter con dimensiones, tipo y texto alternativo.
 - Incorporacion de `robots.txt`, `sitemap.xml` y `security.txt`.
 - Revision de secretos, datos sensibles y referencias restringidas antes de publicar.
