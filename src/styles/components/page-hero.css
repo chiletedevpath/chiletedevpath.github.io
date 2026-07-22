@@ -152,8 +152,7 @@
   transform: translateY(-28px);
 }
 
-.page-hero-visual,
-.media-placeholder {
+.page-hero-visual {
   position: relative;
   overflow: hidden;
   min-height: 260px;
@@ -618,16 +617,14 @@
   fill: color-mix(in srgb, var(--color-acento) 14%, rgba(255, 255, 255, 0.08));
 }
 
-.page-hero-visual span,
-.media-placeholder span {
+.page-hero-visual span {
   color: var(--color-progreso);
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.page-hero-visual strong,
-.media-placeholder strong {
+.page-hero-visual strong {
   max-width: 320px;
   color: #eef7f8;
   font-family: var(--fuente-titulos);
@@ -1012,32 +1009,6 @@
     radial-gradient(circle at 50% 48%, color-mix(in srgb, var(--color-acento) 14%, transparent), transparent 34%),
     radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--color-progreso) 12%, transparent), transparent 52%);
   opacity: 0.92;
-}
-
-.sobre-persona-pendiente {
-  position: relative;
-  z-index: 2;
-  width: min(280px, 68vw);
-  min-height: 500px;
-  border: 1px dashed color-mix(in srgb, var(--color-borde) 70%, var(--color-acento));
-  border-radius: 46% 46% 12px 12px;
-  background:
-    radial-gradient(circle at 50% 15%, color-mix(in srgb, var(--color-progreso) 18%, transparent) 0 12%, transparent 13%),
-    linear-gradient(180deg, color-mix(in srgb, var(--color-principal) 14%, transparent), transparent 64%),
-    var(--color-superficie);
-  box-shadow: var(--sombra-media);
-  display: grid;
-  place-items: end center;
-  padding: 22px;
-  text-align: center;
-}
-
-.sobre-persona-pendiente span {
-  max-width: 180px;
-  color: var(--color-texto-suave);
-  font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
 }
 
 .sobre-persona-foto {

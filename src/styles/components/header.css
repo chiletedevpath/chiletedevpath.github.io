@@ -94,8 +94,7 @@
 }
 
 .idioma-activo,
-.idioma-opcion,
-.idioma-pendiente {
+.idioma-opcion {
   min-width: 34px;
   padding: 5px 8px;
   border-radius: 999px;
@@ -105,12 +104,6 @@
 .idioma-activo {
   background-color: var(--color-principal);
   color: var(--color-superficie);
-}
-
-.idioma-pendiente {
-  color: var(--color-texto-suave);
-  cursor: not-allowed;
-  opacity: 0.72;
 }
 
 .idioma-opcion {

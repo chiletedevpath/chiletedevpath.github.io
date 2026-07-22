@@ -6,7 +6,7 @@ Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
 - Fecha de cierre: 28/06/2026
 - Estado: en revisión
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -24,7 +24,7 @@ La V4.10 mejora la lectura visual de las secciones internas sin cambiar el hero 
 
 - Fecha de cierre: 28/06/2026
 - Estado: en revisión
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -43,7 +43,7 @@ La V4.9 corrige inconsistencias detectadas en auditoría visual y mejora la lect
 
 - Fecha de cierre: 28/06/2026
 - Estado: en revisión
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -61,7 +61,7 @@ La V4.8 alinea la web con el estado actual del ecosistema GitHub: más proyectos
 
 - Fecha de cierre: 26/06/2026
 - Estado: en revisión
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -81,7 +81,7 @@ La V4.6 corrige problemas de madurez visual, bilingüe incompleto, formularios b
 
 - Fecha de cierre: 26/06/2026
 - Estado: en revision
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -100,7 +100,7 @@ La V4.5 corrige problemas de tono, formularios y composicion visual detectados e
 
 - Fecha de cierre: 26/06/2026
 - Estado: en revision
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -121,7 +121,7 @@ La V4.4 corrige puntos de confianza y presentacion detectados en revision visual
 
 - Fecha de cierre: 26/06/2026
 - Estado: en revision
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -144,7 +144,7 @@ La V4.3 mejora contacto, confianza, navegacion, criterio legal/editorial y lectu
 
 - Fecha de cierre: 25/06/2026
 - Estado: en revision
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -166,7 +166,7 @@ La V4.2 corrige comunicacion visual, navegacion y consistencia editorial. La web
 
 - Fecha de cierre: 25/06/2026
 - Estado: en revisión
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -185,7 +185,7 @@ La V4.1 mejora el sistema visual de proyectos sin depender de fotografías impro
 
 - Fecha de cierre: 25/06/2026
 - Estado: en revisión
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -205,7 +205,7 @@ La V4.0 se considera una versión de arquitectura base. Su objetivo es sanear es
 
 - Fecha de cierre: 25/06/2026
 - Estado: en revisión
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -225,7 +225,7 @@ La V3.7 queda en revisión porque su objetivo no es cerrar un rediseño visual c
 
 - Fecha de cierre: 25/06/2026
 - Estado: en revisión
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -244,7 +244,7 @@ La V3.5 se considera en revisión hasta validar que cada fotografía aporte a su
 
 - Fecha de cierre: 25/06/2026
 - Estado: en revisión
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -262,7 +262,7 @@ La V3.4 se considera en revisión hasta validar visualmente que las imágenes ed
 
 - Fecha de cierre: 25/06/2026
 - Estado: en revisión
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -281,7 +281,7 @@ La V3.3 se considera en revisión hasta validar visualmente que las fotografías
 
 - Fecha de cierre: 25/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -299,7 +299,7 @@ La V3.2 se considera cerrada porque reduce redundancia, mejora navegacion real h
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -319,7 +319,7 @@ La V3.1 se considera cerrada porque la web mejora su presentacion publica, queda
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -338,7 +338,7 @@ La V3.0 se considera cerrada porque la web deja de depender de imagenes pendient
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -357,7 +357,7 @@ La V2.4 se considera cerrada porque la web deja de sentirse como directorio y em
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -374,7 +374,7 @@ La V2.3 se considera cerrada porque permite conectar GitHub con la web sin rompe
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -393,7 +393,7 @@ La V2.2 se considera cerrada porque la web empieza a funcionar como una ruta nav
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -411,7 +411,7 @@ La V2.1 se considera cerrada porque fortalece la presencia profesional de Chilet
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -431,7 +431,7 @@ La V2.0 se considera cerrada porque la web deja de ser solo una portada y pasa a
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -449,7 +449,7 @@ La V1.3.1 se considera cerrada porque corrige el bloque visual de identidad del 
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -469,7 +469,7 @@ La V1.3 se considera cerrada porque la web comunica con mayor claridad que Chile
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -489,7 +489,7 @@ La V1.2 se considera cerrada porque la ruta de aprendizaje comunica mejor qué s
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 
@@ -511,7 +511,7 @@ La V1.1 se considera cerrada porque afina la primera publicación pública sin c
 
 - Fecha de cierre: 24/06/2026
 - Estado: cerrada y publicada
-- Sitio: https://chiletedevpath.github.io/
+- Sitio: https://chiletedevpath.com/
 
 ### Alcance
 

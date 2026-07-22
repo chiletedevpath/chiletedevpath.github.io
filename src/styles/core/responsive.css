@@ -81,7 +81,6 @@
     border-radius: 8px;
   }
 
-  .sobre-persona-pendiente,
   .sobre-persona-foto {
     width: min(260px, 74vw);
     min-height: 360px;
@@ -120,8 +119,7 @@
     grid-template-columns: 1fr;
   }
 
-  .page-hero-visual,
-  .media-placeholder {
+  .page-hero-visual {
     min-height: 460px;
   }
 
@@ -264,7 +262,7 @@
   }
 
   .idioma-activo,
-  .idioma-pendiente {
+  .idioma-opcion {
     min-width: 30px;
     padding-inline: 6px;
   }
@@ -310,8 +308,7 @@
     font-size: 2.4rem;
   }
 
-  .page-hero-visual,
-  .media-placeholder {
+  .page-hero-visual {
     min-height: 460px;
     padding: 20px;
   }
