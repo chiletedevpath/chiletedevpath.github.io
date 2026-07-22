@@ -532,6 +532,39 @@
   cursor: pointer;
 }
 
+.acciones-formulario .boton:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.formulario-estado {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.formulario-estado-enviando {
+  border-color: color-mix(in srgb, var(--color-acento) 30%, var(--color-borde));
+  background-color: color-mix(in srgb, var(--color-acento) 9%, var(--color-superficie));
+  color: var(--color-principal);
+}
+
+.formulario-estado-exito {
+  border-color: color-mix(in srgb, #2f7d55 42%, var(--color-borde));
+  background-color: color-mix(in srgb, #2f7d55 10%, var(--color-superficie));
+  color: #245f42;
+}
+
+.formulario-estado-error {
+  border-color: color-mix(in srgb, #a63f3f 38%, var(--color-borde));
+  background-color: color-mix(in srgb, #a63f3f 9%, var(--color-superficie));
+  color: #8b3030;
+}
+
 .mapa-identidad {
   padding: 28px;
   border: 1px solid color-mix(in srgb, var(--color-acento) 38%, var(--color-borde));

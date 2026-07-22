@@ -2,6 +2,24 @@
 
 Registro de versiones publicadas de la web oficial de Chilete DevPath.
 
+## V4.11
+
+- Fecha de cierre: 21/07/2026
+- Estado: listo para publicación
+- Sitio: https://chiletedevpath.com/
+
+### Alcance
+
+- Integración de los formularios de inicio, recursos y comunidad con EmailJS en español e inglés.
+- Envío directo sin depender del cliente de correo instalado en el dispositivo.
+- Confirmación automática para la persona que completa el formulario.
+- Estados accesibles de envío, éxito y error, con bloqueo temporal para evitar envíos duplicados.
+- Actualización de botones, textos informativos y avisos de tratamiento de datos.
+
+### Criterio de cierre
+
+La V4.11 convierte los formularios informativos en un canal de contacto funcional y confirma de forma visible si cada mensaje fue procesado correctamente.
+
 ## V4.10
 
 - Fecha de cierre: 28/06/2026
